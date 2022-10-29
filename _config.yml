@@ -1,5 +1,5 @@
-baseurl: "/home-radar"
-url: http://cowthat.github.io
+# baseurl: "/home-radar"
+# url: http://home-radar.github.io
 
 
 collections:
