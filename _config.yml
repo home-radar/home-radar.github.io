@@ -1,3 +1,5 @@
+baseurl: "/home-radar"
+
 collections:
   authors:
     output: true
