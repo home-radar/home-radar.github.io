@@ -1,4 +1,6 @@
 baseurl: "/home-radar"
+url: http://cowthat.github.io
+
 
 collections:
   authors:
