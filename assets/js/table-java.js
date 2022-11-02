@@ -1,4 +1,4 @@
-var aptTable = [
+var aptsTable = [
 
     {img:'',
     name:'',
@@ -1365,31 +1365,31 @@ var aptTable = [
 
 
 //select tab to open specific table
-function openCity(evt, tableName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tableName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+// function openCity(evt, tableName) {
+//   var i, tabcontent, tablinks;
+//   tabcontent = document.getElementsByClassName("tabcontent");
+//   for (i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
+//
+//   tablinks = document.getElementsByClassName("tablinks");
+//   for (i = 0; i < tablinks.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace(" active", "");
+//   }
+//   document.getElementById(tableName).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
 
 
 
 //Start with a specific tab
-document.getElementById("squishmallows-tab").click();
+// document.getElementById("squishmallows-tab").click();
 
 
-buildTable(squishmallowsTable)
+buildTable(aptsTable)
 
 function buildTable(data){
-  var table = document.getElementById('squishmallowsTable');
+  var table = document.getElementById('aptsTable');
 
   table.innerHTML = ''
 
@@ -1426,43 +1426,43 @@ $('th').on('click', function(){
 
 	if(order == 'desc'){
 		$(this).data('order', "asc")
-		squishmallowsTable = squishmallowsTable.sort((a,b) => a[column] > b[column] ? 1 : -1)
+		aptsTable = aptsTable.sort((a,b) => a[column] > b[column] ? 1 : -1)
 		text += '&#9660'
 	}else{
 		$(this).data('order', "desc")
-		squishmallowsTable = squishmallowsTable.sort((a,b) => a[column] < b[column] ? 1 : -1)
+		aptsTable = aptsTable.sort((a,b) => a[column] < b[column] ? 1 : -1)
 		text += '&#9650'
 	}
 
 	$(this).html(text)
-	buildTable(squishmallowsTable)
+	buildTable(aptsTable)
 
 })
 
 
 //bounce icons when the page loads
-// $(function(){
-//   var str = '#len'; //increment by 1 up to 1-nelemnts
-//   $(document).ready(function(){
-//     var i, stop;
-//     i = 1;
-//     stop = 4; //num elements
-//     setInterval(function(){
-//       if (i > stop){
-//         return;
-//       }
-//       $('#len'+(i++)).toggleClass('bounce');
-//     }, 200)
-//   });
-// });
+$(function(){
+  var str = '#len'; //increment by 1 up to 1-nelemnts
+  $(document).ready(function(){
+    var i, stop;
+    i = 1;
+    stop = 4; //num elements
+    setInterval(function(){
+      if (i > stop){
+        return;
+      }
+      $('#len'+(i++)).toggleClass('bounce');
+    }, 200)
+  });
+});
 
 
 //trying to show and hide again i cant fuckin do this omg
 // function toggle() {
-//   var table = squishmallowsTable;
+//   var table = aptsTable;
 //
 //
-//   for (let i = 0; i < squishmallowsTable.length; i++){
+//   for (let i = 0; i < aptsTable.length; i++){
 //     var getID = table.name[i];
 //     console.log(getID);
 //   }
