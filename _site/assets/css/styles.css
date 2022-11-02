@@ -1,5 +1,30 @@
-.current { color: green; }
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital@0;1&family=Poppins:wght@500&family=Quicksand:wght@700&display=swap");
+* { box-sizing: border-box; }
 
-body { background: red; }
+html { padding: 0; margin: 0; }
+
+body { background: #FFFCF4; padding: 0; margin: 0; }
+
+a { text-decoration: none; }
+
+.navigation { background: #E4BEB7; box-shadow: 0 0 10px 0 #E4BEB7; width: 100vw; height: 110px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
+
+.nav-buttons { font-family: Quicksand; }
+
+.nav-buttons a { color: #4D6E73; font-size: 20px; padding: 15px; margin: 0; transition: ease .3s; }
+
+.nav-buttons a:hover { background: rgba(255, 252, 244, 0.5); color: #33494D; }
+
+.home-radar { font-family: Poppins; }
+
+.nav-logo { font-family: Poppins; font-size: 30px; line-height: 40px; color: #4D6E73; }
+
+.current { background: #FFFCF4; color: #33494D !important; }
+
+.current a:hover { background: rgba(255, 252, 244, 0.5); }
+
+div.content { height: calc(100vh - 100px); overflow: hidden; }
+
+div.content .map { position: absolute; top: 100px; height: calc(100vh - 100px); }
 
 /*# sourceMappingURL=styles.css.map */

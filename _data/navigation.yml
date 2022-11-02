@@ -1,8 +1,19 @@
 - name: Home
-  link: /index.html
-- name: About
-  link: /about.html
-- name: Blog
-  link: /blog.html
-- name: Staff
-  link: /staff.html
+  link: https://kyreefisher01.wixsite.com/home-radar
+- name: Map
+  link: /map.html
+- name: Table
+  link: /table.html
+- name: FAQ
+  link: https://kyreefisher01.wixsite.com/home-radar/blank-2
+
+
+#
+# - name: Home
+#   link: /index.html
+# - name: About
+#   link: /about.html
+# - name: Blog
+#   link: /blog.html
+# - name: Staff
+#   link: /staff.html
