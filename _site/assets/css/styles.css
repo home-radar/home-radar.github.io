@@ -33,7 +33,7 @@ div.content .map-page { width: 65vw; min-height: 1000px; height: calc(100vh - 90
 
 div.content .map-page .left-container { max-width: 65vw; height: 100%; position: relative; overflow: hidden; overflow-y: scroll; overflow-x: scroll; object-fit: contain; height: 130%; z-index: 1; }
 
-div.content .map-page .left-container .map-img { height: 100%; transform: translate(-20%, 0%); position: absolute; top: 0; left: 0; }
+div.content .map-page .left-container .map-img { height: 100%; transform: translate(-20%, 0%) scale(110%); position: absolute; top: 0; left: 0; }
 
 div.content .map-page .left-container .map-icons { position: absolute; width: 300px; display: inline-block; display: flex; flex-flow: nowrap; z-index: 10; }
 
