@@ -20,7 +20,14 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: $poppins;
+  color: $dark-green-gray-2;
+}
+
 p {
+  font-family: $jost;
+  color: $dark-green-gray;
   padding: 0;
   margin: 0;
 }
@@ -81,79 +88,120 @@ p {
 //CONTENT
 
 div.content {
-  position: relative;
-  top: 100px;
-  height: calc(100vh - 100px);
-  overflow: hidden;
+  position: absolute;
+  top: 110px;
+  width: 100vw;
+  height: calc(100vh - 110px);
+  // overflow: hidden;
 
-  .map-container {
-    max-width: 60vw;
-    min-width: 1000px;
+  .map-page {
     height: 100%;
-    height: calc(100vh - 100px);
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    overflow: hidden;
 
-
-    .map-icons {
-      position: absolute;
-      width: 20px;
-      top: 110px;
-      left: 200px;
-      display: inline-block;
+    .left-container {
+      max-width: 60vw;
+      // min-width: 1000px;
+      height: 100%;
+      position:relative;
       // display: flex;
       // justify-content: center;
       // align-items: center;
-      // flex-wrap: nowrap;
-      z-index: 10;
+      overflow: hidden;
+      // overflow-x:auto;
+      // overflow-y:auto;
+      object-fit: contain;
+      height: 130%;
+      z-index: 1;
 
-
-      img{
-        max-height: 25px;
+      .map-img {
+        height: 100%;
+        transform: translate(-20%, 0%);
       }
 
-      .icon-normal:hover .icon-hover-container {
-        opacity: 1;
-      }
-
-      .icon-hover-container {
-        opacity: .25;
+      .map-icons {
         position: absolute;
-        top: 3px;
-        left: 19px;
-        height: 30px;
-        width: 100px;
+        width: 300px;
         display: inline-block;
-        transition: ease .3s;
-        z-index: 15;
+        display: flex;
+        flex-flow: nowrap;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: nowrap;
+        z-index: 10;
 
-        p {
-          display: none;
+
+        img{
+          max-height: 25px;
+          transform: translate(-10%, 0%);
         }
 
-
-        .icon-hover {
-          max-height: 30px;
+        .icon-hover-container {
+          height: 30px;
+          width: 100%;
+          display: flex;
+          flex-flow: nowrap;
+          position: relative;
+          right: 19px;
+          bottom: 2px;
           transition: ease .3s;
+          z-index: 15;
+
+          p {
+            opacity: 0;
+            position: relative;
+            top: 3px;
+            transition: ease .3s;
+            cursor: default;
+          }
+
+
+          .icon-hover {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            opacity: 0;
+            max-height: 30px;
+            transition: ease .3s;
+          }
+
+          .icon-hover:hover {
+            opacity: 1;
+            cursor: pointer;
+          }
+          .icon-hover:hover + p {
+            opacity: 1;
+          }
         }
       }
     }
 
-    .map {
-      // position: relative;
-      // bottom: 200px;
-      // right: 150px;
-      object-fit: contain;
-      height: 130%;
-      transform: translate(-20%, -15%);
-      z-index: 1;
+    .right-container{
+      background: $light-cream;
+      box-shadow: 0 0 10px 0 $dark-pink;
+      width: 40vw;
+      min-width: 300px;
+      height: 100%;
+      padding: 20px 40px;
+      position: fixed;
+      right: 0;
+      top: 110px;
+      z-index: 100;
     }
   }
 }
 
+#DIS {
+  position: absolute;
+  top: 400px;
+  left: 500px;
+}
+
+#LAN {
+  position: absolute;
+  top: 600px;
+  left: 300px;
+}
+
 
 #apts-table{
-  margin-top: 80px;
+  margin-top: 200px;
 }

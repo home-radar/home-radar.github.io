@@ -2,19 +2,27 @@
 layout: default
 ---
 
-<div class="map-container">
-  <div class="map-icons">
-    <img src="assets/images/icons-01.png" class="map icon-normal">
-    <div class ="map icon-hover-container">
-      <img src="assets/images/icons-02.png" class="map icon-hover">
-      <p>[name of apartment]</p>
-    </div>
+<div class="map-page">
+  <div class="left-container">
+    {% for item in site.data.apartments %}
+      <div id="{{ item.code}}" class="map-icons">
+        <img src="assets/images/icons-01.png" class="map icon-normal">
 
+        <div class ="map icon-hover-container">
+          <img src="assets/images/icons-02.png" class="map icon-hover">
+          <p>{{ item.aptName }}</p>
+        </div>
+      </div>
+    {% endfor %}
+
+    <img src="assets/images/Map.png" class="map-img">
   </div>
 
-  <img src="assets/images/Map.png" class="map">
 
-</div>
-<div>
+
+  <div class="right-container">
+    <h1>Interactive Apartment Map</h1>
+    <p> click on any of the apartment icons on the map to see more information about the apartment</p>
+  </div>
 
 </div>
