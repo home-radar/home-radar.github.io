@@ -34,7 +34,7 @@ p {
 
 .navigation {
   background: $pink;
-  box-shadow: 0 0 10px 0 $pink;
+  box-shadow: 0 0 10px 0 $dark-pink-50;
   width: 100vw;
   height: 110px;
   padding: 10px 80px;
@@ -88,26 +88,29 @@ p {
 //CONTENT
 
 div.content {
-  position: absolute;
-  top: 110px;
   width: 100vw;
-  height: calc(100vh - 110px);
-  // overflow: hidden;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 
   .map-page {
-    height: 100%;
+    width: 65vw;
+    min-height: 1000px;
+    height: calc(100vh - 90px);
+    position: absolute;
+    top: 110px;
+    left: 0;
+    overflow-y: scroll;
+    overflow-x: scroll;
 
     .left-container {
-      max-width: 60vw;
+      max-width: 65vw;
       // min-width: 1000px;
       height: 100%;
       position:relative;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
       overflow: hidden;
-      // overflow-x:auto;
-      // overflow-y:auto;
+      overflow-y: scroll;
+      overflow-x: scroll;
       object-fit: contain;
       height: 130%;
       z-index: 1;
@@ -115,6 +118,9 @@ div.content {
       .map-img {
         height: 100%;
         transform: translate(-20%, 0%);
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       .map-icons {
@@ -176,7 +182,7 @@ div.content {
 
     .right-container{
       background: $light-cream;
-      box-shadow: 0 0 10px 0 $dark-pink;
+      box-shadow: 0 0 10px 0 $dark-pink-50;
       width: 40vw;
       min-width: 300px;
       height: 100%;
@@ -201,8 +207,46 @@ div.content {
   left: 300px;
 }
 
+#GRA {
+  position: absolute;
+  top: 200px;
+  left: 800px;
+}
+
+#MON {
+  position: absolute;
+  top: 450px;
+  left: 345px;
+}
+
+#PAR {
+  position: absolute;
+  top: 600px;
+  left: 700px;
+}
+
+#BER {
+  position: absolute;
+  top: 400px;
+  left: 800px;
+}
+
+#TOW {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+#DOW {
+  position: absolute;
+  top: 600px;
+  left: 300px;
+}
 
 .table-page {
+  display: flex;
+
+
   th {
     font-family: $quicksand;
   }

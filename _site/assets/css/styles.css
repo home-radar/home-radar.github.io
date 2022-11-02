@@ -11,7 +11,7 @@ h1 { font-family: Poppins; color: #33494D; }
 
 p { font-family: Jost; color: #4D6E73; padding: 0; margin: 0; }
 
-.navigation { background: #E4BEB7; box-shadow: 0 0 10px 0 #E4BEB7; width: 100vw; height: 110px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
+.navigation { background: #E4BEB7; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 100vw; height: 110px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
 
 .nav-buttons { font-family: Quicksand; }
 
@@ -27,13 +27,13 @@ p { font-family: Jost; color: #4D6E73; padding: 0; margin: 0; }
 
 .current a:hover { background: rgba(255, 252, 244, 0.5); }
 
-div.content { position: absolute; top: 110px; width: 100vw; height: calc(100vh - 110px); }
+div.content { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
 
-div.content .map-page { height: 100%; }
+div.content .map-page { width: 65vw; min-height: 1000px; height: calc(100vh - 90px); position: absolute; top: 110px; left: 0; overflow-y: scroll; overflow-x: scroll; }
 
-div.content .map-page .left-container { max-width: 60vw; height: 100%; position: relative; overflow: hidden; object-fit: contain; height: 130%; z-index: 1; }
+div.content .map-page .left-container { max-width: 65vw; height: 100%; position: relative; overflow: hidden; overflow-y: scroll; overflow-x: scroll; object-fit: contain; height: 130%; z-index: 1; }
 
-div.content .map-page .left-container .map-img { height: 100%; transform: translate(-20%, 0%); }
+div.content .map-page .left-container .map-img { height: 100%; transform: translate(-20%, 0%); position: absolute; top: 0; left: 0; }
 
 div.content .map-page .left-container .map-icons { position: absolute; width: 300px; display: inline-block; display: flex; flex-flow: nowrap; z-index: 10; }
 
@@ -49,11 +49,25 @@ div.content .map-page .left-container .map-icons .icon-hover-container .icon-hov
 
 div.content .map-page .left-container .map-icons .icon-hover-container .icon-hover:hover + p { opacity: 1; }
 
-div.content .map-page .right-container { background: #FFFCF4; box-shadow: 0 0 10px 0 #64433D; width: 40vw; min-width: 300px; height: 100%; padding: 20px 40px; position: fixed; right: 0; top: 110px; z-index: 100; }
+div.content .map-page .right-container { background: #FFFCF4; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 40vw; min-width: 300px; height: 100%; padding: 20px 40px; position: fixed; right: 0; top: 110px; z-index: 100; }
 
 #DIS { position: absolute; top: 400px; left: 500px; }
 
 #LAN { position: absolute; top: 600px; left: 300px; }
+
+#GRA { position: absolute; top: 200px; left: 800px; }
+
+#MON { position: absolute; top: 450px; left: 345px; }
+
+#PAR { position: absolute; top: 600px; left: 700px; }
+
+#BER { position: absolute; top: 400px; left: 800px; }
+
+#TOW { position: absolute; top: 200px; left: 200px; }
+
+#DOW { position: absolute; top: 600px; left: 300px; }
+
+.table-page { display: flex; }
 
 .table-page th { font-family: Quicksand; }
 
