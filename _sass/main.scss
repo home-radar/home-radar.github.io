@@ -16,9 +16,13 @@ body {
   margin: 0;
 }
 
-
 a {
   text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 .navigation {
@@ -77,14 +81,79 @@ a {
 //CONTENT
 
 div.content {
+  position: relative;
+  top: 100px;
   height: calc(100vh - 100px);
   overflow: hidden;
 
-  .map {
-    position: absolute;
-    top: 100px;
+  .map-container {
+    max-width: 60vw;
+    min-width: 1000px;
+    height: 100%;
     height: calc(100vh - 100px);
-;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    overflow: hidden;
 
+
+    .map-icons {
+      position: absolute;
+      width: 20px;
+      top: 110px;
+      left: 200px;
+      display: inline-block;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-wrap: nowrap;
+      z-index: 10;
+
+
+      img{
+        max-height: 25px;
+      }
+
+      .icon-normal:hover .icon-hover-container {
+        opacity: 1;
+      }
+
+      .icon-hover-container {
+        opacity: .25;
+        position: absolute;
+        top: 3px;
+        left: 19px;
+        height: 30px;
+        width: 100px;
+        display: inline-block;
+        transition: ease .3s;
+        z-index: 15;
+
+        p {
+          display: none;
+        }
+
+
+        .icon-hover {
+          max-height: 30px;
+          transition: ease .3s;
+        }
+      }
+    }
+
+    .map {
+      // position: relative;
+      // bottom: 200px;
+      // right: 150px;
+      object-fit: contain;
+      height: 130%;
+      transform: translate(-20%, -15%);
+      z-index: 1;
+    }
   }
+}
+
+
+#squishmallows-table{
+  margin-top: 80px;
 }

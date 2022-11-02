@@ -7,6 +7,8 @@ body { background: #FFFCF4; padding: 0; margin: 0; }
 
 a { text-decoration: none; }
 
+p { padding: 0; margin: 0; }
+
 .navigation { background: #E4BEB7; box-shadow: 0 0 10px 0 #E4BEB7; width: 100vw; height: 110px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
 
 .nav-buttons { font-family: Quicksand; }
@@ -23,8 +25,24 @@ a { text-decoration: none; }
 
 .current a:hover { background: rgba(255, 252, 244, 0.5); }
 
-div.content { height: calc(100vh - 100px); overflow: hidden; }
+div.content { position: relative; top: 100px; height: calc(100vh - 100px); overflow: hidden; }
 
-div.content .map { position: absolute; top: 100px; height: calc(100vh - 100px); }
+div.content .map-container { max-width: 60vw; min-width: 1000px; height: 100%; height: calc(100vh - 100px); overflow: hidden; }
+
+div.content .map-container .map-icons { position: absolute; width: 20px; top: 110px; left: 200px; display: inline-block; z-index: 10; }
+
+div.content .map-container .map-icons img { max-height: 25px; }
+
+div.content .map-container .map-icons .icon-normal:hover .icon-hover-container { opacity: 1; }
+
+div.content .map-container .map-icons .icon-hover-container { opacity: .25; position: absolute; top: 3px; left: 19px; height: 30px; width: 100px; display: inline-block; transition: ease .3s; z-index: 15; }
+
+div.content .map-container .map-icons .icon-hover-container p { display: none; }
+
+div.content .map-container .map-icons .icon-hover-container .icon-hover { max-height: 30px; transition: ease .3s; }
+
+div.content .map-container .map { object-fit: contain; height: 130%; transform: translate(-20%, -15%); z-index: 1; }
+
+#squishmallows-table { margin-top: 80px; }
 
 /*# sourceMappingURL=styles.css.map */
