@@ -202,6 +202,12 @@ div.content {
 }
 
 
-#apts-table{
-  margin-top: 200px;
+.table-page {
+  th {
+    font-family: $quicksand;
+  }
+
+  tr {
+    font-family: $jost;
+  }
 }

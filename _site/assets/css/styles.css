@@ -55,6 +55,8 @@ div.content .map-page .right-container { background: #FFFCF4; box-shadow: 0 0 10
 
 #LAN { position: absolute; top: 600px; left: 300px; }
 
-#apts-table { margin-top: 200px; }
+.table-page th { font-family: Quicksand; }
+
+.table-page tr { font-family: Jost; }
 
 /*# sourceMappingURL=styles.css.map */
