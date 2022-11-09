@@ -97,7 +97,7 @@ div.content .map-page .right-container { background: #FFFCF4; box-shadow: 0 0 10
 
 .table-page .table-content { display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 20px 0; }
 
-.table-page th { font-family: Quicksand; background: #E4BEB7; padding: 5px 10px; }
+.table-page th { font-family: Quicksand; background: #3896A0; color: #FFFCF4; padding: 5px 10px; }
 
 .table-page th:hover { cursor: pointer; }
 
