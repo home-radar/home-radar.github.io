@@ -5,12 +5,16 @@ layout: default
 <div class="map-page">
   <div class="left-container">
     {% for item in site.data.apartments %}
-      <div id="{{ item.code}}" class="map-icons">
-        <img src="assets/images/icons-01.png" class="map icon-normal">
+      {% assign apartment_id    = item.aptName | slugify %}
 
-        <div class ="map icon-hover-container">
+      <div id="{{ item.code}}" class="icon-container">
+        <div class="icon-container-content">
+          <img src="assets/images/icons-01.png" class="map icon-normal">
+
           <img src="assets/images/icons-02.png" class="map icon-hover">
+
           <p>{{ item.aptName }}</p>
+
         </div>
       </div>
     {% endfor %}
@@ -21,8 +25,17 @@ layout: default
 
 
   <div class="right-container">
+
     <h1>Interactive Apartment Map</h1>
     <p> click on any of the apartment icons on the map to see more information about the apartment</p>
+    {% for item in site.data.apartments %}
+      <div>
+
+      </div>
+    {% endfor %}
+
   </div>
 
 </div>
+
+<!-- <input type="radio" name="content-label" class="icon-hover" id="{{ apartment_id }}"><label for="{{ apartment_id }}"></label> -->

@@ -1,4 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital@0;1&family=Poppins:wght@500&family=Quicksand:wght@700&display=swap");
+#DIS { position: absolute; top: 685px; left: 1000px; }
+
+#LAN { position: absolute; top: 625px; left: 270px; }
+
+#GRA { position: absolute; top: 672px; left: 832px; }
+
+#MON { position: absolute; top: 670px; left: 775px; }
+
+#PAR { position: absolute; top: 690px; left: 765px; }
+
+#BER { position: absolute; top: 715px; left: 840px; }
+
+#TOW { position: absolute; top: 765px; left: 900px; }
+
+#COL { position: absolute; top: 380px; left: 510px; }
+
+#CHE { position: absolute; top: 570px; left: 643px; }
+
+#CIR { position: absolute; top: 410px; left: 475px; width: 50px; }
+
+#ONE { position: absolute; top: 950px; left: 920px; }
+
+#LOF { position: absolute; top: 430px; left: 570px; }
+
+#JAM { position: absolute; top: 260px; left: 1050px; }
+
+#PIN { position: absolute; top: 820px; left: 695px; }
+
+#EAG { position: absolute; top: 345px; left: 595px; }
+
+#SQU { position: absolute; top: 530px; left: 670px; }
+
+#ASC { position: absolute; top: 330px; left: 495px; }
+
+#WES { position: absolute; top: 400px; left: 670px; }
+
+#IRO { position: absolute; top: 410px; left: 550px; }
+
+#WBR { position: absolute; top: 380px; left: 550px; }
+
 * { box-sizing: border-box; }
 
 html { padding: 0; margin: 0; }
@@ -11,7 +51,7 @@ h1 { font-family: Poppins; color: #33494D; }
 
 p { font-family: Jost; color: #4D6E73; padding: 0; margin: 0; }
 
-.navigation { background: #E4BEB7; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 100vw; height: 110px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
+.navigation { background: #E4BEB7; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 100vw; height: 110px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 99999; }
 
 .nav-buttons { font-family: Quicksand; }
 
@@ -27,49 +67,39 @@ p { font-family: Jost; color: #4D6E73; padding: 0; margin: 0; }
 
 .current a:hover { background: rgba(255, 252, 244, 0.5); }
 
-div.content { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
+div.content { width: 100vw; height: 100vh; position: relative; top: 110px; overflow: hidden; }
 
-div.content .map-page { width: 65vw; min-height: 1000px; height: calc(100vh - 90px); position: absolute; top: 110px; left: 0; overflow-y: scroll; overflow-x: scroll; }
+div.content .map-page { width: 65vw; min-height: 1000px; height: calc(100vh - 90px); position: absolute; top: 0; left: 0; overflow-y: scroll; overflow-x: scroll; }
 
-div.content .map-page .left-container { max-width: 65vw; height: 100%; position: relative; overflow: hidden; overflow-y: scroll; overflow-x: scroll; object-fit: contain; height: 130%; z-index: 1; }
+div.content .map-page .left-container { max-width: 65vw; height: 100%; position: relative; overflow: hidden; overflow-y: scroll; overflow-x: scroll; object-fit: contain; height: 130%; }
 
-div.content .map-page .left-container .map-img { height: 100%; position: absolute; top: 0; left: 0; }
+div.content .map-page .left-container .map-img { height: 100%; position: absolute; top: 0; left: 0; z-index: 0; }
 
-div.content .map-page .left-container .map-icons { position: absolute; width: 300px; display: inline-block; display: flex; flex-flow: nowrap; z-index: 10; }
+div.content .map-page .left-container .icon-container { position: absolute; }
 
-div.content .map-page .left-container .map-icons img { max-height: 25px; transform: translate(-10%, 0%); }
+div.content .map-page .left-container .icon-container .icon-container-content { position: relative; display: flex; flex-flow: nowrap; align-items: center; }
 
-div.content .map-page .left-container .map-icons .icon-hover-container { height: 30px; width: 100%; display: flex; flex-flow: nowrap; position: relative; right: 19px; bottom: 2px; transition: ease .3s; z-index: 15; }
+div.content .map-page .left-container .icon-container .icon-container-content img { max-height: 25px; transform: translate(-10%, 0%); }
 
-div.content .map-page .left-container .map-icons .icon-hover-container p { opacity: 0; position: relative; top: 3px; transition: ease .3s; cursor: default; }
+div.content .map-page .left-container .icon-container .icon-container-content .icon-normal { position: relative; z-index: 1; }
 
-div.content .map-page .left-container .map-icons .icon-hover-container .icon-hover { opacity: 0; max-height: 30px; transition: ease .3s; }
+div.content .map-page .left-container .icon-container .icon-container-content .icon-hover { max-height: 30px; position: relative; right: 19px; transition: ease .2s; opacity: 0; cursor: pointer; z-index: 1; }
 
-div.content .map-page .left-container .map-icons .icon-hover-container .icon-hover:hover { opacity: 1; cursor: pointer; }
+div.content .map-page .left-container .icon-container .icon-container-content p { background: white; border-radius: 10px; height: 20px; padding: 0 8px; position: relative; right: 20px; bottom: 3px; white-space: nowrap; cursor: default; display: none; transition: ease .3s; }
 
-div.content .map-page .left-container .map-icons .icon-hover-container .icon-hover:hover + p { opacity: 1; }
+div.content .map-page .left-container .icon-container .icon-container-content .icon-hover:hover { opacity: 1; }
 
-div.content .map-page .right-container { background: #FFFCF4; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 40vw; min-width: 300px; height: 100%; padding: 20px 40px; position: fixed; right: 0; top: 110px; z-index: 100; }
+div.content .map-page .left-container .icon-container .icon-container-content .icon-hover:hover + p { position: relative; display: block; z-index: 999; }
 
-#DIS { position: absolute; top: 400px; left: 500px; }
+div.content .map-page .right-container { background: #FFFCF4; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 40vw; min-width: 300px; height: 100%; padding: 20px 40px; position: fixed; right: 0; top: 110px; z-index: 9999; }
 
-#LAN { position: absolute; top: 600px; left: 300px; }
+.table-page { display: flex; flex-direction: column; align-items: center; }
 
-#GRA { position: absolute; top: 200px; left: 800px; }
+.table-page .table-content { display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 20px 0; }
 
-#MON { position: absolute; top: 450px; left: 345px; }
+.table-page th { font-family: Quicksand; background: #E4BEB7; padding: 5px 10px; }
 
-#PAR { position: absolute; top: 600px; left: 700px; }
-
-#BER { position: absolute; top: 400px; left: 800px; }
-
-#TOW { position: absolute; top: 200px; left: 200px; }
-
-#DOW { position: absolute; top: 600px; left: 300px; }
-
-.table-page { display: flex; }
-
-.table-page th { font-family: Quicksand; }
+.table-page th:hover { cursor: pointer; }
 
 .table-page tr { font-family: Jost; }
 
