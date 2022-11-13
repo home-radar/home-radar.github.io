@@ -1,0 +1,27 @@
+@media screen and (max-width: 600px) {
+  div.content-map {
+    max-width: 100vw;
+    min-height: calc(100vh - 100px);
+    position: relative;
+    top: 100px;
+    overflow: hidden;
+    .map-page {
+      width: 100vw;
+      min-height: 1000px;
+      // height: calc(100vh - 90px);
+      position: absolute;
+      top: -150px;
+      left: 0;
+      overflow: scroll;
+      display: flex;
+    }
+  }
+
+  .right-container {
+    position: relative;
+    top: 400px;
+    width: 100vw;
+  }
+
+
+}

@@ -1,0 +1,51 @@
+.navigation {
+  background: $pink;
+  box-shadow: 0 0 10px 0 $dark-pink-50;
+  width: 100vw;
+  height: 100px;
+  padding: 10px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99999;
+}
+
+.nav-buttons {
+  font-family: $quicksand;
+
+  a{
+    color: $dark-green-gray;
+    font-size: 20px;
+    padding: 15px;
+    margin: 0;
+    transition: ease .3s;
+
+    &:hover {
+      background: $light-cream-50;
+      color: $dark-green-gray-2;
+    }
+  }
+}
+
+.home-radar {
+  font-family: $poppins;
+}
+
+.nav-logo {
+  font-family: $poppins;
+  font-size: 24px;
+  line-height: 32px;
+  color: $dark-green-gray;
+}
+
+.current {
+  background: $light-cream;
+  color: $dark-green-gray-2;
+
+  a:hover {
+    background: $light-cream-50;
+  }
+}

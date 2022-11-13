@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $light-cream;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $poppins;
+  color: $dark-green-gray-2;
+}
+
+p, td, th, li, button {
+  font-family: $jost;
+  color: $dark-green-gray;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}

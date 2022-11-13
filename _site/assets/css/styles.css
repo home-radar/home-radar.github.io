@@ -1,44 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital@0;1&family=Poppins:wght@500&family=Quicksand:wght@700&display=swap");
-#DIS { position: absolute; top: 685px; left: 1000px; }
-
-#LAN { position: absolute; top: 625px; left: 270px; }
-
-#GRA { position: absolute; top: 672px; left: 832px; }
-
-#MON { position: absolute; top: 670px; left: 775px; }
-
-#PAR { position: absolute; top: 690px; left: 765px; }
-
-#BER { position: absolute; top: 715px; left: 840px; }
-
-#TOW { position: absolute; top: 765px; left: 900px; }
-
-#COL { position: absolute; top: 380px; left: 510px; }
-
-#CHE { position: absolute; top: 570px; left: 643px; }
-
-#CIR { position: absolute; top: 410px; left: 475px; width: 50px; }
-
-#ONE { position: absolute; top: 950px; left: 920px; }
-
-#LOF { position: absolute; top: 430px; left: 570px; }
-
-#JAM { position: absolute; top: 260px; left: 1050px; }
-
-#PIN { position: absolute; top: 820px; left: 695px; }
-
-#EAG { position: absolute; top: 345px; left: 595px; }
-
-#SQU { position: absolute; top: 530px; left: 670px; }
-
-#ASC { position: absolute; top: 330px; left: 495px; }
-
-#WES { position: absolute; top: 400px; left: 670px; }
-
-#IRO { position: absolute; top: 410px; left: 550px; }
-
-#WBR { position: absolute; top: 380px; left: 550px; }
-
 * { box-sizing: border-box; }
 
 html { padding: 0; margin: 0; }
@@ -63,73 +23,81 @@ p, td, th, li, button { font-family: Jost; color: #4D6E73; font-size: 18px; padd
 
 .nav-logo { font-family: Poppins; font-size: 24px; line-height: 32px; color: #4D6E73; }
 
-.current { background: #FFFCF4; color: #33494D !important; }
+.current { background: #FFFCF4; color: #33494D; }
 
 .current a:hover { background: rgba(255, 252, 244, 0.5); }
 
-div.content { max-width: 100vw; min-height: calc(100vh - 100px); position: relative; top: 100px; overflow: hidden; }
+#DIS { position: absolute; top: 680px; left: 995px; }
 
-div.content .map-page { width: 65vw; min-height: 1000px; height: calc(100vh - 90px); position: absolute; top: 0; left: 0; overflow: scroll; }
+#LAN { position: absolute; top: 625px; left: 270px; }
 
-div.content .map-page .left-container { max-width: 65vw; height: 130%; position: relative; object-fit: contain; cursor: grab; }
+#GRA { position: absolute; top: 690px; left: 850px; }
 
-div.content .map-page .left-container:active { cursor: grabbing; }
+#MON { position: absolute; top: 685px; left: 790px; }
 
-div.content .map-page .left-container .map-img { height: 100%; position: absolute; top: 0; left: 0; z-index: 0; }
+#PAR { position: absolute; top: 705px; left: 780px; }
 
-div.content .map-page .left-container .icon-container { position: absolute; }
+#BER { position: absolute; top: 740px; left: 860px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content { position: relative; display: flex; flex-flow: nowrap; align-items: center; }
+#TOW { position: absolute; top: 785px; left: 920px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content [type=radio] { position: absolute; opacity: 0; width: 0; height: 0; }
+#COL { position: absolute; top: 370px; left: 500px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content img { max-height: 25px; }
+#CHE { position: absolute; top: 570px; left: 643px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content .icon-normal { position: relative; z-index: 1; }
+#CIR { position: absolute; top: 410px; left: 475px; width: 50px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content .icon-hover { max-height: 30px; position: relative; right: 27px; opacity: 0; cursor: pointer; transition: ease .2s; z-index: 1; }
+#ONE { position: absolute; top: 945px; left: 915px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content p { background: white; border-radius: 10px; height: 20px; padding: 0 8px; position: relative; right: 25px; top: 4px; white-space: nowrap; cursor: default; display: none; transition: ease .3s; }
+#LOF { position: absolute; top: 420px; left: 565px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content .icon-button { display: flex; }
+#JAM { position: absolute; top: 260px; left: 1050px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content .icon-hover:hover { opacity: 1; }
+#PIN { position: absolute; top: 815px; left: 695px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content .icon-hover:hover + p { position: relative; display: block; z-index: 999; }
+#EAG { position: absolute; top: 345px; left: 595px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content [type=radio]:checked + img { opacity: 1; }
+#SQU { position: absolute; top: 530px; left: 670px; }
 
-div.content .map-page .left-container .icon-container .icon-container-content [type=radio]:checked + p { position: relative; display: block; z-index: 999; }
+#ASC { position: absolute; top: 330px; left: 495px; }
 
-div.content .map-page .right-container { background: #FFFCF4; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 40vw; min-width: 300px; height: 90vh; padding: 20px 40px; position: fixed; right: 0; top: 100px; overflow-y: scroll; overflow-x: hidden; z-index: 9999; }
+#WES { position: absolute; top: 405px; left: 670px; }
 
-div.content .map-page .right-container [type=radio] { position: absolute; opacity: 0; width: 0; height: 0; }
+#IRO { position: absolute; top: 410px; left: 550px; }
 
-div.content .map-page .right-container .base-content { display: block; }
+#WBR { position: absolute; top: 370px; left: 550px; }
 
-div.content .map-page .right-container .base-content h1 { margin: 10px 0; }
+#MPT { position: absolute; top: 530px; left: 835px; }
 
-div.content .map-page .right-container .base-content p { margin: 20px 0; }
+#BIG { position: absolute; top: 465px; left: 750px; }
 
-div.content .map-page .right-container .base-content .apartment-card-container { columns: 2; }
+#MEZ { position: absolute; top: 750px; left: 1000px; }
 
-div.content .map-page .right-container .base-content .apartment-card-container .apartment-card { background: rgba(228, 191, 184, 0.25); border: 4px solid rgba(228, 191, 184, 0.05); border-radius: 15px; width: 100%; object-fit: contain; position: relative; break-inside: avoid; margin-bottom: 20px; }
+#TAE { position: absolute; top: 490px; left: 660px; }
 
-div.content .map-page .right-container .base-content .apartment-card-container .apartment-card > *:hover { cursor: pointer; }
+#MAR { position: absolute; top: 680px; left: 1040px; }
 
-div.content .map-page .right-container .base-content .apartment-card-container .apartment-card img { border-radius: 0 0 12px 12px; width: 100%; position: relative; top: 4px; }
+#THE { position: absolute; top: 725px; left: 970px; }
 
-div.content .map-page .right-container .base-content .apartment-card-container .apartment-card h3 { padding: 0 20px; margin: 10px 0; }
+#ART { position: absolute; top: 670px; left: 900px; }
 
-div.content .map-page .right-container .base-content .apartment-card-container .apartment-card p { padding: 0 20px; margin: 10px 0; }
+#CAR { position: absolute; top: 815px; left: 740px; }
 
-div.content .map-page .right-container .apartment-content { margin: 0; word-break: break-word; display: none; }
+#L15 { position: absolute; top: 345px; left: 525px; }
 
-div.content .map-page .right-container .apartment-content button { background: none; border: 1px solid #4D6E73; border-radius: 20px; font-size: 16px; padding: 2px 10px; position: relative; right: 20px; transition: ease .2s; }
+#RAM { position: absolute; top: 525px; left: 705px; }
 
-div.content .map-page .right-container .apartment-content button:hover { background: rgba(228, 191, 184, 0.5); border: 1px solid #FFFCF4; }
+#GRO { position: absolute; top: 625px; left: 557px; }
 
-div.content .map-page .right-container .apartment-content h1 { margin: 8px 0; }
+#COR { position: absolute; top: 380px; left: 680px; }
+
+::-webkit-scrollbar { width: 10px; }
+
+::-webkit-scrollbar-track { background: #DEC9B8; border: 1px solid #DEC9B8; border-radius: 0px; }
+
+::-webkit-scrollbar-thumb { background: rgba(99, 67, 61, 0.5); border-radius: 10px; width: 5px; }
+
+::-webkit-scrollbar-thumb:hover { background: #64433D; border-radius: 10px; }
 
 .listings-page { display: flex; flex-direction: column; align-items: center; height: 200vh; }
 
@@ -140,5 +108,81 @@ div.content .map-page .right-container .apartment-content h1 { margin: 8px 0; }
 .listings-page th:hover { cursor: pointer; }
 
 .listings-page tr { font-family: Jost; }
+
+div.content-map { max-width: 100vw; min-height: calc(100vh - 100px); position: relative; top: 100px; overflow: hidden; }
+
+div.content-map .map-page { width: 65vw; min-height: 1000px; height: calc(100vh - 90px); position: absolute; top: 0; left: 0; overflow: scroll; }
+
+.left-container { max-width: 65vw; height: 130%; position: relative; object-fit: contain; cursor: grab; }
+
+.left-container:active { cursor: grabbing; }
+
+.left-container img.map-img { height: 100%; position: absolute; top: 0; left: 0; z-index: 0; }
+
+.icon-container { position: absolute; }
+
+.icon-container .icon-container-content { position: relative; right: 12px; bottom: 10px; display: flex; flex-flow: nowrap; align-items: center; }
+
+.icon-container .icon-container-content [type=radio] { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.icon-container .icon-container-content img { max-height: 25px; }
+
+.icon-container .icon-container-content .icon-normal { position: relative; z-index: 1; }
+
+.icon-container .icon-container-content .icon-hover { max-height: 30px; position: relative; right: 27px; opacity: 0; cursor: pointer; transition: ease .2s; z-index: 1; }
+
+.icon-container .icon-container-content p { background: white; border-radius: 10px; height: 24px; padding: 0 8px; position: relative; right: 25px; top: 4px; white-space: nowrap; cursor: default; display: none; transition: ease .3s; }
+
+.icon-container .icon-container-content .icon-button { display: flex; }
+
+.icon-container .icon-container-content .icon-hover:hover { opacity: 1; }
+
+.icon-container .icon-container-content .icon-hover:hover + p { position: relative; display: block; z-index: 999; }
+
+.icon-container .icon-container-content [type=radio]:checked + img { opacity: 1; }
+
+.icon-container .icon-container-content [type=radio]:checked + p { position: relative; display: block; z-index: 999; }
+
+.right-container { background: #FFFCF4; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 40vw; min-width: 300px; height: 90vh; padding: 20px 40px; position: fixed; right: 0; top: 100px; overflow-y: scroll; overflow-x: hidden; z-index: 9999; }
+
+.right-container [type=radio] { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.base-content { display: block; }
+
+.base-content h1 { margin: 10px 0; }
+
+.base-content p { margin: 20px 0; }
+
+.base-content .apartment-card-container { column-count: 2; }
+
+.base-content .apartment-card-container .apartment-card { background: rgba(228, 191, 184, 0.25); border: 4px solid rgba(228, 191, 184, 0.05); border-radius: 15px; width: 100%; margin-bottom: 20px; object-fit: contain; position: relative; break-inside: avoid; transition: ease .2s; }
+
+.base-content .apartment-card-container .apartment-card:hover { background: #92D2D9; transform: translateY(-8px); cursor: pointer; }
+
+.base-content .apartment-card-container .apartment-card > *:hover { cursor: pointer; }
+
+.base-content .apartment-card-container .apartment-card img { border-radius: 0 0 12px 12px; width: 100%; position: relative; top: 4px; }
+
+.base-content .apartment-card-container .apartment-card h3 { padding: 0 20px; margin: 10px 0; }
+
+.base-content .apartment-card-container .apartment-card p { padding: 0 20px; margin: 10px 0; }
+
+.apartment-content { margin: 0; word-break: break-word; display: none; }
+
+.apartment-content button { background: none; border: 1px solid #4D6E73; border-radius: 20px; font-size: 16px; padding: 2px 10px; position: relative; right: 20px; transition: ease .2s; }
+
+.apartment-content button:hover { background: rgba(228, 191, 184, 0.5); border: 1px solid #FFFCF4; }
+
+.apartment-content h1 { margin: 8px 0; }
+
+.apartment-content .apartment-page-icons { display: flex; flex-wrap: wrap; margin: 20px 0; }
+
+.apartment-content .apartment-page-icons p { color: #FFFCF4; background: #3896A0; border-radius: 20px; padding: 4px 10px; margin: 4px 4px 4px 0; }
+
+.apartment-content .apartment-content-image { max-width: 100%; }
+
+@media screen and (max-width: 1150px) { .base-content .apartment-card-container { column-count: 1; } }
+
+@media screen and (max-width: 600px) { div.content-map { max-width: 100vw; min-height: calc(100vh - 100px); position: relative; top: 100px; overflow: hidden; } div.content-map .map-page { width: 100vw; min-height: 1000px; position: absolute; top: -150px; left: 0; overflow: scroll; display: flex; } .right-container { position: relative; top: 400px; width: 100vw; } }
 
 /*# sourceMappingURL=styles.css.map */
