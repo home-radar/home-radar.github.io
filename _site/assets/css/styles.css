@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 { font-family: Poppins; color: #33494D; }
 
 p, td, th, li, button { font-family: Jost; color: #4D6E73; font-size: 18px; padding: 0; margin: 0; }
 
-.navigation { background: #E4BEB7; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 100vw; height: 100px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 99999; }
+nav { background: #E4BEB7; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 100vw; height: 100px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 99999; }
 
 .nav-buttons { font-family: Quicksand; }
 
@@ -26,6 +26,14 @@ p, td, th, li, button { font-family: Jost; color: #4D6E73; font-size: 18px; padd
 .current { background: #FFFCF4; color: #33494D; }
 
 .current a:hover { background: rgba(255, 252, 244, 0.5); }
+
+::-webkit-scrollbar { width: 10px; }
+
+::-webkit-scrollbar-track { background: #DEC9B8; border: 1px solid #DEC9B8; border-radius: 0px; }
+
+::-webkit-scrollbar-thumb { background: rgba(99, 67, 61, 0.5); border-radius: 10px; width: 5px; }
+
+::-webkit-scrollbar-thumb:hover { background: #64433D; border-radius: 10px; }
 
 #DIS { position: absolute; top: 680px; left: 995px; }
 
@@ -90,14 +98,6 @@ p, td, th, li, button { font-family: Jost; color: #4D6E73; font-size: 18px; padd
 #GRO { position: absolute; top: 625px; left: 557px; }
 
 #COR { position: absolute; top: 380px; left: 680px; }
-
-::-webkit-scrollbar { width: 10px; }
-
-::-webkit-scrollbar-track { background: #DEC9B8; border: 1px solid #DEC9B8; border-radius: 0px; }
-
-::-webkit-scrollbar-thumb { background: rgba(99, 67, 61, 0.5); border-radius: 10px; width: 5px; }
-
-::-webkit-scrollbar-thumb:hover { background: #64433D; border-radius: 10px; }
 
 .listings-page { display: flex; flex-direction: column; align-items: center; height: 200vh; }
 
@@ -183,6 +183,6 @@ div.content-map .map-page { width: 65vw; min-height: 1000px; height: calc(100vh 
 
 @media screen and (max-width: 1150px) { .base-content .apartment-card-container { column-count: 1; } }
 
-@media screen and (max-width: 600px) { div.content-map { max-width: 100vw; min-height: calc(100vh - 100px); position: relative; top: 100px; overflow: hidden; } div.content-map .map-page { width: 100vw; min-height: 1000px; position: absolute; top: -150px; left: 0; overflow: scroll; display: flex; } .right-container { position: relative; top: 400px; width: 100vw; } }
+@media screen and (max-width: 600px) { nav { height: 60px; } .nav-buttons { flex-flow: nowrap; } .nav-buttons a { font-size: 12px; } div.content-map { max-width: 100vw; min-height: calc(100vh - 100px); height: 200vh; } div.content-map .map-page { width: 100vw; min-height: 1000px; position: absolute; top: -150px; left: 0; overflow: scroll; display: flex; } div.content-map .map-page::-webkit-scrollbar { display: none; } .right-container { position: relative; top: 400px; width: 100vw; height: 150vh; } .right-container h1 { font-size: 24px; } }
 
 /*# sourceMappingURL=styles.css.map */
