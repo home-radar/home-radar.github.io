@@ -1,0 +1,11 @@
+[
+  { "apartment":"red",
+    "info":"this is the color red"
+  },
+  { "apartment":"green",
+    "info":"this is the color green"
+  },
+  { "apartment":"blue",
+    "info":"this is the color green"
+  }
+]

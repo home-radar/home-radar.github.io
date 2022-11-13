@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-ui.js"></script> -->
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/aboutus.html" />
+<meta property="og:url" content="http://localhost:4000/aboutus.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/aboutus.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navigation">
+  <div class="nav-logo home-radar">
+    <h1 class="home-radar">Home<br>Radar</h1>
+  </div>
+  <div class="nav-buttons">
+    
+      
+        <a href="/map.html" s>Map</a>
+      
+    
+      
+        <a href="/listings.html" s>Listings</a>
+      
+    
+      
+        <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" s>FAQ</a>
+      
+    
+      
+        <a href="https://kyreefisher01.wixsite.com/home-radar" s>About Us</a>
+      
+    
+  </div>
+</nav>
+
+    <div class="content">
+      <!DOCTYPE html>
+<style>
+    .apartment{
+        color: #fff;
+        padding: 20px;
+        display: none;
+        margin-top: 20px;
+    }
+    .red{ background: #ff0000; }
+    .green{ background: #228B22; }
+    .blue{ background: #0000ff; }
+</style>
+
+<body>
+    <div>
+      
+            <img src="assets/images/icons-01.png" class="icon-normal">
+
+              <label for="" class="icon-button">
+
+                <input type="radio"
+                        name="content-toggle"
+                        id="red"
+                        value="red">
+                <img src="assets/images/icons-02.png" class="map icon-hover">
+                <p></p>
+
+              </label>
+      
+            <img src="assets/images/icons-01.png" class="icon-normal">
+
+              <label for="" class="icon-button">
+
+                <input type="radio"
+                        name="content-toggle"
+                        id="green"
+                        value="green">
+                <img src="assets/images/icons-02.png" class="map icon-hover">
+                <p></p>
+
+              </label>
+      
+            <img src="assets/images/icons-01.png" class="icon-normal">
+
+              <label for="" class="icon-button">
+
+                <input type="radio"
+                        name="content-toggle"
+                        id="blue"
+                        value="blue">
+                <img src="assets/images/icons-02.png" class="map icon-hover">
+                <p></p>
+
+              </label>
+      
+    </div>
+
+    
+
+      <div class="red apartment">this is the color red</div>
+
+    
+
+      <div class="green apartment">this is the color green</div>
+
+    
+
+      <div class="blue apartment">this is the color green</div>
+
+    
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        var inputValue = $(this).attr("value");
+        var targetBox = $("." + inputValue);
+        $(".apartment").not(targetBox).hide();
+        $(targetBox).show();
+    });
+});
+</script>
+
+    </div>
+  </body>
+</html>
