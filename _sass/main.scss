@@ -2,8 +2,7 @@
 
 @import "fonts.scss",
         "colors.scss",
-        "locations.scss",
-        "content.scss";
+        "locations.scss";
 
 * {
   box-sizing: border-box;
@@ -29,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $dark-green-gray-2;
 }
 
-p, td, th, li {
+p, td, th, li, button {
   font-family: $jost;
   color: $dark-green-gray;
   font-size: 18px;
@@ -114,8 +113,12 @@ div.content {
       height: 130%;
       position:relative;
       object-fit: contain;
-      overflow: none;
+      // overflow: none;
       cursor: grab;
+
+      &:active {
+      cursor: grabbing;
+      }
 
       .map-img {
         height: 100%;
@@ -143,7 +146,7 @@ div.content {
 
           img {
             max-height: 25px;
-            // transform: translate(-10%, 0%);
+            // transform: translate(-20%, 0%);
           }
 
           .icon-normal {
@@ -217,6 +220,7 @@ div.content {
       overflow-x:hidden;
       z-index: 9999;
 
+
       [type=radio] {
         position: absolute;
         opacity: 0;
@@ -224,20 +228,89 @@ div.content {
         height: 0;
       }
 
-      .apartment-content {
-        margin: 0;
-        word-break: break-word
+      .base-content {
+        display: block;
+
+        h1 {
+          margin: 10px 0;
+        }
+
+        p {
+          margin: 20px 0;
+        }
+
+        .apartment-card-container {
+          columns: 2;
+
+          .apartment-card {
+            background: $pink-25;
+            border: 4px solid $pink-05;
+            border-radius: 15px;
+            width: 100%;
+            object-fit: contain;
+            position: relative;
+            break-inside: avoid;
+            margin-bottom: 20px;
+
+            &>*:hover {
+              cursor: pointer;
+            }
+
+            img {
+              border-radius: 0 0 12px 12px;
+              width: 100%;
+              position: relative;
+              top: 4px;
+            }
+
+            h3 {
+              padding: 0 20px;
+              margin: 10px 0;
+            }
+
+            p {
+              padding: 0 20px;
+              margin: 10px 0;
+            }
+          }
+        }
       }
 
+      .apartment-content {
+        margin: 0;
+        word-break: break-word;
+        display: none;
 
+        button {
+          background: none;
+          border: 1px solid $dark-green-gray;
+          border-radius: 20px;
+          font-size: 16px;
+          padding: 2px 10px;
+          position: relative;
+          right: 20px;
+          transition: ease .2s;
+
+          &:hover {
+            // content: 'hello';
+            background: $pink-50;
+            border: 1px solid $light-cream;
+          }
+        }
+
+        h1 {
+          margin: 8px 0;
+        }
+      }
     }
   }
 }
 
-.table-page {
+.listings-page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 200vh;
 
   .table-content {
     display: flex;
@@ -262,39 +335,3 @@ div.content {
     font-family: $jost;
   }
 }
-
-
-// #district-square-apts:checked~#parent #district-square-apts,
-// #landmark-at-1700:checked~#parent #landmark-at-1700,
-// #grace-and-monroe-apts:checked~#parent #grace-and-monroe-apts,
-// #monroe-park-towers:checked~#parent #monroe-park-towers,
-// #park-plaza-at-belvidere:checked~#parent #park-plaza-at-belvidere,
-// #the-berkshire:checked~#parent #the-berkshire,
-// #the-towers-on-franklin:checked~#parent #the-towers-on-franklin,
-// #biggs-building-apartments:checked~#parent #biggs-building-apartments,
-// #columbia-apartments:checked~#parent #columbia-apartments,
-// #artisan-alley:checked~#parent #artisan-alley,
-// #theatre-row:checked~#parent #theatre-row,
-// #marshall-adams-apt:checked~#parent #marshall-adams-apt,
-// #t-and-e-apts:checked~#parent #t-and-e-apts,
-// #the-mezzo-lofts:checked~#parent #the-mezzo-lofts,
-// #iron-house-apartments:checked~#parent #iron-house-apartments,
-// #ascend:checked~#parent #ascend,
-// #the-square:checked~#parent #the-square,
-// #eagle-mill-apartments-lofts:checked~#parent #eagle-mill-apartments-lofts,
-// #pine-courts:checked~#parent #pine-courts,
-// #colliseum-lofts:checked~#parent #colliseum-lofts,
-// #the-james:checked~#parent #the-james,
-// #the-lofts-at-capital-garage:checked~#parent #the-lofts-at-capital-garage,
-// #one-canal:checked~#parent #one-canal,
-// #circ-apartments:checked~#parent #circ-apartments,
-// #chesterfield-apartments:checked~#parent #chesterfield-apartments,
-// #1200-west-marshall:checked~#parent #1200-west-marshall,
-// #marshall-park-townhomes:checked~#parent #marshall-park-townhomes,
-// #1318-w-broad:checked~#parent #1318-w-broad {
-// background: red
-// }
-//
-// #the-james:checked {
-//   content: "no"
-// }

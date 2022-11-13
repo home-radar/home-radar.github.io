@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>dragNscroll Plugin Examples</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: black;
+  -webkit-transition: all 300ms ease-in-out;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+html,* { font-family: 'Inter'; box-sizing: border-box; }
+body { background-color: black;
+  color: white; line-height:1.6;}
+.lead { font-size: 1.5rem; font-weight: 300; }
+.container { margin: 150px auto; max-width: 960px; }
+.box,.box2,.box3 { width: 600px; height: 300px; overflow: scroll; cursor: grab; }
+</style>
+</head>
+
+<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/other/drag-to-scroll.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul><div id="carbon-block"></div>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+  <div class="container">
+    <h1>dragNscroll Plugin Examples</h1>
+    <p class="lead">A jQuery scroll on drag plugin that allows users to scroll a page (or any scrollable element) by using mouse drag, similar to the swipe up/down behavior in mobile devices.</p>
+    <h2>With Default Settings</h2>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac posuere lacus, eget dapibus urna. Proin commodo posuere orci, a mattis diam rhoncus ac. Curabitur rutrum mi purus, congue vulputate libero placerat a. Quisque aliquam ante varius risus lobortis lobortis. Cras viverra dignissim sagittis. Nullam porttitor convallis ullamcorper. Suspendisse in blandit lectus. Curabitur justo magna, convallis in dolor at, egestas condimentum turpis.
+
+    Vivamus fermentum mauris finibus nunc placerat dignissim. Nullam at mollis massa. Ut nunc tellus, semper ac nunc id, faucibus vestibulum dui. Donec neque mi, congue et eleifend nec, auctor quis odio. Nullam eu leo id elit eleifend sodales. Sed tempus viverra justo, mollis semper nibh iaculis in. Nullam consequat dapibus turpis, ut aliquam eros scelerisque id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi vulputate eros quis lectus finibus, ac malesuada velit molestie. Sed porttitor est in bibendum rutrum. Aliquam erat volutpat. Proin non velit sed metus ullamcorper blandit vitae vel elit. Nunc quis nisl eu sapien pretium volutpat. Fusce metus quam, elementum sit amet purus et, hendrerit viverra velit. Nunc lacus augue, tempor ut tincidunt venenatis, tincidunt vitae nibh. Nulla lacus sapien, venenatis ut pulvinar nec, malesuada vel odio.
+
+    Fusce neque orci, egestas ut auctor quis, pulvinar eu dui. In eget erat vitae metus congue mattis. Integer bibendum velit ultrices leo cursus interdum. Mauris vestibulum ipsum at nulla bibendum placerat. Quisque in condimentum urna, eu tempor velit. Aenean in vehicula risus, vel faucibus ligula. Cras non augue ligula. Integer tristique elit eu pharetra faucibus. Curabitur tortor ipsum, tempus at risus sit amet, vestibulum dignissim lorem. Maecenas fringilla dictum varius. Suspendisse eu convallis tortor, in porttitor urna. Proin luctus nunc sed posuere tempus. Etiam lectus eros, placerat non purus ac, cursus fringilla tellus. Donec condimentum venenatis maximus. Sed lobortis erat id elit elementum aliquam. Sed nisi felis, molestie at lectus facilisis, imperdiet auctor ante.</div>
+    <h2>Reverse Direction</h2>
+    <div class="box2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac posuere lacus, eget dapibus urna. Proin commodo posuere orci, a mattis diam rhoncus ac. Curabitur rutrum mi purus, congue vulputate libero placerat a. Quisque aliquam ante varius risus lobortis lobortis. Cras viverra dignissim sagittis. Nullam porttitor convallis ullamcorper. Suspendisse in blandit lectus. Curabitur justo magna, convallis in dolor at, egestas condimentum turpis.
+
+    Vivamus fermentum mauris finibus nunc placerat dignissim. Nullam at mollis massa. Ut nunc tellus, semper ac nunc id, faucibus vestibulum dui. Donec neque mi, congue et eleifend nec, auctor quis odio. Nullam eu leo id elit eleifend sodales. Sed tempus viverra justo, mollis semper nibh iaculis in. Nullam consequat dapibus turpis, ut aliquam eros scelerisque id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi vulputate eros quis lectus finibus, ac malesuada velit molestie. Sed porttitor est in bibendum rutrum. Aliquam erat volutpat. Proin non velit sed metus ullamcorper blandit vitae vel elit. Nunc quis nisl eu sapien pretium volutpat. Fusce metus quam, elementum sit amet purus et, hendrerit viverra velit. Nunc lacus augue, tempor ut tincidunt venenatis, tincidunt vitae nibh. Nulla lacus sapien, venenatis ut pulvinar nec, malesuada vel odio.
+
+    Fusce neque orci, egestas ut auctor quis, pulvinar eu dui. In eget erat vitae metus congue mattis. Integer bibendum velit ultrices leo cursus interdum. Mauris vestibulum ipsum at nulla bibendum placerat. Quisque in condimentum urna, eu tempor velit. Aenean in vehicula risus, vel faucibus ligula. Cras non augue ligula. Integer tristique elit eu pharetra faucibus. Curabitur tortor ipsum, tempus at risus sit amet, vestibulum dignissim lorem. Maecenas fringilla dictum varius. Suspendisse eu convallis tortor, in porttitor urna. Proin luctus nunc sed posuere tempus. Etiam lectus eros, placerat non purus ac, cursus fringilla tellus. Donec condimentum venenatis maximus. Sed lobortis erat id elit elementum aliquam. Sed nisi felis, molestie at lectus facilisis, imperdiet auctor ante.</div>
+    <h2>allowThrowing: false</h2>
+    <div class="box3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac posuere lacus, eget dapibus urna. Proin commodo posuere orci, a mattis diam rhoncus ac. Curabitur rutrum mi purus, congue vulputate libero placerat a. Quisque aliquam ante varius risus lobortis lobortis. Cras viverra dignissim sagittis. Nullam porttitor convallis ullamcorper. Suspendisse in blandit lectus. Curabitur justo magna, convallis in dolor at, egestas condimentum turpis.
+
+    Vivamus fermentum mauris finibus nunc placerat dignissim. Nullam at mollis massa. Ut nunc tellus, semper ac nunc id, faucibus vestibulum dui. Donec neque mi, congue et eleifend nec, auctor quis odio. Nullam eu leo id elit eleifend sodales. Sed tempus viverra justo, mollis semper nibh iaculis in. Nullam consequat dapibus turpis, ut aliquam eros scelerisque id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi vulputate eros quis lectus finibus, ac malesuada velit molestie. Sed porttitor est in bibendum rutrum. Aliquam erat volutpat. Proin non velit sed metus ullamcorper blandit vitae vel elit. Nunc quis nisl eu sapien pretium volutpat. Fusce metus quam, elementum sit amet purus et, hendrerit viverra velit. Nunc lacus augue, tempor ut tincidunt venenatis, tincidunt vitae nibh. Nulla lacus sapien, venenatis ut pulvinar nec, malesuada vel odio.
+
+    Fusce neque orci, egestas ut auctor quis, pulvinar eu dui. In eget erat vitae metus congue mattis. Integer bibendum velit ultrices leo cursus interdum. Mauris vestibulum ipsum at nulla bibendum placerat. Quisque in condimentum urna, eu tempor velit. Aenean in vehicula risus, vel faucibus ligula. Cras non augue ligula. Integer tristique elit eu pharetra faucibus. Curabitur tortor ipsum, tempus at risus sit amet, vestibulum dignissim lorem. Maecenas fringilla dictum varius. Suspendisse eu convallis tortor, in porttitor urna. Proin luctus nunc sed posuere tempus. Etiam lectus eros, placerat non purus ac, cursus fringilla tellus. Donec condimentum venenatis maximus. Sed lobortis erat id elit elementum aliquam. Sed nisi felis, molestie at lectus facilisis, imperdiet auctor ante.</div>
+</div>
+<!-- 1. Load the plugin after jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script src="jquery.dragnscroll.js"></script>
+<script>
+  // call the plugin on the element and done.
+  $('.box').dragNscroll()
+  $('.box2').dragNscroll({
+    reverse: true
+    // pass options here...
+  })
+  $('.box3').dragNscroll({
+    allowThrowing: false
+  })
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</body>
+</html>

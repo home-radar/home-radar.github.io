@@ -1,0 +1,23 @@
+{
+   "name": "jquery.dragnscroll",
+   "version": "1.0.0",
+   "description": "A jQuery plugin that provides web pages or any scrollable page element with scrolling functionality that mimics touch scrolling on smartphones, including the ability to \"throw\" the content you are dragging.",
+   "main": "dist/jquery.dragnscroll.js",
+   "scripts": {
+      "test": "mocha"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/faulkj/jQuery.dragNscroll.git"
+   },
+   "keywords": [
+      "jQuery",
+      "scrolling"
+   ],
+   "author": "Joshua Faulkenberry <j@joshuafaulkenberry.com> (https://joshuafaulkenberry.com/)",
+   "license": "Kopimi",
+   "bugs": {
+      "url": "https://github.com/faulkj/jQuery.dragNscroll/issues"
+   },
+   "homepage": "https://github.com/faulkj/jQuery.dragNscroll#readme"
+}

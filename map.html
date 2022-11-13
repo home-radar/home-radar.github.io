@@ -39,33 +39,46 @@ layout: default
       <h1>Apartment listings</h1>
       <p> Click on any of the apartment icons on the map to see more information about the apartment</p>
 
-      <table>
-
+      <div class="apartment-card-container">
       {% for item in site.data.apartments %}
-          <tr>
-            <td><label for="{{ apartment_id }}" class="icon-button">
+      {% assign apartment_id    = item.aptName | slugify %}
+          <div class="apartment-card">
+            <label for="{{ apartment_id }}" class="icon-button">
 
+              <h3>{{ item.aptName }}</h3>
+              <p>{{ item.numOfBeds }} beds</p>
+
+              {% if item.code == "LOF" %}
+                <p>{{ item.fourBedLow }}-
+              {% elsif item.studioLow contains "$" %}
+                <p>{{ item.studioLow }}-
+              {% elsif item.oneBedLow contains "$" and item.studioLow == "" %}
+                <p>{{ item.oneBedLow }}-
+              {% else %}
+                <p>{{ item.oneBedLow }}-
+              {% endif %}
+                </p>
+
+              <img src="assets/images/Map.png">
               <input type="radio"
-                      name="content-toggle"
+                      name="content-opener"
                       tabindex="{% increment variable %}"
                       value="{{ apartment_id }}"
                       id="{{ apartment_id }}"
                       class="icon-hover">
-              <p>{{ item.aptName }}</p>
 
-            </label></td>
-          </tr>
+            </label>
+          </div>
       {% endfor %}
-      </table>
-
+      </div>
 
     </div>
 
 
     {% for item in site.data.apartments %}
       {% assign apartment_id    = item.aptName | slugify %}
-
       <div class="{{ apartment_id }} apartment-content" id="{{ apartment_id }}-content">
+        <button type="button" class="uncheck"> &#8592; back to listings</button>
         <h1>{{ item.aptName }}</h1>
       </div>
 
@@ -77,28 +90,41 @@ layout: default
 
 
 <script>
-
   const ele = document.getElementById('map-page-container');
   ele.scrollTop = 200;
-  ele.scrollLeft = 400;
-
+  ele.scrollLeft = 500;
 </script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-
 $(document).ready(function(){
     $('input[type="radio"]').click(function(){
         var inputValue = $(this).attr("value");
         var target = $("." + inputValue);
 
         $(".apartment-content").not(target).hide();
-        $(".base-content").not(target).hide();
         $(".base-content").hide();
 
         $(target).show();
     });
-});
 
+    $('.uncheck').click(function(){
+      var inputValue = $(this).attr("value");
+      var target = $("." + inputValue);
+
+      $(".apartment-content").hide();
+      $(".base-content").show();
+      $(target).hide();
+      $('input[name="content-toggle"]').prop('checked', false);
+    });
+});
 </script>
-<!-- <input type="radio" name="content-label" class="icon-hover" id="{{ apartment_id }}"><label for="{{ apartment_id }}"></label> -->
+
+<script src="assets/js/drag-to-scroll/src/jquery.dragnscroll.js"></script>
+<script>
+  $('.map-page').dragNscroll({
+  acceleration:.25,
+  deceleration:.25,
+  decelRate:50,
+  })
+</script>
