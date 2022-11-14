@@ -32,7 +32,7 @@ layout: default
 
     <img src="assets/images/Map.png" class="map-img" id="map-image">
     </div>
-    
+
   </div>
 
   <div class="right-container" id="parent">
@@ -87,7 +87,8 @@ layout: default
               {% endif %}
               </p>
 
-              <img src="assets/images/Map.png">
+
+              <img src="assets/images/apartments/{{ item.aptName | slugify }}.png">
               <input type="radio"
                       name="content-opener"
                       tabindex="{% increment variable %}"
@@ -107,7 +108,8 @@ layout: default
       {% assign apartment_id    = item.aptName | slugify %}
       <div class="{{ apartment_id }} apartment-content" id="{{ apartment_id }}-content">
         <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>{{ item.aptName }}</h1>
+        <h1>{{ item.aptName }} </h1>
+        <p>Managed by {{ item.managementCompany }}</p>
 
         <p>{{ item.address }}</p>
 

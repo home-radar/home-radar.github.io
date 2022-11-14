@@ -12,10 +12,15 @@
     }
   }
 
+  .nav-logo {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   div.content-map {
     max-width: 100vw;
     min-height: calc(100vh - 100px);
-    height: 200vh;
+    height: 100vh;
     .map-page {
       width: 100vw;
       min-height: 1000px;

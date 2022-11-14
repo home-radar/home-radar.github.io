@@ -1,5 +1,13 @@
 @media screen and (max-width: 1150px) {
+  .right-container{
+    width: 38vw;
+  }
+
   .base-content .apartment-card-container{
     column-count: 1;
   }
+}
+
+@media screen and (max-width: 700px) {
+  
 }
