@@ -159,8 +159,8 @@ layout: default
             </p>
           </div>
 
-          <a href="{{ item.websiteLink }}" target="_blank" class="website-link">visit their site</a>
-          <p >managed by {{ item.managementCompany }}</p>
+          <a href="{{ item.websiteLink }}" target="_blank" class="website-link">Visit their site</a>
+          <p >Managed by {{ item.managementCompany }}</p>
           <p>{{ item.address }}</p>
 
           {% if item.distance != "" %}
@@ -206,12 +206,12 @@ layout: default
           </div>
 
           <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-          <p class="apt-description">{{ item.locationDesc }} You should rent here if {{ item.youWant }}</p>
+          <p class="apt-description">{{ item.locationDesc }}{% if item.youWant !="" %} You should rent here if {{ item.youWant }}{% endif %}</p>
 
           <hr>
 
           <div class="table-div prices-div">
-            <h3>prices</h3>
+            <h3>Prices</h3>
             <table class="main-table prices-table">
               {% if item.studioLow contains "$" %}
               <tr>
@@ -274,7 +274,7 @@ layout: default
           <hr>
 
           <div class="table-div features-div">
-            <h3>features</h3>
+            <h3>Features</h3>
             <table class="main-table features-table">
               <tr>
                 <th>utilities</th>
@@ -323,7 +323,7 @@ layout: default
 
           {% if item.amenities != "" or item.fitnessCenter == "yes" %}
           <div class="table-div amenities-div">
-            <h3>amenities</h3>
+            <h3>Amenities</h3>
 
 
             <ul>
@@ -352,7 +352,7 @@ layout: default
 
           <div class="table-div problems-div">
             <div>
-            <h3>reported problems</h3>
+            <h3>Reported problems</h3>
             <a class="aaaa not-it" href="https://forms.gle/Uf2M8rjU7J2nE84y7" target="_blank">submit a review</a>
 
             </div>
