@@ -16,6 +16,8 @@ hr { border: 0.5px solid #ADBDD4; }
 
 nav { background: #E4BEB7; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 100vw; height: 100px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 99999; }
 
+nav img { width: 5%; }
+
 .nav-buttons a { color: #4D6E73; font-size: 20px; padding: 15px; margin: 0; transition: ease .3s; font-family: Quicksand; }
 
 .nav-buttons a:hover { background: rgba(255, 252, 244, 0.5); color: #33494D; }
