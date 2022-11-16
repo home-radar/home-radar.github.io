@@ -79,6 +79,14 @@ layout: default
                   {{ item.fourBedLow }} -
                 {% elsif item.code == "CAN" %}
                   {{ item.fourBedLow }} -
+                {% elsif item.code == "MPT" %}
+                  {{ item.fourBedLow }} -
+                {% elsif item.code == "CHE" %}
+                  {{ item.oneBedLow }}+
+                {% elsif item.code == "RAM" %}
+                  {{ item.twoBedLow }} -
+                {% elsif item.code == "GRO" %}
+                  up to {{ item.oneBedHigh }}
                 {% elsif item.studioLow contains "$" %}
                   {{ item.studioLow }} -
                 {% elsif item.oneBedLow contains "$" and item.studioLow == "" %}
@@ -94,6 +102,10 @@ layout: default
                   {{ item.studioLow }}/person
                 {% elsif item.code == "CAN" %}
                   {{ item.oneBedLow }}/person
+                {% elsif item.code == "MPT" %}
+                  {{ item.studioLow }}/person
+                {% elsif item.code == "RAM" %}
+                  {{ item.studioLow }}/person
                 {% elsif item.fourBedHigh contains "$" %}
                   {{ item.fourBedHigh }}
                 {% elsif item.fourBedLow contains "$" and item.fourBedHigh == "" %}
@@ -104,7 +116,10 @@ layout: default
                   {{ item.threeBedLow }}
                 {% elsif item.twoBedHigh contains "$" and item.threeBedLow == "" %}
                   {{ item.twoBedHigh }}
+                {% elsif item.twoBedLow contains "$" and item.threeBedHigh == "" %}
+                  {{ item.twoBedLow }}
                 {% endif %}
+
                 </p>
 
 
