@@ -212,7 +212,7 @@ div.table-div h3 { margin: 3px 0; width: 125px; }
 
 .main-table tr:nth-child(odd) { background: rgba(228, 191, 184, 0.25); }
 
-.main-table th, .main-table td { padding: 5px 16px; min-width: 125px; }
+.main-table th, .main-table td { padding: 5px 16px; min-width: 135px; }
 
 .main-table th { text-align: right; border: 2px solid #64433D; border-left: none; width: 100px; }
 

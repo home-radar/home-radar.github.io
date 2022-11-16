@@ -86,40 +86,6 @@
   });
 </script>
 
-    <!DOCTYPE html>
-<style>
-    .apartment{
-        color: #fff;
-        padding: 20px;
-        display: none;
-        margin-top: 20px;
-    }
-    .red{ background: #ff0000; }
-    .green{ background: #228B22; }
-    .blue{ background: #0000ff; }
-</style>
-
-<body>
-    <div>
-      
-    </div>
-
     
-
-
-</body>
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-$(document).ready(function(){
-    $('input[type="radio"]').click(function(){
-        var inputValue = $(this).attr("value");
-        var targetBox = $("." + inputValue);
-        $(".apartment").not(targetBox).hide();
-        $(targetBox).show();
-    });
-});
-</script>
-
   </body>
 </html>
