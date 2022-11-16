@@ -42,7 +42,7 @@ layout: default
       <div class="base-content">
 
         <h1>Apartment Listings</h1>
-        <p> Click on any of the icons on the map or listings below to see more information about the apartment.<br><br>We rate our apartments based on reviews of maintenance, management, pest control, and general happiness of tenants. Learn more about our rating system.</p>
+        <p> Click on any of the icons on the map or listings below to see more information about the apartment.<br><br>We rate our apartments based on our knowledge and reviews of maintenance, management, pest control, and general happiness of tenants. We're not perfect though, so <a href="" target="_blank" class="not-it">submit a review</a> to improve our ratings!</p>
 
         <div class="apartment-card-container">
         {% for item in site.data.apartments %}
@@ -143,8 +143,9 @@ layout: default
               {% endif %}
             </p>
           </div>
-          <p>managed by {{ item.managementCompany }}</p>
 
+          <a href="{{ item.websiteLink }}" target="_blank" class="website-link">visit their site</a>
+          <p >managed by {{ item.managementCompany }}</p>
           <p>{{ item.address }}</p>
 
           {% if item.distance != "" %}
@@ -333,11 +334,12 @@ layout: default
           <hr>
           {% endif %}
 
-          <div class="table-div amenities-div">
+          <div class="table-div problems-div">
             <h3>reported problems</h3>
 
+          <div class="problems-div-div">
             {% if item.problems != "" %}
-              <a>submit a review</a>
+              <a class="aaaa not-it" href="" target="_blank">submit a review</a>
               <ul>
                 {% assign problems = item.problems | split: "," %}
 
@@ -345,9 +347,11 @@ layout: default
                   <li>{{ problem }}</li>
                 {% endfor %}
               <ul>
-            {% else %}
-              <p>this apartment has no reported problems. <a>submit a review</a></p>
+              {% else %}
+              <p>this apartment has no reported problems. <a class="not-it" href="" target="_blank">submit a review</a></p>
             {% endif %}
+          </div>
+
 
 
           </div>

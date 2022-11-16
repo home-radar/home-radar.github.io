@@ -350,5 +350,42 @@ div.table-div {
   height: 100%;
 }
 
+.problems-div-div {
+  max-width: calc(100% - 100px);
+  min-width: 200px;
+  .aaaa {
+    margin: 20px 20px;
+    margin-top: 10px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  margin: 0;
+}
+
+.website-link {
+  text-decoration: underline;
+  position: relative;
+  top: 4px;
+  transition: ease .3s;
+
+  &:hover {
+    color: $dark-pink;
+  }
+}
+
+.not-it {
+  text-decoration: underline;
+  transition: ease .3s;
+
+  &:hover {
+    color: $dark-pink;
+  }
+}
+
 @import "tablet.scss",
         "phone.scss";

@@ -1,7 +1,7 @@
 - name: Map
   link: /
-- name: Listings
-  link: /listings.html
+# - name: Listings
+#   link: /listings.html
 - name: FAQ
   link: https://kyreefisher01.wixsite.com/home-radar/blank-2
 - name: About Us

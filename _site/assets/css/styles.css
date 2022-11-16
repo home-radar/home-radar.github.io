@@ -6,7 +6,7 @@ html { padding: 0; margin: 0; }
 
 body { background: #FFFCF4; padding: 0; margin: 0; }
 
-a { text-decoration: none; }
+a { font-family: Jost; font-size: 18px; color: #4D6E73; text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 { font-family: Poppins; color: #33494D; }
 
@@ -16,9 +16,7 @@ hr { border: 0.5px solid #ADBDD4; }
 
 nav { background: #E4BEB7; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 100vw; height: 100px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 99999; }
 
-.nav-buttons { font-family: Quicksand; }
-
-.nav-buttons a { color: #4D6E73; font-size: 20px; padding: 15px; margin: 0; transition: ease .3s; }
+.nav-buttons a { color: #4D6E73; font-size: 20px; padding: 15px; margin: 0; transition: ease .3s; font-family: Quicksand; }
 
 .nav-buttons a:hover { background: rgba(255, 252, 244, 0.5); color: #33494D; }
 
@@ -221,6 +219,22 @@ div.table-div h3 { margin: 3px 0; width: 100px; }
 .main-table td { border: 2px solid #64433D; border-right: none; }
 
 .rating { color: #FFFCF4; background: #3896A0; border-radius: 20px; padding: 4px 10px; margin: 4px 4px 4px 0; height: 100%; }
+
+.problems-div-div { max-width: calc(100% - 100px); min-width: 200px; }
+
+.problems-div-div .aaaa { margin: 20px 20px; margin-top: 10px; }
+
+.problems-div-div a { text-decoration: underline; }
+
+ul { margin: 0; }
+
+.website-link { text-decoration: underline; position: relative; top: 4px; transition: ease .3s; }
+
+.website-link:hover { color: #64433D; }
+
+.not-it { text-decoration: underline; transition: ease .3s; }
+
+.not-it:hover { color: #64433D; }
 
 @media screen and (max-width: 1150px) { .right-container { width: 38vw; } .base-content .apartment-card-container { column-count: 1; } }
 
