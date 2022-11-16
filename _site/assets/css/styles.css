@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital@0;1&family=Poppins:wght@500&family=Quicksand:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;1,400&display=swap");
 * { box-sizing: border-box; }
 
 html { padding: 0; margin: 0; }
@@ -10,6 +11,8 @@ a { text-decoration: none; }
 h1, h2, h3, h4, h5, h6 { font-family: Poppins; color: #33494D; }
 
 p, td, th, li, button { font-family: Jost; color: #4D6E73; font-size: 18px; padding: 0; margin: 0; }
+
+hr { border: 0.5px solid #ADBDD4; }
 
 nav { background: #E4BEB7; box-shadow: 0 0 10px 0 rgba(99, 67, 61, 0.5); width: 100vw; height: 100px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 99999; }
 
@@ -171,9 +174,9 @@ div.content-map .map-page { width: 65vw; min-height: 1000px; height: calc(100vh 
 
 .base-content .apartment-card-container .apartment-card h3 { padding: 0 20px; margin: 10px 0; }
 
-.base-content .apartment-card-container .apartment-card p { padding: 0 20px; margin: 10px 0; }
+.base-content .apartment-card-container .apartment-card p { padding: 0 20px; margin: 5px 0; }
 
-.base-content .apartment-card-container .apartment-card .totalRating { max-width: 150px; margin-left: 8px; }
+.base-content .apartment-card-container .apartment-card .totalRating { max-width: 149px; margin-left: 8px; }
 
 .base-content .apartment-card-container .apartment-card .unrated { max-width: 155px; margin-left: 8px; }
 
@@ -181,7 +184,7 @@ div.content-map .map-page { width: 65vw; min-height: 1000px; height: calc(100vh 
 
 .apartment-content { margin: 0; word-break: break-word; display: none; }
 
-.apartment-content button { background: none; border: 1px solid #4D6E73; border-radius: 20px; font-size: 16px; padding: 2px 10px; position: relative; right: 20px; transition: ease .2s; }
+.apartment-content button { background: none; border: 1px solid #4D6E73; border-radius: 20px; font-size: 16px; padding: 2px 10px; position: relative; right: 20px; top: 5px; transition: ease .2s; }
 
 .apartment-content button:hover { background: rgba(228, 191, 184, 0.5); border: 1px solid #FFFCF4; }
 
@@ -191,7 +194,31 @@ div.content-map .map-page { width: 65vw; min-height: 1000px; height: calc(100vh 
 
 .apartment-content .apartment-content-image { max-width: 100%; }
 
-.apartment-content .apartment-content-header { display: flex; }
+.apartment-content .apartment-content-header { margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; }
+
+.apartment-content .apartment-content-header h1 { margin-right: 5%; margin-bottom: 0; }
+
+.apartment-content .apartment-content-header .totalRating { position: relative; top: 5px; }
+
+.apt-description { margin-bottom: 20px; }
+
+div.table-div { margin: 20px 0; display: flex; flex-wrap: wrap; }
+
+div.table-div h3 { margin: 3px 0; width: 100px; }
+
+.main-table { width: calc(100% - 100px); border-collapse: collapse; }
+
+.main-table tr:first-child { border-top: hidden; }
+
+.main-table tr:last-child { border-bottom: hidden; }
+
+.main-table tr:nth-child(odd) { background: rgba(228, 191, 184, 0.25); }
+
+.main-table th, .main-table td { padding: 5px 16px; min-width: 120px; }
+
+.main-table th { text-align: right; border: 2px solid #64433D; border-left: none; width: 100px; }
+
+.main-table td { border: 2px solid #64433D; border-right: none; }
 
 .rating { color: #FFFCF4; background: #3896A0; border-radius: 20px; padding: 4px 10px; margin: 4px 4px 4px 0; height: 100%; }
 

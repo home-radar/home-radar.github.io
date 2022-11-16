@@ -41,8 +41,8 @@ layout: default
     <div class="right-container" id="parent">
       <div class="base-content">
 
-        <h1>Apartment listings</h1>
-        <p> Click on any of the apartment icons on the map to see more information about the apartment</p>
+        <h1>Apartment Listings</h1>
+        <p> Click on any of the icons on the map or listings below to see more information about the apartment.<br><br>We rate our apartments based on reviews of maintenance, management, pest control, and general happiness of tenants. Learn more about our rating system.</p>
 
         <div class="apartment-card-container">
         {% for item in site.data.apartments %}
@@ -77,6 +77,8 @@ layout: default
                   {{ item.twoBedLow }} -
                 {% elsif item.code == "ASC" %}
                   {{ item.fourBedLow }} -
+                {% elsif item.code == "CAN" %}
+                  {{ item.fourBedLow }} -
                 {% elsif item.studioLow contains "$" %}
                   {{ item.studioLow }} -
                 {% elsif item.oneBedLow contains "$" and item.studioLow == "" %}
@@ -90,6 +92,8 @@ layout: default
                   {{ item.twoBedHigh }}/person
                 {% elsif item.code == "ASC" %}
                   {{ item.studioLow }}/person
+                {% elsif item.code == "CAN" %}
+                  {{ item.oneBedLow }}/person
                 {% elsif item.fourBedHigh contains "$" %}
                   {{ item.fourBedHigh }}
                 {% elsif item.fourBedLow contains "$" and item.fourBedHigh == "" %}
@@ -139,12 +143,12 @@ layout: default
               {% endif %}
             </p>
           </div>
-          <p>Managed by {{ item.managementCompany }}</p>
+          <p>managed by {{ item.managementCompany }}</p>
 
           <p>{{ item.address }}</p>
 
           {% if item.distance != "" %}
-            <p>{{ item.distance }} miles | {{ item.walk }} min walk to the compass</p>
+            <p><strong>{{ item.distance }} miles | {{ item.walk }} min walk to the compass</strong></p>
           {% endif %}
 
           <div class="apartment-page-icons">
@@ -186,80 +190,169 @@ layout: default
           </div>
 
           <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-          <p>{{ item.locationDesc }}</p>
+          <p class="apt-description">{{ item.locationDesc }} You should rent here if {{ item.youWant }}</p>
 
-          <h3>prices</h3>
-          <table>
-            {% if item.studioLow contains "$" %}
-            <tr>
-              <th>studio</th>
-              <td>{{ item.studioLow }}
-                {% if item.studioHigh contains "$" %}
-                  - {{ item.studioHigh }}<td>
-                {% else %}
-                  <td>
-                {% endif %}
-            </tr>
-            {% endif %}
+          <hr>
 
-
-            {% if item.oneBedLow contains "$" %}
-            <tr>
-              <th>one bed</th>
-              <td>{{ item.oneBedLow }}
-                {% if item.oneBedHigh contains "$" %}
-                  - {{ item.oneBedHigh }}<td>
-                {% else %}
-                  <td>
-                {% endif %}
-            </tr>
-            {% endif %}
-
-            {% if item.twoBedLow contains "$" %}
-            <tr>
-              <th>two bed</th>
-              <td>{{ item.twoBedLow }}
-                {% if item.twoBedHigh contains "$" %}
-                  - {{ item.twoBedHigh }}<td>
-                {% else %}
-                  <td>
-                {% endif %}
-            </tr>
-            {% endif %}
-
-            {% if item.threeBedLow contains "$" %}
-            <tr>
-              <th>three bed</th>
-              <td>{{ item.threeBedLow }}
-                {% if item.threeBedHigh contains "$" %}
-                  - {{ item.threeBedHigh }}<td>
-                {% else %}
-                  <td>
-                {% endif %}
-            </tr>
-            {% endif %}
-
-            {% if item.fourBedLow contains "$" %}
-            <tr>
-              <th>four bed</th>
-              <td>{{ item.fourBedLow }}
-                {% if item.fourBedHigh contains "$" %}
-                  - {{ item.fourBedHigh }}<td>
-                {% else %}
-                  <td>
-                {% endif %}
-            </tr>
-            {% endif %}
-
-            <tr>
-              {% if item.fourBedLow contains "$" %}
-                <th>four bed</th>
+          <div class="table-div prices-div">
+            <h3>prices</h3>
+            <table class="main-table prices-table">
+              {% if item.studioLow contains "$" %}
+              <tr>
+                <th>studio</th>
+                <td>{{ item.studioLow }}
+                  {% if item.studioHigh contains "$" %}
+                    - {{ item.studioHigh }}
+                  {% endif %}
+                </td>
+              </tr>
               {% endif %}
-            </tr>
 
-          </table>
+
+              {% if item.oneBedLow contains "$" %}
+              <tr>
+                <th>one bed</th>
+                <td>{{ item.oneBedLow }}
+                  {% if item.oneBedHigh contains "$" %}
+                    - {{ item.oneBedHigh }}
+                  {% endif %}
+                </td>
+              </tr>
+              {% endif %}
+
+              {% if item.twoBedLow contains "$" %}
+              <tr>
+                <th>two bed</th>
+                <td>{{ item.twoBedLow }}
+                  {% if item.twoBedHigh contains "$" %}
+                    - {{ item.twoBedHigh }}
+                  {% endif %}
+                </td>
+              </tr>
+              {% endif %}
+
+              {% if item.threeBedLow contains "$" %}
+              <tr>
+                <th>three bed</th>
+                <td>{{ item.threeBedLow }}
+                  {% if item.threeBedHigh contains "$" %}
+                    - {{ item.threeBedHigh }}
+                  {% endif %}
+                </td>
+              </tr>
+              {% endif %}
+
+              {% if item.fourBedLow contains "$" %}
+              <tr>
+                <th>four bed</th>
+                <td>{{ item.fourBedLow }}
+                  {% if item.fourBedHigh contains "$" %}
+                    - {{ item.fourBedHigh }}
+                  {% endif %}
+                </td>
+              </tr>
+              {% endif %}
+            </table>
+          </div>
+
+          <hr>
+
+          <div class="table-div features-div">
+            <h3>features</h3>
+            <table class="main-table features-table">
+              <tr>
+                <th>utilities</th>
+                <td>{% if item.utilities == "no electric" %}all except electric
+                    {% elsif item.utilities != "?"%}{{ item.utilities }}
+                    {% else %}info not found{% endif %}
+                </td>
+              </tr>
+
+              <tr>
+                <th>wifi</th>
+                <td>{% if item.wifi == "yes"%}high speed wifi
+                    {% else %}unreliable or slow{% endif %}
+                </td>
+              </tr>
+
+              <tr>
+                <th>a/c</th>
+                <td>{% if item.ac == "yes"%}central A/C
+                    {% else %}{{ item.ac }}{% endif %}
+                </td>
+              </tr>
+
+              <tr>
+                <th>laundry</th>
+                <td>{% if item.laundry == "in-unit"%}in-unit washer/drayer
+                    {% elsif item.laundry != "?" %}{{ item.laundry }}
+                    {% else %}info not found{% endif %}
+                </td>
+              </tr>
+
+              <tr>
+                <th>parking</th>
+                <td>{{ item.parkingInfo }}</td>
+              </tr>
+
+              <tr>
+                <th>pets</th>
+                <td>{{ item.pets }}</td>
+              </tr>
+
+            </table>
+          </div>
+
+          <hr>
+
+          {% if item.amenities != "" or item.fitnessCenter == "yes" %}
+          <div class="table-div amenities-div">
+            <h3>amenities</h3>
+
+
+            <ul>
+              {% if item.secureEntry == "yes"%}
+                <li>secure entry</li>
+              {% else %}
+                <li>no secure entry</li>
+              {% endif %}
+
+              {% if item.fitnessCenter == "yes" %}
+                <li>fitness center</li>
+              {% endif %}
+
+              {% assign amenities = item.amenities | split: "," %}
+
+              {% for amenity in amenities %}
+                <li>{{ amenity }}</li>
+              {% endfor %}
+
+            <ul>
+          </div>
+
+          <hr>
+          {% endif %}
+
+          <div class="table-div amenities-div">
+            <h3>reported problems</h3>
+
+            {% if item.problems != "" %}
+              <a>submit a review</a>
+              <ul>
+                {% assign problems = item.problems | split: "," %}
+
+                {% for problem in problems %}
+                  <li>{{ problem }}</li>
+                {% endfor %}
+              <ul>
+            {% else %}
+              <p>this apartment has no reported problems. <a>submit a review</a></p>
+            {% endif %}
+
+
+          </div>
+
         </div>
-
       {% endfor %}
     </div>
   </div>

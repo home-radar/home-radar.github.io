@@ -214,11 +214,11 @@ div.content-map {
 
       p {
         padding: 0 20px;
-        margin: 10px 0;
+        margin: 5px 0;
       }
 
       .totalRating {
-        max-width: 150px;
+        max-width: 149px;
         margin-left: 8px;
       }
 
@@ -247,6 +247,7 @@ div.content-map {
     padding: 2px 10px;
     position: relative;
     right: 20px;
+    top: 5px;
     transition: ease .2s;
 
     &:hover {
@@ -271,8 +272,73 @@ div.content-map {
   }
 
   .apartment-content-header {
+    margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    h1 {
+      margin-right: 5%;
+      margin-bottom: 0;
+    }
+
+    .totalRating {
+      position: relative;
+      top: 5px
+    }
+
   }
+}
+
+.apt-description {
+  margin-bottom: 20px;
+}
+
+div.table-div {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  h3 {
+    margin: 3px 0;
+    width: 100px;
+  }
+}
+
+.main-table {
+  width: calc(100% - 100px);
+  // max-width: 300px;
+  border-collapse: collapse;
+
+  tr:first-child {
+    border-top: hidden;
+  }
+
+  tr:last-child {
+    border-bottom: hidden;
+  }
+
+  tr:nth-child(odd) {
+    background: $pink-25;
+  }
+
+  th, td {
+    padding: 5px 16px;
+    min-width: 120px;
+  }
+
+  th {
+    text-align: right;
+    border: 2px solid $dark-pink;
+    border-left: none;
+    width: 100px;
+  }
+
+  td {
+    border: 2px solid $dark-pink;
+    border-right: none;
+  }
+
 }
 
 .rating {
