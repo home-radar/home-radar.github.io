@@ -314,7 +314,11 @@ layout: default
 
               <tr>
                 <th>pets</th>
-                <td>{{ item.pets }}</td>
+                {% if item.pets == "no"%}
+                  <td>not allowed</td>
+                {% else %}
+                  <td>{{ item.pets }}</td>
+                {% endif %}
               </tr>
 
               <tr>
