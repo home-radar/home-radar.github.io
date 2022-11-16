@@ -202,9 +202,9 @@ div.content-map .map-page { width: 65vw; min-height: 1000px; height: calc(100vh 
 
 div.table-div { margin: 20px 0; display: flex; flex-wrap: wrap; }
 
-div.table-div h3 { margin: 3px 0; width: 100px; }
+div.table-div h3 { margin: 3px 0; width: 125px; }
 
-.main-table { width: calc(100% - 100px); border-collapse: collapse; }
+.main-table { width: calc(100% - 125px); border-collapse: collapse; }
 
 .main-table tr:first-child { border-top: hidden; }
 
@@ -212,7 +212,7 @@ div.table-div h3 { margin: 3px 0; width: 100px; }
 
 .main-table tr:nth-child(odd) { background: rgba(228, 191, 184, 0.25); }
 
-.main-table th, .main-table td { padding: 5px 16px; min-width: 120px; }
+.main-table th, .main-table td { padding: 5px 16px; min-width: 125px; }
 
 .main-table th { text-align: right; border: 2px solid #64433D; border-left: none; width: 100px; }
 
@@ -220,7 +220,7 @@ div.table-div h3 { margin: 3px 0; width: 100px; }
 
 .rating { color: #FFFCF4; background: #3896A0; border-radius: 20px; padding: 4px 10px; margin: 4px 4px 4px 0; height: 100%; }
 
-.problems-div-div { max-width: calc(100% - 100px); min-width: 200px; }
+.problems-div-div { max-width: calc(100% - 125px); min-width: 200px; }
 
 .problems-div-div .aaaa { margin: 20px 20px; margin-top: 10px; }
 

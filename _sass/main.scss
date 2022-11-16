@@ -301,12 +301,12 @@ div.table-div {
 
   h3 {
     margin: 3px 0;
-    width: 100px;
+    width: 125px;
   }
 }
 
 .main-table {
-  width: calc(100% - 100px);
+  width: calc(100% - 125px);
   // max-width: 300px;
   border-collapse: collapse;
 
@@ -324,7 +324,7 @@ div.table-div {
 
   th, td {
     padding: 5px 16px;
-    min-width: 120px;
+    min-width: 125px;
   }
 
   th {
@@ -351,7 +351,7 @@ div.table-div {
 }
 
 .problems-div-div {
-  max-width: calc(100% - 100px);
+  max-width: calc(100% - 125px);
   min-width: 200px;
   .aaaa {
     margin: 20px 20px;
