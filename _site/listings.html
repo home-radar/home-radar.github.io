@@ -24,29 +24,69 @@
   <div class="nav-logo home-radar">
     <h1 class="home-radar">Home<br>Radar</h1>
   </div>
-  <div class="nav-buttons">
-    
+
+  <div class="normal-nav">
+    <div class="nav-buttons">
       
-        <a href="/" >Map</a>
+        
+          <a href="/" >Map</a>
+        
       
-    
+        
+          <a href="/listings.html" class="current">Listings</a>
+        
       
-        <a href="/listings.html" class="current">Listings</a>
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" >FAQ</a>
+        
       
-    
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar" >About Us</a>
+        
       
-        <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" >FAQ</a>
+    </div>
+  </div>
+
+  <div class="mobile-nav">
+    <button type="button" class="menu">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </button>
+
+    <div class="nav-buttons mobile-nav-buttons" id="mobileMobile">
       
-    
+        
+          <a href="/" >Map</a>
+        
       
-        <a href="https://kyreefisher01.wixsite.com/home-radar" >About Us</a>
+        
+          <a href="/listings.html" class="current">Listings</a>
+        
       
-    
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" >FAQ</a>
+        
+      
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar" >About Us</a>
+        
+      
+    </div>
   </div>
 </nav>
 
-    <div class="content">
-      <div class="listings-page">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  var $menuButton= $('.menu');
+  var $menuContainer = $('.mobile-nav-buttons');
+  $menuButton.click(function(){
+    $menuButton.toggleClass('menu-click');
+    $menuContainer.toggleClass('menu-slide');
+  });
+</script>
+
+    <div class="listings-page">
   <div class="table-content">
     <h1>Table</h1>
     <p>This table can be used to sort all of the apartments on this website by the features <i>you</i> need.</p>
@@ -72,6 +112,5 @@
 <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-ui.js"></script>
 <script type="text/javascript" src="http://localhost:4000/assets/js/table-java.js"></script>
 
-    </div>
   </body>
 </html>

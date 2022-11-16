@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<div class="content">
 <div class="content-map">
   <div class="map-page" id="map-page-container">
 
@@ -34,203 +35,235 @@ layout: default
     </div>
 
   </div>
+  <div class="button-container">
+    <button type="button" class="apartments-up"><p>&#8963;</p></button>
 
-  <div class="right-container" id="parent">
-    <div class="base-content">
-      <h1>Apartment listings</h1>
-      <p> Click on any of the apartment icons on the map to see more information about the apartment</p>
+    <div class="right-container" id="parent">
+      <div class="base-content">
 
-      <div class="apartment-card-container">
-      {% for item in site.data.apartments %}
-      {% assign apartment_id    = item.aptName | slugify %}
-          <div class="apartment-card">
-            <label for="{{ apartment_id }}" class="icon-button">
+        <h1>Apartment listings</h1>
+        <p> Click on any of the apartment icons on the map to see more information about the apartment</p>
 
-              <h3>{{ item.aptName }}</h3>
+        <div class="apartment-card-container">
+        {% for item in site.data.apartments %}
+        {% assign apartment_id    = item.aptName | slugify %}
+            <div class="apartment-card">
+              <label for="{{ apartment_id }}" class="icon-button">
 
-              <!-- number of rooms -->
-              {% if item.code == "LOF" %}
-                <p>{{ item.numOfBeds }}</p>
-              {% else %}
-                <p>{{ item.numOfBeds }} beds</p>
-              {% endif %}
+                <h3>{{ item.aptName }}</h3>
 
-              <!-- low range of rent -->
-              <p>
-              {% if item.code == "LOF" %}
-                {{ item.twoBedLow }} -
-              {% elsif item.code == "ASC" %}
-                {{ item.fourBedLow }} -
-              {% elsif item.studioLow contains "$" %}
-                {{ item.studioLow }} -
-              {% elsif item.oneBedLow contains "$" and item.studioLow == "" %}
-                {{ item.oneBedLow }} -
-              {% elsif item.twoBedLow contains "$" and item.oneBedLow == "" %}
-                {{ item.twoBedLow }} -
-              {% endif %}
+                <p {% if item.totalRating == "?" %}class="rating unrated"{% else %}class="rating totalRating"{% endif %}">rating:
+                  {% if item.totalRating == "good" %}
+                    &#9733;&#9733;&#9733;
+                  {% elsif item.totalRating == "mid" %}
+                    &#9733;&#9733;&#9734;
+                  {% elsif item.totalRating == "bad" %}
+                    &#9733;&#9734;&#9734;
+                  {% else %}
+                    unrated
+                  {% endif %}
+                </p>
 
-              <!-- high range of rent -->
-              {% if item.code == "LOF" %}
-                {{ item.twoBedHigh }}/person
-              {% elsif item.code == "ASC" %}
-                {{ item.studioLow }}/person
-              {% elsif item.fourBedHigh contains "$" %}
-                {{ item.fourBedHigh }}
-              {% elsif item.fourBedLow contains "$" and item.fourBedHigh == "" %}
-                {{ item.fourBedLow }}
-              {% elsif item.threeBedHigh contains "$" and item.fourBedLow == "" %}
-                {{ item.threeBedHigh }}
-              {% elsif item.threeBedLow contains "$" and item.threeBedHigh == "" %}
-                {{ item.threeBedLow }}
-              {% elsif item.twoBedHigh contains "$" and item.threeBedLow == "" %}
-                {{ item.twoBedHigh }}
-              {% endif %}
-              </p>
+                <!-- number of rooms -->
+                {% if item.code == "LOF" %}
+                  <p>{{ item.numOfBeds }}</p>
+                {% else %}
+                  <p>{{ item.numOfBeds }} beds</p>
+                {% endif %}
 
+                <!-- low range of rent -->
+                <p>
+                {% if item.code == "LOF" %}
+                  {{ item.twoBedLow }} -
+                {% elsif item.code == "ASC" %}
+                  {{ item.fourBedLow }} -
+                {% elsif item.studioLow contains "$" %}
+                  {{ item.studioLow }} -
+                {% elsif item.oneBedLow contains "$" and item.studioLow == "" %}
+                  {{ item.oneBedLow }} -
+                {% elsif item.twoBedLow contains "$" and item.oneBedLow == "" %}
+                  {{ item.twoBedLow }} -
+                {% endif %}
 
-              <img src="assets/images/apartments/{{ item.aptName | slugify }}.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="{% increment variable %}"
-                      value="{{ apartment_id }}"
-                      id="{{ apartment_id }}"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      {% endfor %}
-      </div>
-
-    </div>
+                <!-- high range of rent -->
+                {% if item.code == "LOF" %}
+                  {{ item.twoBedHigh }}/person
+                {% elsif item.code == "ASC" %}
+                  {{ item.studioLow }}/person
+                {% elsif item.fourBedHigh contains "$" %}
+                  {{ item.fourBedHigh }}
+                {% elsif item.fourBedLow contains "$" and item.fourBedHigh == "" %}
+                  {{ item.fourBedLow }}
+                {% elsif item.threeBedHigh contains "$" and item.fourBedLow == "" %}
+                  {{ item.threeBedHigh }}
+                {% elsif item.threeBedLow contains "$" and item.threeBedHigh == "" %}
+                  {{ item.threeBedLow }}
+                {% elsif item.twoBedHigh contains "$" and item.threeBedLow == "" %}
+                  {{ item.twoBedHigh }}
+                {% endif %}
+                </p>
 
 
-    {% for item in site.data.apartments %}
-      {% assign apartment_id    = item.aptName | slugify %}
-      <div class="{{ apartment_id }} apartment-content" id="{{ apartment_id }}-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>{{ item.aptName }} </h1>
-        <p>Managed by {{ item.managementCompany }}</p>
+                <img src="assets/images/apartments/{{ item.aptName | slugify }}.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="{% increment variable %}"
+                        value="{{ apartment_id }}"
+                        id="{{ apartment_id }}"
+                        class="icon-hover">
 
-        <p>{{ item.address }}</p>
-
-        {% if item.distance != "" %}
-          <p>{{ item.distance }} miles | {{ item.walk }} min walk to the compass</p>
-        {% endif %}
-
-        <div class="apartment-page-icons">
-          <p>maintence:
-            {% if item.maintenance == "good" %}
-              &#9733;&#9733;&#9733;
-            {% elsif item.maintenance == "mid" %}
-              &#9733;&#9733;&#9734;
-            {% elsif item.maintenance == "bad" %}
-              &#9733;&#9734;&#9734;
-            {% endif %}
-          </p>
-
-          <p>management:
-            {% if item.management == "good" %}
-              &#9733;&#9733;&#9733;
-            {% elsif item.management == "mid" %}
-              &#9733;&#9733;&#9734;
-            {% elsif item.management == "bad" %}
-              &#9733;&#9734;&#9734;
-            {% else %}
-              unrated
-            {% endif %}
-          </p>
-
-          <p>pest control:
-            {% if item.pests == "good" %}
-              &#9733;&#9733;&#9733;
-            {% elsif item.pests == "mid" %}
-              &#9733;&#9733;&#9734;
-            {% elsif item.pests == "bad" %}
-              &#9733;&#9734;&#9734;
-            {% else %}
-              unrated
-            {% endif %}
-          </p>
+              </label>
+            </div>
+        {% endfor %}
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p>{{ item.locationDesc }}</p>
-
-        <h3>prices</h3>
-        <table>
-          {% if item.studioLow contains "$" %}
-          <tr>
-            <th>studio</th>
-            <td>{{ item.studioLow }}
-              {% if item.studioHigh contains "$" %}
-                - {{ item.studioHigh }}<td>
-              {% else %}
-                <td>
-              {% endif %}
-          </tr>
-          {% endif %}
-
-
-          {% if item.oneBedLow contains "$" %}
-          <tr>
-            <th>one bed</th>
-            <td>{{ item.oneBedLow }}
-              {% if item.oneBedHigh contains "$" %}
-                - {{ item.oneBedHigh }}<td>
-              {% else %}
-                <td>
-              {% endif %}
-          </tr>
-          {% endif %}
-
-          {% if item.twoBedLow contains "$" %}
-          <tr>
-            <th>two bed</th>
-            <td>{{ item.twoBedLow }}
-              {% if item.twoBedHigh contains "$" %}
-                - {{ item.twoBedHigh }}<td>
-              {% else %}
-                <td>
-              {% endif %}
-          </tr>
-          {% endif %}
-
-          {% if item.threeBedLow contains "$" %}
-          <tr>
-            <th>three bed</th>
-            <td>{{ item.threeBedLow }}
-              {% if item.threeBedHigh contains "$" %}
-                - {{ item.threeBedHigh }}<td>
-              {% else %}
-                <td>
-              {% endif %}
-          </tr>
-          {% endif %}
-
-          {% if item.fourBedLow contains "$" %}
-          <tr>
-            <th>four bed</th>
-            <td>{{ item.fourBedLow }}
-              {% if item.fourBedHigh contains "$" %}
-                - {{ item.fourBedHigh }}<td>
-              {% else %}
-                <td>
-              {% endif %}
-          </tr>
-          {% endif %}
-
-          <tr>
-            {% if item.fourBedLow contains "$" %}
-              <th>four bed</th>
-            {% endif %}
-          </tr>
-
-        </table>
       </div>
 
-    {% endfor %}
-  </div>
 
+      {% for item in site.data.apartments %}
+        {% assign apartment_id    = item.aptName | slugify %}
+        <div class="{{ apartment_id }} apartment-content" id="{{ apartment_id }}-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
+
+          <div class="apartment-content-header">
+            <h1>{{ item.aptName }}</h1>
+            <p class="rating totalRating">rating:
+              {% if item.totalRating == "good" %}
+                &#9733;&#9733;&#9733;
+              {% elsif item.totalRating == "mid" %}
+                &#9733;&#9733;&#9734;
+              {% elsif item.totalRating == "bad" %}
+                &#9733;&#9734;&#9734;
+              {% else %}
+                unrated
+              {% endif %}
+            </p>
+          </div>
+          <p>Managed by {{ item.managementCompany }}</p>
+
+          <p>{{ item.address }}</p>
+
+          {% if item.distance != "" %}
+            <p>{{ item.distance }} miles | {{ item.walk }} min walk to the compass</p>
+          {% endif %}
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              {% if item.maintenance == "good" %}
+                &#9733;&#9733;&#9733;
+              {% elsif item.maintenance == "mid" %}
+                &#9733;&#9733;&#9734;
+              {% elsif item.maintenance == "bad" %}
+                &#9733;&#9734;&#9734;
+              {% else %}
+                unrated
+              {% endif %}
+            </p>
+
+            <p class="rating">management:
+              {% if item.management == "good" %}
+                &#9733;&#9733;&#9733;
+              {% elsif item.management == "mid" %}
+                &#9733;&#9733;&#9734;
+              {% elsif item.management == "bad" %}
+                &#9733;&#9734;&#9734;
+              {% else %}
+                unrated
+              {% endif %}
+            </p>
+
+            <p class="rating">pest control:
+              {% if item.pests == "good" %}
+                &#9733;&#9733;&#9733;
+              {% elsif item.pests == "mid" %}
+                &#9733;&#9733;&#9734;
+              {% elsif item.pests == "bad" %}
+                &#9733;&#9734;&#9734;
+              {% else %}
+                unrated
+              {% endif %}
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>{{ item.locationDesc }}</p>
+
+          <h3>prices</h3>
+          <table>
+            {% if item.studioLow contains "$" %}
+            <tr>
+              <th>studio</th>
+              <td>{{ item.studioLow }}
+                {% if item.studioHigh contains "$" %}
+                  - {{ item.studioHigh }}<td>
+                {% else %}
+                  <td>
+                {% endif %}
+            </tr>
+            {% endif %}
+
+
+            {% if item.oneBedLow contains "$" %}
+            <tr>
+              <th>one bed</th>
+              <td>{{ item.oneBedLow }}
+                {% if item.oneBedHigh contains "$" %}
+                  - {{ item.oneBedHigh }}<td>
+                {% else %}
+                  <td>
+                {% endif %}
+            </tr>
+            {% endif %}
+
+            {% if item.twoBedLow contains "$" %}
+            <tr>
+              <th>two bed</th>
+              <td>{{ item.twoBedLow }}
+                {% if item.twoBedHigh contains "$" %}
+                  - {{ item.twoBedHigh }}<td>
+                {% else %}
+                  <td>
+                {% endif %}
+            </tr>
+            {% endif %}
+
+            {% if item.threeBedLow contains "$" %}
+            <tr>
+              <th>three bed</th>
+              <td>{{ item.threeBedLow }}
+                {% if item.threeBedHigh contains "$" %}
+                  - {{ item.threeBedHigh }}<td>
+                {% else %}
+                  <td>
+                {% endif %}
+            </tr>
+            {% endif %}
+
+            {% if item.fourBedLow contains "$" %}
+            <tr>
+              <th>four bed</th>
+              <td>{{ item.fourBedLow }}
+                {% if item.fourBedHigh contains "$" %}
+                  - {{ item.fourBedHigh }}<td>
+                {% else %}
+                  <td>
+                {% endif %}
+            </tr>
+            {% endif %}
+
+            <tr>
+              {% if item.fourBedLow contains "$" %}
+                <th>four bed</th>
+              {% endif %}
+            </tr>
+
+          </table>
+        </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
 </div>
 
 
@@ -242,27 +275,36 @@ layout: default
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-$(document).ready(function(){
-    $('input[type="radio"]').click(function(){
+  $(document).ready(function(){
+      $('input[type="radio"]').click(function(){
+          var inputValue = $(this).attr("value");
+          var target = $("." + inputValue);
+
+          $(".apartment-content").not(target).hide();
+          $(".base-content").hide();
+
+          $(target).show();
+      });
+
+      $('.uncheck').click(function(){
         var inputValue = $(this).attr("value");
         var target = $("." + inputValue);
 
-        $(".apartment-content").not(target).hide();
-        $(".base-content").hide();
+        $(".apartment-content").hide();
+        $(".base-content").show();
+        $(target).hide();
+        $('input[name="content-toggle"]').prop('checked', false);
+      });
+  });
+</script>
 
-        $(target).show();
-    });
-
-    $('.uncheck').click(function(){
-      var inputValue = $(this).attr("value");
-      var target = $("." + inputValue);
-
-      $(".apartment-content").hide();
-      $(".base-content").show();
-      $(target).hide();
-      $('input[name="content-toggle"]').prop('checked', false);
-    });
-});
+<script>
+  var $button = $('.apartments-up');
+  var $container = $('.right-container');
+  $button.click(function(){
+    $button.toggleClass('slide-button');
+    $container.toggleClass('slide-container');
+  });
 </script>
 
 <script src="assets/js/drag-to-scroll/src/jquery.dragnscroll.js"></script>

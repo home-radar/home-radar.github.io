@@ -24,29 +24,70 @@
   <div class="nav-logo home-radar">
     <h1 class="home-radar">Home<br>Radar</h1>
   </div>
-  <div class="nav-buttons">
-    
+
+  <div class="normal-nav">
+    <div class="nav-buttons">
       
-        <a href="/" class="current">Map</a>
+        
+          <a href="/" class="current">Map</a>
+        
       
-    
+        
+          <a href="/listings.html" >Listings</a>
+        
       
-        <a href="/listings.html" >Listings</a>
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" >FAQ</a>
+        
       
-    
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar" >About Us</a>
+        
       
-        <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" >FAQ</a>
+    </div>
+  </div>
+
+  <div class="mobile-nav">
+    <button type="button" class="menu">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </button>
+
+    <div class="nav-buttons mobile-nav-buttons" id="mobileMobile">
       
-    
+        
+          <a href="/" class="current">Map</a>
+        
       
-        <a href="https://kyreefisher01.wixsite.com/home-radar" >About Us</a>
+        
+          <a href="/listings.html" >Listings</a>
+        
       
-    
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" >FAQ</a>
+        
+      
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar" >About Us</a>
+        
+      
+    </div>
   </div>
 </nav>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  var $menuButton= $('.menu');
+  var $menuContainer = $('.mobile-nav-buttons');
+  $menuButton.click(function(){
+    $menuButton.toggleClass('menu-click');
+    $menuContainer.toggleClass('menu-slide');
+  });
+</script>
+
     <div class="content">
-      <div class="content-map">
+<div class="content-map">
   <div class="map-page" id="map-page-container">
 
     <div class="left-container" id="left-map-container">
@@ -647,28 +688,6 @@
         </div>
       
         
-        <div id="WBR" class="icon-container">
-          <div class="icon-container-content">
-
-            <img src="assets/images/icons-01.png" class="map icon-normal">
-
-              <label for="1318-west-broad" class="icon-button">
-
-                <input type="radio"
-                        name="content-toggle"
-                        tabindex="27"
-                        value="1318-west-broad"
-                        id="1318-west-broad"
-                        class="icon-hover">
-                <img src="assets/images/icons-02.png" class="map icon-hover">
-                <p>1318 West Broad</p>
-
-              </label>
-
-          </div>
-        </div>
-      
-        
         <div id="RAM" class="icon-container">
           <div class="icon-container-content">
 
@@ -678,7 +697,7 @@
 
                 <input type="radio"
                         name="content-toggle"
-                        tabindex="28"
+                        tabindex="27"
                         value="ramz-apartments-on-broad"
                         id="ramz-apartments-on-broad"
                         class="icon-hover">
@@ -700,7 +719,7 @@
 
                 <input type="radio"
                         name="content-toggle"
-                        tabindex="29"
+                        tabindex="28"
                         value="1510-lofts"
                         id="1510-lofts"
                         class="icon-hover">
@@ -722,7 +741,7 @@
 
                 <input type="radio"
                         name="content-toggle"
-                        tabindex="30"
+                        tabindex="29"
                         value="cary-belvidere-apartments"
                         id="cary-belvidere-apartments"
                         class="icon-hover">
@@ -734,3297 +753,4180 @@
           </div>
         </div>
       
+        
+        <div id="CAN" class="icon-container">
+          <div class="icon-container-content">
+
+            <img src="assets/images/icons-01.png" class="map icon-normal">
+
+              <label for="8-189-canal-street" class="icon-button">
+
+                <input type="radio"
+                        name="content-toggle"
+                        tabindex="30"
+                        value="8-189-canal-street"
+                        id="8-189-canal-street"
+                        class="icon-hover">
+                <img src="assets/images/icons-02.png" class="map icon-hover">
+                <p>8 &#189; Canal Street</p>
+
+              </label>
+
+          </div>
+        </div>
+      
+        
+        <div id="WBR" class="icon-container">
+          <div class="icon-container-content">
+
+            <img src="assets/images/icons-01.png" class="map icon-normal">
+
+              <label for="1318-west-broad" class="icon-button">
+
+                <input type="radio"
+                        name="content-toggle"
+                        tabindex="31"
+                        value="1318-west-broad"
+                        id="1318-west-broad"
+                        class="icon-hover">
+                <img src="assets/images/icons-02.png" class="map icon-hover">
+                <p>1318 West Broad</p>
+
+              </label>
+
+          </div>
+        </div>
+      
 
     <img src="assets/images/Map.png" class="map-img" id="map-image">
     </div>
 
   </div>
+  <div class="button-container">
+    <button type="button" class="apartments-up"><p>&#8963;</p></button>
 
-  <div class="right-container" id="parent">
-    <div class="base-content">
-      <h1>Apartment listings</h1>
-      <p> Click on any of the apartment icons on the map to see more information about the apartment</p>
+    <div class="right-container" id="parent">
+      <div class="base-content">
 
-      <div class="apartment-card-container">
-      
-      
-          <div class="apartment-card">
-            <label for="district-square-apartments" class="icon-button">
+        <h1>Apartment listings</h1>
+        <p> Click on any of the apartment icons on the map to see more information about the apartment</p>
 
-              <h3>District Square Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $925 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,090
-              
-              </p>
-
-
-              <img src="assets/images/apartments/district-square-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="31"
-                      value="district-square-apartments"
-                      id="district-square-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="grace-and-monroe-apartments" class="icon-button">
-
-              <h3>Grace and Monroe Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $912 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,050
-              
-              </p>
-
-
-              <img src="assets/images/apartments/grace-and-monroe-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="32"
-                      value="grace-and-monroe-apartments"
-                      id="grace-and-monroe-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="monroe-park-towers" class="icon-button">
-
-              <h3>Monroe Park Towers</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $986 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,188
-              
-              </p>
-
-
-              <img src="assets/images/apartments/monroe-park-towers.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="33"
-                      value="monroe-park-towers"
-                      id="monroe-park-towers"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="park-plaza-at-belvidere" class="icon-button">
-
-              <h3>Park Plaza at Belvidere</h3>
-
-              <!-- number of rooms -->
-              
-                <p>1 - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,065 -
-              
-
-              <!-- high range of rent -->
-              
-                $1,994
-              
-              </p>
-
-
-              <img src="assets/images/apartments/park-plaza-at-belvidere.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="34"
-                      value="park-plaza-at-belvidere"
-                      id="park-plaza-at-belvidere"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="the-berkshire" class="icon-button">
-
-              <h3>The Berkshire</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $784 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,222
-              
-              </p>
-
-
-              <img src="assets/images/apartments/the-berkshire.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="35"
-                      value="the-berkshire"
-                      id="the-berkshire"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="the-towers-on-franklin" class="icon-button">
-
-              <h3>The Towers On Franklin</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 2 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $905 -
-              
-
-              <!-- high range of rent -->
-              
-                $1,640
-              
-              </p>
-
-
-              <img src="assets/images/apartments/the-towers-on-franklin.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="36"
-                      value="the-towers-on-franklin"
-                      id="the-towers-on-franklin"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="artisan-alley" class="icon-button">
-
-              <h3>Artisan Alley</h3>
-
-              <!-- number of rooms -->
-              
-                <p>1 - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,000 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,100
-              
-              </p>
-
-
-              <img src="assets/images/apartments/artisan-alley.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="37"
-                      value="artisan-alley"
-                      id="artisan-alley"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="theater-row-apartments" class="icon-button">
-
-              <h3>Theater Row Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p>1 - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,300 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,400
-              
-              </p>
-
-
-              <img src="assets/images/apartments/theater-row-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="38"
-                      value="theater-row-apartments"
-                      id="theater-row-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="marshall-adams-apartments" class="icon-button">
-
-              <h3>Marshall Adams Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p>2 - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,500 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,100
-              
-              </p>
-
-
-              <img src="assets/images/apartments/marshall-adams-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="39"
-                      value="marshall-adams-apartments"
-                      id="marshall-adams-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="t-and-e-apartments" class="icon-button">
-
-              <h3>T and E Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $944 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,400
-              
-              </p>
-
-
-              <img src="assets/images/apartments/t-and-e-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="40"
-                      value="t-and-e-apartments"
-                      id="t-and-e-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="the-mezzo-lofts" class="icon-button">
-
-              <h3>The Mezzo Lofts</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 2 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,325 -
-              
-
-              <!-- high range of rent -->
-              
-                $1,882
-              
-              </p>
-
-
-              <img src="assets/images/apartments/the-mezzo-lofts.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="41"
-                      value="the-mezzo-lofts"
-                      id="the-mezzo-lofts"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="iron-house-apartments" class="icon-button">
-
-              <h3>Iron House Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p>1 - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $875 -
-              
-
-              <!-- high range of rent -->
-              
-                $1,800
-              
-              </p>
-
-
-              <img src="assets/images/apartments/iron-house-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="42"
-                      value="iron-house-apartments"
-                      id="iron-house-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="ascend" class="icon-button">
-
-              <h3>Ascend</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 4 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $920 -
-              
-
-              <!-- high range of rent -->
-              
-                $1,450/person
-              
-              </p>
-
-
-              <img src="assets/images/apartments/ascend.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="43"
-                      value="ascend"
-                      id="ascend"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="the-square" class="icon-button">
-
-              <h3>The Square</h3>
-
-              <!-- number of rooms -->
-              
-                <p>1 - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,255 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,922
-              
-              </p>
-
-
-              <img src="assets/images/apartments/the-square.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="44"
-                      value="the-square"
-                      id="the-square"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="eagle-mill-apartments-lofts" class="icon-button">
-
-              <h3>Eagle Mill Apartments & Lofts</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,025 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,400
-              
-              </p>
-
-
-              <img src="assets/images/apartments/eagle-mill-apartments-lofts.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="45"
-                      value="eagle-mill-apartments-lofts"
-                      id="eagle-mill-apartments-lofts"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="pine-courts" class="icon-button">
-
-              <h3>Pine Courts</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $835 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,100
-              
-              </p>
-
-
-              <img src="assets/images/apartments/pine-courts.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="46"
-                      value="pine-courts"
-                      id="pine-courts"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="coliseum-lofts" class="icon-button">
-
-              <h3>Coliseum Lofts</h3>
-
-              <!-- number of rooms -->
-              
-                <p>studio - 3 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $890 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,095
-              
-              </p>
-
-
-              <img src="assets/images/apartments/coliseum-lofts.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="47"
-                      value="coliseum-lofts"
-                      id="coliseum-lofts"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="the-james" class="icon-button">
-
-              <h3>The James</h3>
-
-              <!-- number of rooms -->
-              
-                <p>1 - 4 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,170 -
-              
-
-              <!-- high range of rent -->
-              
-                $3,040
-              
-              </p>
-
-
-              <img src="assets/images/apartments/the-james.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="48"
-                      value="the-james"
-                      id="the-james"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="the-lofts-at-capital-garage" class="icon-button">
-
-              <h3>The Lofts at Capital Garage</h3>
-
-              <!-- number of rooms -->
-              
-                <p>2 beds, 2 people/room</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $514 -
-              
-
-              <!-- high range of rent -->
-              
-                $614/person
-              
-              </p>
-
-
-              <img src="assets/images/apartments/the-lofts-at-capital-garage.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="49"
-                      value="the-lofts-at-capital-garage"
-                      id="the-lofts-at-capital-garage"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="one-canal" class="icon-button">
-
-              <h3>One Canal</h3>
-
-              <!-- number of rooms -->
-              
-                <p>1 - 2 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,400 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,540
-              
-              </p>
-
-
-              <img src="assets/images/apartments/one-canal.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="50"
-                      value="one-canal"
-                      id="one-canal"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="circ-apartments" class="icon-button">
-
-              <h3>Circ Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p>1 - 2 beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-                $1,498 -
-              
-
-              <!-- high range of rent -->
-              
-                $2,840
-              
-              </p>
-
-
-              <img src="assets/images/apartments/circ-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="51"
-                      value="circ-apartments"
-                      id="circ-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="cornish-brewery-apartments" class="icon-button">
-
-              <h3>Cornish Brewery Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/cornish-brewery-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="52"
-                      value="cornish-brewery-apartments"
-                      id="cornish-brewery-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="chesterfield-apartments" class="icon-button">
-
-              <h3>Chesterfield Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/chesterfield-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="53"
-                      value="chesterfield-apartments"
-                      id="chesterfield-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="biggs-building" class="icon-button">
-
-              <h3>Biggs Building</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/biggs-building.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="54"
-                      value="biggs-building"
-                      id="biggs-building"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="1005-grove-apartments" class="icon-button">
-
-              <h3>1005 Grove Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/1005-grove-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="55"
-                      value="1005-grove-apartments"
-                      id="1005-grove-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="1200-west-marshall" class="icon-button">
-
-              <h3>1200 West Marshall</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/1200-west-marshall.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="56"
-                      value="1200-west-marshall"
-                      id="1200-west-marshall"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="marshall-park-townhomes" class="icon-button">
-
-              <h3>Marshall Park Townhomes</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/marshall-park-townhomes.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="57"
-                      value="marshall-park-townhomes"
-                      id="marshall-park-townhomes"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="1318-west-broad" class="icon-button">
-
-              <h3>1318 West Broad</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/1318-west-broad.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="58"
-                      value="1318-west-broad"
-                      id="1318-west-broad"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="ramz-apartments-on-broad" class="icon-button">
-
-              <h3>RAMZ Apartments on Broad</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/ramz-apartments-on-broad.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="59"
-                      value="ramz-apartments-on-broad"
-                      id="ramz-apartments-on-broad"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="1510-lofts" class="icon-button">
-
-              <h3>1510 Lofts</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/1510-lofts.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="60"
-                      value="1510-lofts"
-                      id="1510-lofts"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      
-          <div class="apartment-card">
-            <label for="cary-belvidere-apartments" class="icon-button">
-
-              <h3>Cary Belvidere Apartments</h3>
-
-              <!-- number of rooms -->
-              
-                <p> beds</p>
-              
-
-              <!-- low range of rent -->
-              <p>
-              
-
-              <!-- high range of rent -->
-              
-              </p>
-
-
-              <img src="assets/images/apartments/cary-belvidere-apartments.png">
-              <input type="radio"
-                      name="content-opener"
-                      tabindex="61"
-                      value="cary-belvidere-apartments"
-                      id="cary-belvidere-apartments"
-                      class="icon-hover">
-
-            </label>
-          </div>
-      
-      </div>
-
-    </div>
-
-
-    
-      
-      <div class="district-square-apartments apartment-content" id="district-square-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>District Square Apartments </h1>
-        <p>Managed by Landmark</p>
-
-        <p>111 W Marshall St</p>
-
+        <div class="apartment-card-container">
         
-          <p>0.8 miles | 16 min walk to the compass</p>
         
+            <div class="apartment-card">
+              <label for="district-square-apartments" class="icon-button">
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+                <h3>District Square Apartments</h3>
 
-          <p>management:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9734;&#9734;
+                  
+                </p>
 
-          <p>pest control:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+                <!-- number of rooms -->
+                
+                  <p>studio - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $925 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,090
+                
+                </p>
+
+
+                <img src="assets/images/apartments/district-square-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="32"
+                        value="district-square-apartments"
+                        id="district-square-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="grace-and-monroe-apartments" class="icon-button">
+
+                <h3>Grace and Monroe Apartments</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $912 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,050
+                
+                </p>
+
+
+                <img src="assets/images/apartments/grace-and-monroe-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="33"
+                        value="grace-and-monroe-apartments"
+                        id="grace-and-monroe-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="monroe-park-towers" class="icon-button">
+
+                <h3>Monroe Park Towers</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9734;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $986 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,188
+                
+                </p>
+
+
+                <img src="assets/images/apartments/monroe-park-towers.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="34"
+                        value="monroe-park-towers"
+                        id="monroe-park-towers"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="park-plaza-at-belvidere" class="icon-button">
+
+                <h3>Park Plaza at Belvidere</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,065 -
+                
+
+                <!-- high range of rent -->
+                
+                  $1,994
+                
+                </p>
+
+
+                <img src="assets/images/apartments/park-plaza-at-belvidere.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="35"
+                        value="park-plaza-at-belvidere"
+                        id="park-plaza-at-belvidere"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="the-berkshire" class="icon-button">
+
+                <h3>The Berkshire</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9734;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $784 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,222
+                
+                </p>
+
+
+                <img src="assets/images/apartments/the-berkshire.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="36"
+                        value="the-berkshire"
+                        id="the-berkshire"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="the-towers-on-franklin" class="icon-button">
+
+                <h3>The Towers On Franklin</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9734;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 2 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $905 -
+                
+
+                <!-- high range of rent -->
+                
+                  $1,640
+                
+                </p>
+
+
+                <img src="assets/images/apartments/the-towers-on-franklin.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="37"
+                        value="the-towers-on-franklin"
+                        id="the-towers-on-franklin"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="artisan-alley" class="icon-button">
+
+                <h3>Artisan Alley</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,000 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,100
+                
+                </p>
+
+
+                <img src="assets/images/apartments/artisan-alley.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="38"
+                        value="artisan-alley"
+                        id="artisan-alley"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="theater-row-apartments" class="icon-button">
+
+                <h3>Theater Row Apartments</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,300 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,400
+                
+                </p>
+
+
+                <img src="assets/images/apartments/theater-row-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="39"
+                        value="theater-row-apartments"
+                        id="theater-row-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="marshall-adams-apartments" class="icon-button">
+
+                <h3>Marshall Adams Apartments</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>2 - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,500 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,100
+                
+                </p>
+
+
+                <img src="assets/images/apartments/marshall-adams-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="40"
+                        value="marshall-adams-apartments"
+                        id="marshall-adams-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="t-and-e-apartments" class="icon-button">
+
+                <h3>T and E Apartments</h3>
+
+                <p class="rating unrated"">rating:
+                  
+                    unrated
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $944 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,400
+                
+                </p>
+
+
+                <img src="assets/images/apartments/t-and-e-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="41"
+                        value="t-and-e-apartments"
+                        id="t-and-e-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="the-mezzo-lofts" class="icon-button">
+
+                <h3>The Mezzo Lofts</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 2 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,325 -
+                
+
+                <!-- high range of rent -->
+                
+                  $1,882
+                
+                </p>
+
+
+                <img src="assets/images/apartments/the-mezzo-lofts.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="42"
+                        value="the-mezzo-lofts"
+                        id="the-mezzo-lofts"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="iron-house-apartments" class="icon-button">
+
+                <h3>Iron House Apartments</h3>
+
+                <p class="rating unrated"">rating:
+                  
+                    unrated
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $875 -
+                
+
+                <!-- high range of rent -->
+                
+                  $1,800
+                
+                </p>
+
+
+                <img src="assets/images/apartments/iron-house-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="43"
+                        value="iron-house-apartments"
+                        id="iron-house-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="ascend" class="icon-button">
+
+                <h3>Ascend</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 4 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $920 -
+                
+
+                <!-- high range of rent -->
+                
+                  $1,450/person
+                
+                </p>
+
+
+                <img src="assets/images/apartments/ascend.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="44"
+                        value="ascend"
+                        id="ascend"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="the-square" class="icon-button">
+
+                <h3>The Square</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,255 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,922
+                
+                </p>
+
+
+                <img src="assets/images/apartments/the-square.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="45"
+                        value="the-square"
+                        id="the-square"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="eagle-mill-apartments-lofts" class="icon-button">
+
+                <h3>Eagle Mill Apartments & Lofts</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9734;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,025 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,400
+                
+                </p>
+
+
+                <img src="assets/images/apartments/eagle-mill-apartments-lofts.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="46"
+                        value="eagle-mill-apartments-lofts"
+                        id="eagle-mill-apartments-lofts"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="pine-courts" class="icon-button">
+
+                <h3>Pine Courts</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $835 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,100
+                
+                </p>
+
+
+                <img src="assets/images/apartments/pine-courts.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="47"
+                        value="pine-courts"
+                        id="pine-courts"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="coliseum-lofts" class="icon-button">
+
+                <h3>Coliseum Lofts</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $890 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,095
+                
+                </p>
+
+
+                <img src="assets/images/apartments/coliseum-lofts.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="48"
+                        value="coliseum-lofts"
+                        id="coliseum-lofts"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="the-james" class="icon-button">
+
+                <h3>The James</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 4 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,170 -
+                
+
+                <!-- high range of rent -->
+                
+                  $3,040
+                
+                </p>
+
+
+                <img src="assets/images/apartments/the-james.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="49"
+                        value="the-james"
+                        id="the-james"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="the-lofts-at-capital-garage" class="icon-button">
+
+                <h3>The Lofts at Capital Garage</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9734;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>2 rooms, 2 people/room</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $514 -
+                
+
+                <!-- high range of rent -->
+                
+                  $614/person
+                
+                </p>
+
+
+                <img src="assets/images/apartments/the-lofts-at-capital-garage.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="50"
+                        value="the-lofts-at-capital-garage"
+                        id="the-lofts-at-capital-garage"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="one-canal" class="icon-button">
+
+                <h3>One Canal</h3>
+
+                <p class="rating unrated"">rating:
+                  
+                    unrated
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 2 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,400 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,540
+                
+                </p>
+
+
+                <img src="assets/images/apartments/one-canal.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="51"
+                        value="one-canal"
+                        id="one-canal"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="circ-apartments" class="icon-button">
+
+                <h3>Circ Apartments</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 2 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,498 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,840
+                
+                </p>
+
+
+                <img src="assets/images/apartments/circ-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="52"
+                        value="circ-apartments"
+                        id="circ-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="cornish-brewery-apartments" class="icon-button">
+
+                <h3>Cornish Brewery Apartments</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 2 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,400 -
+                
+
+                <!-- high range of rent -->
+                
+                  $1,800
+                
+                </p>
+
+
+                <img src="assets/images/apartments/cornish-brewery-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="53"
+                        value="cornish-brewery-apartments"
+                        id="cornish-brewery-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="chesterfield-apartments" class="icon-button">
+
+                <h3>Chesterfield Apartments</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9734;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $800 -
+                
+
+                <!-- high range of rent -->
+                
+                </p>
+
+
+                <img src="assets/images/apartments/chesterfield-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="54"
+                        value="chesterfield-apartments"
+                        id="chesterfield-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="biggs-building" class="icon-button">
+
+                <h3>Biggs Building</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9734;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 2 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $899 -
+                
+
+                <!-- high range of rent -->
+                
+                </p>
+
+
+                <img src="assets/images/apartments/biggs-building.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="55"
+                        value="biggs-building"
+                        id="biggs-building"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="1005-grove-apartments" class="icon-button">
+
+                <h3>1005 Grove Apartments</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,200 -
+                
+
+                <!-- high range of rent -->
+                
+                </p>
+
+
+                <img src="assets/images/apartments/1005-grove-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="56"
+                        value="1005-grove-apartments"
+                        id="1005-grove-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="1200-west-marshall" class="icon-button">
+
+                <h3>1200 West Marshall</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 4 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,389 -
+                
+
+                <!-- high range of rent -->
+                
+                  $909
+                
+                </p>
+
+
+                <img src="assets/images/apartments/1200-west-marshall.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="57"
+                        value="1200-west-marshall"
+                        id="1200-west-marshall"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="marshall-park-townhomes" class="icon-button">
+
+                <h3>Marshall Park Townhomes</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9734;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio, 1, 4 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $925 -
+                
+
+                <!-- high range of rent -->
+                
+                  $625
+                
+                </p>
+
+
+                <img src="assets/images/apartments/marshall-park-townhomes.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="58"
+                        value="marshall-park-townhomes"
+                        id="marshall-park-townhomes"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="ramz-apartments-on-broad" class="icon-button">
+
+                <h3>RAMZ Apartments on Broad</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio, 2 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,279 -
+                
+
+                <!-- high range of rent -->
+                
+                </p>
+
+
+                <img src="assets/images/apartments/ramz-apartments-on-broad.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="59"
+                        value="ramz-apartments-on-broad"
+                        id="ramz-apartments-on-broad"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="1510-lofts" class="icon-button">
+
+                <h3>1510 Lofts</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 2 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,175 -
+                
+
+                <!-- high range of rent -->
+                
+                </p>
+
+
+                <img src="assets/images/apartments/1510-lofts.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="60"
+                        value="1510-lofts"
+                        id="1510-lofts"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="cary-belvidere-apartments" class="icon-button">
+
+                <h3>Cary Belvidere Apartments</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9733;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>studio - 2 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,075 -
+                
+
+                <!-- high range of rent -->
+                
+                </p>
+
+
+                <img src="assets/images/apartments/cary-belvidere-apartments.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="61"
+                        value="cary-belvidere-apartments"
+                        id="cary-belvidere-apartments"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="8-189-canal-street" class="icon-button">
+
+                <h3>8 &#189; Canal Street</h3>
+
+                <p class="rating totalRating"">rating:
+                  
+                    &#9733;&#9733;&#9734;
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 4 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,449 -
+                
+
+                <!-- high range of rent -->
+                
+                  $854
+                
+                </p>
+
+
+                <img src="assets/images/apartments/8-189-canal-street.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="62"
+                        value="8-189-canal-street"
+                        id="8-189-canal-street"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
+        
+            <div class="apartment-card">
+              <label for="1318-west-broad" class="icon-button">
+
+                <h3>1318 West Broad</h3>
+
+                <p class="rating unrated"">rating:
+                  
+                    unrated
+                  
+                </p>
+
+                <!-- number of rooms -->
+                
+                  <p>1 - 3 beds</p>
+                
+
+                <!-- low range of rent -->
+                <p>
+                
+                  $1,015 -
+                
+
+                <!-- high range of rent -->
+                
+                  $2,285
+                
+                </p>
+
+
+                <img src="assets/images/apartments/1318-west-broad.png">
+                <input type="radio"
+                        name="content-opener"
+                        tabindex="63"
+                        value="1318-west-broad"
+                        id="1318-west-broad"
+                        class="icon-hover">
+
+              </label>
+            </div>
+        
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p>District Square apartments is located just off of Broad Street near the Maggie Walker statue.</p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$925
-              
-                - $950<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$900
-              
-                - $1,050<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,300
-              
-                - $1,500<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$2,045
-              
-                - $2,090<td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
       </div>
 
-    
+
       
-      <div class="grace-and-monroe-apartments apartment-content" id="grace-and-monroe-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Grace and Monroe Apartments </h1>
-        <p>Managed by Landmark</p>
-
-        <p>401 W Grace St</p>
-
         
-          <p>0.4 miles | 9 min walk to the compass</p>
-        
+        <div class="district-square-apartments apartment-content" id="district-square-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>District Square Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Landmark</p>
 
-          <p>management:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <p>111 W Marshall St</p>
 
-          <p>pest control:
+          
+            <p>0.8 miles | 16 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>District Square apartments is located just off of Broad Street near the Maggie Walker statue.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9733;
+            <tr>
+              <th>studio</th>
+              <td>$925
+                
+                  - $950<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$900
+                
+                  - $1,050<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,300
+                
+                  - $1,500<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,045
+                
+                  - $2,090<td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$912
-              
-                - $1,010<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$975
-              
-                - $1,075<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,300
-              
-                - $1,520<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$1,849
-              
-                - $2,050<td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="monroe-park-towers apartment-content" id="monroe-park-towers-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Monroe Park Towers </h1>
-        <p>Managed by Belvidere Management Corporation</p>
-
-        <p>520 W Franklin St</p>
-
         
-          <p>0.3 miles | 6 min walk to the compass</p>
-        
+        <div class="grace-and-monroe-apartments apartment-content" id="grace-and-monroe-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Grace and Monroe Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Landmark</p>
 
-          <p>management:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <p>401 W Grace St</p>
 
-          <p>pest control:
+          
+            <p>0.4 miles | 9 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Grace and Monroe Apartments is located just off of Belvedere Street, one block down from Domino's and close to Monroe Park.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9734;&#9734;
+            <tr>
+              <th>studio</th>
+              <td>$912
+                
+                  - $1,010<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$975
+                
+                  - $1,075<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,300
+                
+                  - $1,520<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$1,849
+                
+                  - $2,050<td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$986
-              
-                - $1,050<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,113
-              
-                - $1,304<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,451
-              
-                - $1,887<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$2,134
-              
-                - $2,188<td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="park-plaza-at-belvidere apartment-content" id="park-plaza-at-belvidere-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Park Plaza at Belvidere </h1>
-        <p>Managed by Belvidere Management Corporation</p>
-
-        <p>515 W Franklin St</p>
-
         
-          <p>0.3 miles | 6 min walk to the compass</p>
-        
+        <div class="monroe-park-towers apartment-content" id="monroe-park-towers-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Monroe Park Towers</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Belvidere Management Corporation</p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          <p>520 W Franklin St</p>
 
-          <p>pest control:
+          
+            <p>0.3 miles | 6 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                unrated
+              
+            </p>
+
+            <p class="rating">management:
+              
+                unrated
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                unrated
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Monroe Park Towers is located at the corner of Belvidere and Franklin street.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9733;
+            <tr>
+              <th>studio</th>
+              <td>$986
+                
+                  - $1,050<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,113
+                
+                  - $1,304<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,451
+                
+                  - $1,887<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,134
+                
+                  - $2,188<td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,065
-              
-                - $1,336<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,593
-              
-                - $1,994<td>
-              
-          </tr>
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="the-berkshire apartment-content" id="the-berkshire-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>The Berkshire </h1>
-        <p>Managed by Thalhimer
+        
+        <div class="park-plaza-at-belvidere apartment-content" id="park-plaza-at-belvidere-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
+
+          <div class="apartment-content-header">
+            <h1>Park Plaza at Belvidere</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by Belvidere Management Corporation</p>
+
+          <p>515 W Franklin St</p>
+
+          
+            <p>0.3 miles | 6 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Park Plaza at Belvidere is located right across Monroe Park on 515 W Franklin St.</p>
+
+          <h3>prices</h3>
+          <table>
+            
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,065
+                
+                  - $1,336<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,593
+                
+                  - $1,994<td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
+        </div>
+
+      
+        
+        <div class="the-berkshire apartment-content" id="the-berkshire-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
+
+          <div class="apartment-content-header">
+            <h1>The Berkshire</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Thalhimer
 Cushman & Wakefield</p>
 
-        <p>300 W Franklin St</p>
+          <p>300 W Franklin St</p>
 
-        
-          <p>0.4 miles | 8 min walk to the compass</p>
-        
+          
+            <p>0.4 miles | 8 min walk to the compass</p>
+          
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
 
-          <p>pest control:
+            <p class="rating">pest control:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Berkshire is located 3 blocks down Franklin Street from Belvedere street, which would be across the street from Monroe Park.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+            <tr>
+              <th>studio</th>
+              <td>$784
+                
+                  - $1,049<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$909
+                
+                  - $1,579<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,494
+                
+                  - $1,767<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,079
+                
+                  - $2,222<td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$784
-              
-                - $1,049<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$909
-              
-                - $1,579<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,494
-              
-                - $1,767<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$2,079
-              
-                - $2,222<td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="the-towers-on-franklin apartment-content" id="the-towers-on-franklin-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>The Towers On Franklin </h1>
-        <p>Managed by Thalhimer
+        
+        <div class="the-towers-on-franklin apartment-content" id="the-towers-on-franklin-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
+
+          <div class="apartment-content-header">
+            <h1>The Towers On Franklin</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Thalhimer
 Cushman & Wakefield</p>
 
-        <p>104 W Franklin St</p>
+          <p>311 W Franklin St & 104 W Franklin St</p>
 
-        
-          <p>0.5 miles | 11 min walk to the compass</p>
-        
+          
+            <p>0.5 miles | 11 min walk to the compass</p>
+          
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
 
-          <p>pest control:
+            <p class="rating">pest control:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Towers on Franklin is comprised of two different apartment buildings, one located on 311 W Franklin St and one a few blocks away at 104 W Franklin St.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9734;
+            <tr>
+              <th>studio</th>
+              <td>$905
+                
+                  - $1,216<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$980
+                
+                  - $1,300<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,607
+                
+                  - $1,640<td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$905
-              
-                - $1,216<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$980
-              
-                - $1,300<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,607
-              
-                - $1,640<td>
-              
-          </tr>
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="artisan-alley apartment-content" id="artisan-alley-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Artisan Alley </h1>
-        <p>Managed by University Property</p>
-
-        <p>323 W Broad St</p>
-
         
-          <p>0.6 miles | 11 min walk to the compass</p>
-        
+        <div class="artisan-alley apartment-content" id="artisan-alley-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Artisan Alley</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by University Property</p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          <p>323 W Broad St</p>
 
-          <p>pest control:
+          
+            <p>0.6 miles | 11 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Artisan Alley Apartments is located next to the Common House Richmond on 323 W Broad St.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9733;
+
+
             
-          </p>
+            <tr>
+              <th>one bed</th>
+              <td>$1,000
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,400
+                
+                  - $1,600<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,100
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,000
-              
-                <td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,400
-              
-                - $1,600<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$2,100
-              
-                <td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="theater-row-apartments apartment-content" id="theater-row-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Theater Row Apartments </h1>
-        <p>Managed by University Property</p>
-
-        <p>115 W Broad St</p>
-
         
-          <p>0.7 miles | 14 min walk to the compass</p>
-        
+        <div class="theater-row-apartments apartment-content" id="theater-row-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Theater Row Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by University Property</p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          <p>115 W Broad St</p>
 
-          <p>pest control:
+          
+            <p>0.7 miles | 14 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Theater Row Apartments is located on Broad Street near a Pulse bus stop and the Maggie Walker statue.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9733;
+
+
             
-          </p>
+            <tr>
+              <th>one bed</th>
+              <td>$1,300
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,300
+                
+                  - $1,700<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,000
+                
+                  - $2,400<td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p>Theater Row Apartments is located on Broad Street near a Pulse bus stop and the Maggie Walker statue.</p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,300
-              
-                <td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,300
-              
-                - $1,700<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$2,000
-              
-                - $2,400<td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="marshall-adams-apartments apartment-content" id="marshall-adams-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Marshall Adams Apartments </h1>
-        <p>Managed by University Property</p>
-
-        <p>22 W Marshall St</p>
-
         
-          <p>0.8 miles | 17 min walk to the compass</p>
-        
+        <div class="marshall-adams-apartments apartment-content" id="marshall-adams-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Marshall Adams Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by University Property</p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          <p>22 W Marshall St</p>
 
-          <p>pest control:
+          
+            <p>0.8 miles | 17 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Marshall Adams Apartments are located near the Maggie Walker statue and a PULSE bus stop on Broad Street.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9733;
+
+
             
-          </p>
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,500
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,000
+                
+                  - $2,100<td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,500
-              
-                <td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$2,000
-              
-                - $2,100<td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="t-and-e-apartments apartment-content" id="t-and-e-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>T and E Apartments </h1>
-        <p>Managed by Clachan Properties</p>
-
-        <p>1011 West Marshall St</p>
-
         
-          <p>0.4 miles | 9 min walk to the compass</p>
-        
+        <div class="t-and-e-apartments apartment-content" id="t-and-e-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>T and E Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                unrated
+              
+            </p>
+          </div>
+          <p>Managed by Clachan Properties</p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
+          <p>1011 West Marshall St</p>
 
-          <p>pest control:
+          
+            <p>0.4 miles | 9 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                unrated
+              
+            </p>
+
+            <p class="rating">management:
+              
+                unrated
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                unrated
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>T and E Apartments is located on the East side of Richmond in Oakwood on 3508 E Richmond Rd, near the Oakwood cemetery.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9734;
+            <tr>
+              <th>studio</th>
+              <td>$944
+                
+                  - $1,095<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,240
+                
+                  - $1,315<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,350
+                
+                  - $1,750<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$1,850
+                
+                  - $2,400<td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$944
-              
-                - $1,095<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,240
-              
-                - $1,315<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,350
-              
-                - $1,750<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$1,850
-              
-                - $2,400<td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="the-mezzo-lofts apartment-content" id="the-mezzo-lofts-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>The Mezzo Lofts </h1>
-        <p>Managed by Gates Hudson
+        
+        <div class="the-mezzo-lofts apartment-content" id="the-mezzo-lofts-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
+
+          <div class="apartment-content-header">
+            <h1>The Mezzo Lofts</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Gates Hudson
 SNP Properties</p>
 
-        <p>17 W Broad St</p>
+          <p>17 W Broad St</p>
 
-        
-          <p>0.7 miles | 15 min walk to the compass</p>
-        
+          
+            <p>0.7 miles | 15 min walk to the compass</p>
+          
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
 
-          <p>management:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
 
-          <p>pest control:
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Mezzo Lofts is located on Broad Street across the street from the Maggie Walker statue.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9734;&#9734;
+            <tr>
+              <th>studio</th>
+              <td>$1,325
+                
+                  - $1,409<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,325
+                
+                  - $1,454<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,695
+                
+                  - $1,882<td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p>Theater Row Apartments is located on Broad Street across the street from the Maggie Walker statue.</p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$1,325
-              
-                - $1,409<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,325
-              
-                - $1,454<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,695
-              
-                - $1,882<td>
-              
-          </tr>
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="iron-house-apartments apartment-content" id="iron-house-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Iron House Apartments </h1>
-        <p>Managed by Levco Management</p>
-
-        <p>1309 W Broad St</p>
-
         
-          <p>0.5 miles | 10 min walk to the compass</p>
-        
+        <div class="iron-house-apartments apartment-content" id="iron-house-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Iron House Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                unrated
+              
+            </p>
+          </div>
+          <p>Managed by Levco Management</p>
 
-          <p>management:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <p>1309 W Broad St</p>
 
-          <p>pest control:
+          
+            <p>0.5 miles | 10 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                unrated
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                unrated
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Iron House Apartmenrs is located on 1309 W Broad St. next to a Waffle House restaurant.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+
+
             
-          </p>
+            <tr>
+              <th>one bed</th>
+              <td>$875
+                
+                  - $960<td>
+                
+            </tr>
+            
+
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$1,800
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$875
-              
-                - $960<td>
-              
-          </tr>
-          
-
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$1,800
-              
-                <td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="ascend apartment-content" id="ascend-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Ascend </h1>
-        <p>Managed by Coastal Ridge</p>
-
-        <p>1600 W Broad St</p>
-
         
-          <p>0.6 miles | 13 min walk to the compass</p>
-        
+        <div class="ascend apartment-content" id="ascend-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
+          <div class="apartment-content-header">
+            <h1>Ascend</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by Coastal Ridge</p>
+
+          <p>1600 W Broad St</p>
+
+          
+            <p>0.6 miles | 13 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Ascend is located just off of VCU campus near Lowes.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9733;
+            <tr>
+              <th>studio</th>
+              <td>$1,450
+                
+                  <td>
+                
+            </tr>
             
-          </p>
 
-          <p>management:
+
             
-              &#9733;&#9733;&#9733;
+            <tr>
+              <th>one bed</th>
+              <td>$1,655
+                
+                  - $1,685<td>
+                
+            </tr>
             
-          </p>
 
-          <p>pest control:
             
-              &#9733;&#9733;&#9733;
+            <tr>
+              <th>two bed</th>
+              <td>$1,115
+                
+                  - $1,135<td>
+                
+            </tr>
             
-          </p>
-        </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p>Ascend is located just off of VCU campus near Lowes.</p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$1,450
-              
-                <td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,655
-              
-                - $1,685<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,115
-              
-                - $1,135<td>
-              
-          </tr>
-          
-
-          
-
-          
-          <tr>
-            <th>four bed</th>
-            <td>$920
-              
-                - $965<td>
-              
-          </tr>
-          
-
-          <tr>
             
+
+            
+            <tr>
               <th>four bed</th>
+              <td>$920
+                
+                  - $965<td>
+                
+            </tr>
             
-          </tr>
 
-        </table>
-      </div>
+            <tr>
+              
+                <th>four bed</th>
+              
+            </tr>
 
-    
-      
-      <div class="the-square apartment-content" id="the-square-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>The Square </h1>
-        <p>Managed by Rangewater Real Estate</p>
-
-        <p>406 Shafer St</p>
-
-        
-          <p>0.2 miles | 4 min walk to the compass</p>
-        
-
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
-
-          <p>management:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
-
-          <p>pest control:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p>The Square is located in central VCU campus, above Panda Express and next to West Grace North dormitories.</p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,255
-              
-                - $1,299<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,470
-              
-                - $1,650<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$1,850
-              
-                - $2,922<td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="eagle-mill-apartments-lofts apartment-content" id="eagle-mill-apartments-lofts-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Eagle Mill Apartments & Lofts </h1>
-        <p>Managed by Pondok Management</p>
-
-        <p>1400 W Marshall St</p>
-
         
-          <p>0.6 miles | 12 min walk to the compass</p>
-        
+        <div class="the-square apartment-content" id="the-square-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>The Square</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by Rangewater Real Estate</p>
 
-          <p>management:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <p>406 Shafer St</p>
 
-          <p>pest control:
+          
+            <p>0.2 miles | 4 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Square is located in central VCU campus, above Panda Express and next to West Grace North dormitories.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9734;&#9734;
+
+
             
-          </p>
+            <tr>
+              <th>one bed</th>
+              <td>$1,255
+                
+                  - $1,299<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,470
+                
+                  - $1,650<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$1,850
+                
+                  - $2,922<td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$1,025
-              
-                - $1,300<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,025
-              
-                - $1,300<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,025
-              
-                - $1,475<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$2,100
-              
-                - $2,400<td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="pine-courts apartment-content" id="pine-courts-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Pine Courts </h1>
-        <p>Managed by Pine Court LLC</p>
-
-        <p>707 W Cary St</p>
-
         
-          <p>0.4 miles | 8 min walk to the compass</p>
-        
+        <div class="eagle-mill-apartments-lofts apartment-content" id="eagle-mill-apartments-lofts-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Eagle Mill Apartments & Lofts</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Pondok Management</p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
+          <p>1400 W Marshall St</p>
 
-          <p>pest control:
+          
+            <p>0.6 miles | 12 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Eagle Mill Apartments & Lofts is located behind the Bowe Street Parking deck and two blocks from Kroger.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9734;
+            <tr>
+              <th>studio</th>
+              <td>$1,025
+                
+                  - $1,300<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,025
+                
+                  - $1,300<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,025
+                
+                  - $1,475<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,100
+                
+                  - $2,400<td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$835
-              
-                - $895<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$940
-              
-                - $995<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,425
-              
-                - $1,450<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$2,100
-              
-                <td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="coliseum-lofts apartment-content" id="coliseum-lofts-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Coliseum Lofts </h1>
-        <p>Managed by Dodson Property Management</p>
-
-        <p>1359 W Broad St</p>
-
         
-          <p>0.6 miles | 11 min walk to the compass</p>
-        
+        <div class="pine-courts apartment-content" id="pine-courts-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Pine Courts</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Pine Court LLC</p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
+          <p>707 W Cary St</p>
 
-          <p>pest control:
+          
+            <p>0.4 miles | 8 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>All three Pine Courts locations are on Cary Street across from Engineering West hall and the back of Gladding Residence Center.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9734;
+            <tr>
+              <th>studio</th>
+              <td>$835
+                
+                  - $895<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$940
+                
+                  - $995<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,425
+                
+                  - $1,450<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,100
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-          <tr>
-            <th>studio</th>
-            <td>$890
-              
-                - $930<td>
-              
-          </tr>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$990
-              
-                - $1,150<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,340
-              
-                - $1,617<td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>three bed</th>
-            <td>$2,095
-              
-                <td>
-              
-          </tr>
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="the-james apartment-content" id="the-james-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>The James </h1>
-        <p>Managed by Campus Life & Style</p>
-
-        <p>601 W Bacon St</p>
-
         
-          <p>1.6 miles | 33 min walk to the compass</p>
-        
+        <div class="coliseum-lofts apartment-content" id="coliseum-lofts-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Coliseum Lofts</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Dodson Property Management</p>
 
-          <p>management:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
+          <p>1359 W Broad St</p>
 
-          <p>pest control:
+          
+            <p>0.6 miles | 11 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Coliseum Lofts is located on 1359 W Broad St, and offers a myriad of little stores and restaurants in the near by areas.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              &#9733;&#9733;&#9733;
+            <tr>
+              <th>studio</th>
+              <td>$890
+                
+                  - $930<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$990
+                
+                  - $1,150<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,340
+                
+                  - $1,617<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,095
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p>The James is located north of I-95 and provides a shuttle service to and from campus.</p>
+      
+        
+        <div class="the-james apartment-content" id="the-james-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <h3>prices</h3>
-        <table>
-          
+          <div class="apartment-content-header">
+            <h1>The James</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Campus Life & Style</p>
 
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,170
-              
-                <td>
-              
-          </tr>
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$1,780
-              
-                <td>
-              
-          </tr>
-          
+          <p>601 W Bacon St</p>
 
           
-          <tr>
-            <th>three bed</th>
-            <td>$2,550
-              
-                <td>
-              
-          </tr>
+            <p>1.6 miles | 33 min walk to the compass</p>
           
 
-          
-          <tr>
-            <th>four bed</th>
-            <td>$3,040
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
               
-                <td>
+                &#9733;&#9733;&#9734;
               
-          </tr>
-          
+            </p>
 
-          <tr>
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The James is located north of I-95 and provides a shuttle service to and from campus.</p>
+
+          <h3>prices</h3>
+          <table>
             
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,170
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,780
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$2,550
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
               <th>four bed</th>
+              <td>$3,040
+                
+                  <td>
+                
+            </tr>
             
-          </tr>
 
-        </table>
-      </div>
-
-    
-      
-      <div class="the-lofts-at-capital-garage apartment-content" id="the-lofts-at-capital-garage-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>The Lofts at Capital Garage </h1>
-        <p>Managed by American Campus Communities</p>
-
-        <p>1301 W Broad St</p>
-
-        
-          <p>0.4 miles | 9 min walk to the compass</p>
-        
-
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
-
-          <p>management:
-            
-              &#9733;&#9734;&#9734;
-            
-          </p>
-
-          <p>pest control:
-            
-              &#9733;&#9733;&#9734;
-            
-          </p>
-        </div>
-
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-          <tr>
-            <th>two bed</th>
-            <td>$514
+            <tr>
               
-                - $614<td>
+                <th>four bed</th>
               
-          </tr>
-          
+            </tr>
 
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
-      
-      <div class="one-canal apartment-content" id="one-canal-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>One Canal </h1>
-        <p>Managed by Bank Street Advisors</p>
-
-        <p>108 S 1st St</p>
-
-        
-          <p>0.7 miles | 15 min walk to the compass</p>
-        
-
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
-
-          <p>management:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
-
-          <p>pest control:
-            
-              &#9733;&#9733;&#9733;
-            
-          </p>
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
+      
+        
+        <div class="the-lofts-at-capital-garage apartment-content" id="the-lofts-at-capital-garage-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,400
+          <div class="apartment-content-header">
+            <h1>The Lofts at Capital Garage</h1>
+            <p class="rating totalRating">rating:
               
-                - $1,800<td>
+                &#9733;&#9734;&#9734;
               
-          </tr>
-          
+            </p>
+          </div>
+          <p>Managed by American Campus Communities</p>
+
+          <p>1301 W Broad St</p>
 
           
-          <tr>
-            <th>two bed</th>
-            <td>$2,115
+            <p>0.4 miles | 9 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
               
-                - $2,540<td>
+                &#9733;&#9734;&#9734;
               
-          </tr>
-          
+            </p>
 
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
-      
-      <div class="circ-apartments apartment-content" id="circ-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Circ Apartments </h1>
-        <p>Managed by PRG Real Estate Management</p>
-
-        <p>1205 W Franklin St</p>
-
-        
-          <p>0.5 miles | 11 min walk to the compass</p>
-        
-
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
-
-          <p>management:
-            
-              unrated
-            
-          </p>
-
-          <p>pest control:
-            
-              unrated
-            
-          </p>
-        </div>
-
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-          <tr>
-            <th>one bed</th>
-            <td>$1,498
+            <p class="rating">management:
               
-                - $2,477<td>
+                &#9733;&#9734;&#9734;
               
-          </tr>
-          
+            </p>
 
-          
-          <tr>
-            <th>two bed</th>
-            <td>$2,046
+            <p class="rating">pest control:
               
-                - $2,840<td>
+                &#9733;&#9733;&#9734;
               
-          </tr>
-          
+            </p>
+          </div>
 
-          
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Lofts at Capital Garage is located on 1301 W Broad St. Next to the No Limits nutrition center. </p>
 
-          
-
-          <tr>
+          <h3>prices</h3>
+          <table>
             
-          </tr>
 
-        </table>
-      </div>
 
-    
-      
-      <div class="cornish-brewery-apartments apartment-content" id="cornish-brewery-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Cornish Brewery Apartments </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
-        
-
-        <div class="apartment-page-icons">
-          <p>maintence:
             
-          </p>
 
-          <p>management:
             
-              unrated
+            <tr>
+              <th>two bed</th>
+              <td>$514
+                
+                  - $614<td>
+                
+            </tr>
             
-          </p>
 
-          <p>pest control:
             
-              unrated
+
             
-          </p>
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="chesterfield-apartments apartment-content" id="chesterfield-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Chesterfield Apartments </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
         
+        <div class="one-canal apartment-content" id="one-canal-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>One Canal</h1>
+            <p class="rating totalRating">rating:
+              
+                unrated
+              
+            </p>
+          </div>
+          <p>Managed by Bank Street Advisors</p>
 
-          <p>management:
-            
-              unrated
-            
-          </p>
+          <p>108 S 1st St</p>
 
-          <p>pest control:
+          
+            <p>0.7 miles | 15 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                unrated
+              
+            </p>
+
+            <p class="rating">management:
+              
+                unrated
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                unrated
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>One Canal Apartments is located on 108 S 1st St, near the Virginia War memorial.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+
+
             
-          </p>
+            <tr>
+              <th>one bed</th>
+              <td>$1,400
+                
+                  - $1,800<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$2,115
+                
+                  - $2,540<td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="biggs-building apartment-content" id="biggs-building-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Biggs Building </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
         
+        <div class="circ-apartments apartment-content" id="circ-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Circ Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by PRG Real Estate Management</p>
 
-          <p>management:
-            
-              unrated
-            
-          </p>
+          <p>1205 W Franklin St</p>
 
-          <p>pest control:
+          
+            <p>0.5 miles | 11 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Circ Apartments is located on 1137 W Grace St, right next to St John's United Church.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+
+
             
-          </p>
+            <tr>
+              <th>one bed</th>
+              <td>$1,498
+                
+                  - $2,477<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$2,046
+                
+                  - $2,840<td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="1005-grove-apartments apartment-content" id="1005-grove-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>1005 Grove Apartments </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
         
+        <div class="cornish-brewery-apartments apartment-content" id="cornish-brewery-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Cornish Brewery Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by University Property</p>
 
-          <p>management:
-            
-              unrated
-            
-          </p>
+          <p>1201 W Clay St</p>
 
-          <p>pest control:
+          
+            <p>0.5 miles | 11 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Cornish Brewery Apartments is located one block from the Siegel Center and Broad Street.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+            <tr>
+              <th>studio</th>
+              <td>$1,400
+                
+                  <td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$945
+                
+                  - $1,325<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,725
+                
+                  - $1,800<td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="1200-west-marshall apartment-content" id="1200-west-marshall-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>1200 West Marshall </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
         
+        <div class="chesterfield-apartments apartment-content" id="chesterfield-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Chesterfield Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Landmark Lifestyle Apartments</p>
 
-          <p>management:
-            
-              unrated
-            
-          </p>
+          <p>900 W Franklin St</p>
 
-          <p>pest control:
+          
+            <p>0.1 miles | 2 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Chesterfield Apartments are located above the Virginia Book Company and Mochinut.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+
+
             
-          </p>
+            <tr>
+              <th>one bed</th>
+              <td>$800
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="marshall-park-townhomes apartment-content" id="marshall-park-townhomes-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Marshall Park Townhomes </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
         
+        <div class="biggs-building apartment-content" id="biggs-building-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Biggs Building</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Downtown Rentals RVA</p>
 
-          <p>management:
-            
-              unrated
-            
-          </p>
+          <p>900 W Marshall St</p>
 
-          <p>pest control:
+          
+            <p>0.5 miles | 11 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>The Biggs Building Apartments is one block away from the School of the Arts Building.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+
+
             
-          </p>
+            <tr>
+              <th>one bed</th>
+              <td>$899
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,175
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="1318-west-broad apartment-content" id="1318-west-broad-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>1318 West Broad </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
         
+        <div class="1005-grove-apartments apartment-content" id="1005-grove-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>1005 Grove Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by Landmark</p>
 
-          <p>management:
-            
-              unrated
-            
-          </p>
+          <p>1005 Grove Ave</p>
 
-          <p>pest control:
+          
+            <p>0.07 miles | 2 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>1005 Grove Apartments is located across the street from Cabell Library.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+
+
             
-          </p>
+            <tr>
+              <th>one bed</th>
+              <td>$1,200
+                
+                  - $1,300<td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="ramz-apartments-on-broad apartment-content" id="ramz-apartments-on-broad-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>RAMZ Apartments on Broad </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
         
+        <div class="1200-west-marshall apartment-content" id="1200-west-marshall-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>1200 West Marshall</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by American Campus Communities</p>
 
-          <p>management:
-            
-              unrated
-            
-          </p>
+          <p>1200 W Marshall St</p>
 
-          <p>pest control:
+          
+            <p>0.4 miles | 9 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>1200 West Marshall Apartments is located across the street from the Siegel Center.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+            <tr>
+              <th>studio</th>
+              <td>$1,389
+                
+                  - $1,399<td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,739
+                
+                  - $1,739<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,039
+                
+                  - $1,084<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$884
+                
+                  - $909<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>four bed</th>
+              <td>$909
+                
+                  - $909<td>
+                
+            </tr>
+            
+
+            <tr>
+              
+                <th>four bed</th>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="1510-lofts apartment-content" id="1510-lofts-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>1510 Lofts </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
         
+        <div class="marshall-park-townhomes apartment-content" id="marshall-park-townhomes-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>Marshall Park Townhomes</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by Landmark</p>
 
-          <p>management:
-            
-              unrated
-            
-          </p>
+          <p>728 W Marshall St</p>
 
-          <p>pest control:
+          
+            <p>0.5 miles | 10 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Marshall Park Townhomes are located two blocks from VCUarts Depot and Depots Annex.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+            <tr>
+              <th>studio</th>
+              <td>$925
+                
+                  <td>
+                
+            </tr>
             
-          </p>
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$999
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            
+            <tr>
+              <th>four bed</th>
+              <td>$625
+                
+                  <td>
+                
+            </tr>
+            
+
+            <tr>
+              
+                <th>four bed</th>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
-
-        <h3>prices</h3>
-        <table>
-          
-
-
-          
-
-          
-
-          
-
-          
-
-          <tr>
-            
-          </tr>
-
-        </table>
-      </div>
-
-    
       
-      <div class="cary-belvidere-apartments apartment-content" id="cary-belvidere-apartments-content">
-        <button type="button" class="uncheck"> &#8592; back to listings</button>
-        <h1>Cary Belvidere Apartments </h1>
-        <p>Managed by </p>
-
-        <p></p>
-
         
+        <div class="ramz-apartments-on-broad apartment-content" id="ramz-apartments-on-broad-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <div class="apartment-page-icons">
-          <p>maintence:
-            
-          </p>
+          <div class="apartment-content-header">
+            <h1>RAMZ Apartments on Broad</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by American Campus Communities</p>
 
-          <p>management:
-            
-              unrated
-            
-          </p>
+          <p>933 W Broad St</p>
 
-          <p>pest control:
+          
+            <p>0.3 miles | 5 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>RAMZ Apartments on Broad is located across the street from Barnes and Noble @ VCU and the VCU School of the Arts Building.</p>
+
+          <h3>prices</h3>
+          <table>
             
-              unrated
+            <tr>
+              <th>studio</th>
+              <td>$1,279
+                
+                  <td>
+                
+            </tr>
             
-          </p>
+
+
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$829
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
         </div>
 
-        <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
-        <p></p>
+      
+        
+        <div class="1510-lofts apartment-content" id="1510-lofts-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
 
-        <h3>prices</h3>
-        <table>
+          <div class="apartment-content-header">
+            <h1>1510 Lofts</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by Peak Property Management</p>
+
+          <p>1510 W Broad St</p>
+
+          
+            <p>0.6 miles | 13 min walk to the compass</p>
           
 
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
 
-          
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
 
-          
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
 
-          
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>1510 Lofts is located close to Kroger and one block from Bowe Street Parking Deck.</p>
 
-          
-
-          <tr>
+          <h3>prices</h3>
+          <table>
             
-          </tr>
 
-        </table>
-      </div>
 
-    
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,175
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,550
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
+        </div>
+
+      
+        
+        <div class="cary-belvidere-apartments apartment-content" id="cary-belvidere-apartments-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
+
+          <div class="apartment-content-header">
+            <h1>Cary Belvidere Apartments</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+          <p>Managed by Family Business</p>
+
+          <p>601 W Cary St</p>
+
+          
+            <p>0.4 miles | 9 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>Cary Belvidere Apartments is located across the street from the Engineering West Hall and one block from Monroe Park.</p>
+
+          <h3>prices</h3>
+          <table>
+            
+            <tr>
+              <th>studio</th>
+              <td>$1,075
+                
+                  <td>
+                
+            </tr>
+            
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,225
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$1,735
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
+        </div>
+
+      
+        
+        <div class="8-189-canal-street apartment-content" id="8-189-canal-street-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
+
+          <div class="apartment-content-header">
+            <h1>8 &#189; Canal Street</h1>
+            <p class="rating totalRating">rating:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+          </div>
+          <p>Managed by American Campus Communities</p>
+
+          <p>8 1/2 W Canal St, Richmond, VA 23220</p>
+
+          
+            <p>0.7 miles | 13 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                &#9733;&#9733;&#9734;
+              
+            </p>
+
+            <p class="rating">management:
+              
+                &#9733;&#9734;&#9734;
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                &#9733;&#9733;&#9733;
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>8 1/2 Canal Street is located about 3 Blocks from the VCU College of Engineering East Hall.</p>
+
+          <h3>prices</h3>
+          <table>
+            
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,449
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>two bed</th>
+              <td>$959
+                
+                  - $969<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>three bed</th>
+              <td>$874
+                
+                  - $884<td>
+                
+            </tr>
+            
+
+            
+            <tr>
+              <th>four bed</th>
+              <td>$809
+                
+                  - $854<td>
+                
+            </tr>
+            
+
+            <tr>
+              
+                <th>four bed</th>
+              
+            </tr>
+
+          </table>
+        </div>
+
+      
+        
+        <div class="1318-west-broad apartment-content" id="1318-west-broad-content">
+          <button type="button" class="uncheck"> &#8592; back to listings</button>
+
+          <div class="apartment-content-header">
+            <h1>1318 West Broad</h1>
+            <p class="rating totalRating">rating:
+              
+                unrated
+              
+            </p>
+          </div>
+          <p>Managed by Clachan Properties</p>
+
+          <p>1318 W Broad St</p>
+
+          
+            <p>0.5 miles | 11 min walk to the compass</p>
+          
+
+          <div class="apartment-page-icons">
+            <p class="rating">maintence:
+              
+                unrated
+              
+            </p>
+
+            <p class="rating">management:
+              
+                unrated
+              
+            </p>
+
+            <p class="rating">pest control:
+              
+                unrated
+              
+            </p>
+          </div>
+
+          <!-- <img src="assets/images/Map.png" class="apartment-content-image"> -->
+          <p>1318 West Broad is located next to the Bowe Street Parking Deck and Lombardy Kroger.</p>
+
+          <h3>prices</h3>
+          <table>
+            
+
+
+            
+            <tr>
+              <th>one bed</th>
+              <td>$1,015
+                
+                  <td>
+                
+            </tr>
+            
+
+            
+
+            
+
+            
+
+            <tr>
+              
+            </tr>
+
+          </table>
+        </div>
+
+      
+    </div>
   </div>
-
+</div>
 </div>
 
 
@@ -4036,27 +4938,36 @@ SNP Properties</p>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-$(document).ready(function(){
-    $('input[type="radio"]').click(function(){
+  $(document).ready(function(){
+      $('input[type="radio"]').click(function(){
+          var inputValue = $(this).attr("value");
+          var target = $("." + inputValue);
+
+          $(".apartment-content").not(target).hide();
+          $(".base-content").hide();
+
+          $(target).show();
+      });
+
+      $('.uncheck').click(function(){
         var inputValue = $(this).attr("value");
         var target = $("." + inputValue);
 
-        $(".apartment-content").not(target).hide();
-        $(".base-content").hide();
+        $(".apartment-content").hide();
+        $(".base-content").show();
+        $(target).hide();
+        $('input[name="content-toggle"]').prop('checked', false);
+      });
+  });
+</script>
 
-        $(target).show();
-    });
-
-    $('.uncheck').click(function(){
-      var inputValue = $(this).attr("value");
-      var target = $("." + inputValue);
-
-      $(".apartment-content").hide();
-      $(".base-content").show();
-      $(target).hide();
-      $('input[name="content-toggle"]').prop('checked', false);
-    });
-});
+<script>
+  var $button = $('.apartments-up');
+  var $container = $('.right-container');
+  $button.click(function(){
+    $button.toggleClass('slide-button');
+    $container.toggleClass('slide-container');
+  });
 </script>
 
 <script src="assets/js/drag-to-scroll/src/jquery.dragnscroll.js"></script>
@@ -4068,6 +4979,5 @@ $(document).ready(function(){
   })
 </script>
 
-    </div>
   </body>
 </html>

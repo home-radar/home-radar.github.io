@@ -11,6 +11,11 @@
 
 //CONTENT
 
+.content {
+  height: 100vh;
+  overflow: hidden;
+}
+
 div.content-map {
   max-width: 100vw;
   min-height: calc(100vh - 100px);
@@ -131,6 +136,10 @@ div.content-map {
 }
 
 
+.button-container {
+
+}
+
 .right-container{
   background: $light-cream;
   box-shadow: 0 0 10px 0 $dark-pink-50;
@@ -142,8 +151,8 @@ div.content-map {
   position: fixed;
   right: 0;
   top: 100px;
-  overflow-y:scroll;
-  overflow-x:hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 9999;
 
 
@@ -207,8 +216,22 @@ div.content-map {
         padding: 0 20px;
         margin: 10px 0;
       }
+
+      .totalRating {
+        max-width: 150px;
+        margin-left: 8px;
+      }
+
+      .unrated {
+        max-width: 155px;
+        margin-left: 8px;
+      }
     }
   }
+}
+
+.apartments-up {
+  display: none
 }
 
 .apartment-content {
@@ -241,19 +264,24 @@ div.content-map {
     display: flex;
     flex-wrap: wrap;
     margin: 20px 0;
-
-    p {
-      color: $light-cream;
-      background: $teal;
-      border-radius: 20px;
-      padding: 4px 10px;
-      margin: 4px 4px 4px 0;
-    }
   }
 
   .apartment-content-image {
     max-width: 100%;
   }
+
+  .apartment-content-header {
+    display: flex;
+  }
+}
+
+.rating {
+  color: $light-cream;
+  background: $teal;
+  border-radius: 20px;
+  padding: 4px 10px;
+  margin: 4px 4px 4px 0;
+  height: 100%;
 }
 
 @import "tablet.scss",

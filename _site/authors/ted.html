@@ -15,11 +15,11 @@
 <link rel="canonical" href="http://localhost:4000/authors/ted.html" />
 <meta property="og:url" content="http://localhost:4000/authors/ted.html" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-11-14T15:41:30-05:00" />
+<meta property="article:published_time" content="2022-11-15T19:32:45-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Ted" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-14T15:41:30-05:00","datePublished":"2022-11-14T15:41:30-05:00","description":"Ted has been eating fruit since he was baby.","headline":"Ted","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/authors/ted.html"},"url":"http://localhost:4000/authors/ted.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-15T19:32:45-05:00","datePublished":"2022-11-15T19:32:45-05:00","description":"Ted has been eating fruit since he was baby.","headline":"Ted","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/authors/ted.html"},"url":"http://localhost:4000/authors/ted.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,29 +30,69 @@
   <div class="nav-logo home-radar">
     <h1 class="home-radar">Home<br>Radar</h1>
   </div>
-  <div class="nav-buttons">
-    
+
+  <div class="normal-nav">
+    <div class="nav-buttons">
       
-        <a href="/" >Map</a>
+        
+          <a href="/" >Map</a>
+        
       
-    
+        
+          <a href="/listings.html" >Listings</a>
+        
       
-        <a href="/listings.html" >Listings</a>
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" >FAQ</a>
+        
       
-    
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar" >About Us</a>
+        
       
-        <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" >FAQ</a>
+    </div>
+  </div>
+
+  <div class="mobile-nav">
+    <button type="button" class="menu">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </button>
+
+    <div class="nav-buttons mobile-nav-buttons" id="mobileMobile">
       
-    
+        
+          <a href="/" >Map</a>
+        
       
-        <a href="https://kyreefisher01.wixsite.com/home-radar" >About Us</a>
+        
+          <a href="/listings.html" >Listings</a>
+        
       
-    
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar/blank-2" >FAQ</a>
+        
+      
+        
+          <a href="https://kyreefisher01.wixsite.com/home-radar" >About Us</a>
+        
+      
+    </div>
   </div>
 </nav>
 
-    <div class="content">
-      <h1>Ted Doe</h1>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  var $menuButton= $('.menu');
+  var $menuContainer = $('.mobile-nav-buttons');
+  $menuButton.click(function(){
+    $menuButton.toggleClass('menu-click');
+    $menuContainer.toggleClass('menu-slide');
+  });
+</script>
+
+    <h1>Ted Doe</h1>
 <h2>Writer</h2>
 
 <p>Ted has been eating fruit since he was baby.</p>
@@ -66,6 +106,5 @@
   
 </ul>
 
-    </div>
   </body>
 </html>

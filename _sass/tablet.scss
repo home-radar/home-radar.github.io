@@ -9,5 +9,87 @@
 }
 
 @media screen and (max-width: 700px) {
-  
+  .normal-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+
+    .menu {
+      background: none;
+      border: none;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      position: absolute;
+      top: 35px;
+      right: 10vw;
+      transition: ease .3s;
+      z-index: 1000000000;
+    }
+
+    .line {
+      border-top: 4px solid $dark-green-gray-2;
+      width: 40px;
+      margin: 4px;
+      border-radius: 2px;
+      transition: ease .2s;
+
+    }
+
+    .nav-buttons {
+      background: $dark-teal;
+      width: 50vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      right: -50vw;
+      padding: 80px 10px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      transition: ease .5s;
+      z-index: 100000000;
+
+      a {
+        color: $light-cream;
+        width: 100%;
+        font-size: 20px;
+      }
+
+      .current {
+        color: $dark-green-gray-2;
+      }
+    }
+
+    .menu-slide {
+      transition: ease .5s;
+      right: 0;
+    }
+
+    .menu-click {
+      transform: rotate(360deg);
+
+      .line-1 {
+        position: relative;
+        top: 12px;
+        transform: rotate(45deg);
+        border-top: 4px solid $light-cream;
+      }
+
+      .line-2 {
+        opacity: 0;
+      }
+
+      .line-3 {
+        position: relative;
+        bottom: 12px;
+        transform: rotate(-45deg);
+        border-top: 4px solid $light-cream;
+      }
+    }
+  }
+
 }
