@@ -1,18 +1,21 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    // /* Safari only override */
-    // ::i-block-chrome, input[type="radio"]:hover {
-    //   appearance: none;
-    //   display: none
-    // }
-    //
-    // ::i-block-chrome, input[type="radio"] {
-    //   appearance: none;
-    //   display: none
-    // }
-    //
-    // ::i-block-chrome, input[type="radio"] {
-    //   position: relative;
-    //   left: 5px;
-    // }
+    /* Safari only override */
+    ::i-block-chrome, input[type="radio"]:hover {
+      position: absolute;
+ appearance: none;
+ opacity: 0;
+    }
+
+    ::i-block-chrome, input[type="radio"] {
+      position: absolute;
+ appearance: none;
+ opacity: 0;
+    }
+
+    ::i-block-chrome, input[type="radio"] {
+      position: absolute;
+ appearance: none;
+ opacity: 0;
+    }
 
 }
