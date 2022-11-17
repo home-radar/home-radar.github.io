@@ -68,7 +68,7 @@ div.content-map {
     flex-flow: nowrap;
     align-items: center;
 
-    [type=radio] {
+    input[type=radio] {
       position: absolute;
       opacity: 0;
       width: 0;
@@ -111,6 +111,8 @@ div.content-map {
 
     .icon-button {
       display: flex;
+      position: relative;
+      left: 8px;
     }
 
     .icon-hover:hover {
@@ -123,17 +125,18 @@ div.content-map {
       z-index: 999;
     }
 
-    [type=radio]:checked + img {
+    input[type=radio]:checked + img {
       opacity: 1;
     }
 
-    [type=radio]:checked + p {
+    input[type=radio]:checked + p {
       position: relative;
       display: block;
       z-index: 999;
     }
   }
 }
+
 
 
 .button-container {
@@ -156,7 +159,7 @@ div.content-map {
   z-index: 9999;
 
 
-  [type=radio] {
+  input[type=radio] {
     position: absolute;
     opacity: 0;
     width: 0;
