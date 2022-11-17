@@ -5,7 +5,7 @@
     }
 
     /* Safari only override */
-    ::i-block-chrome, input[type="radio"]{
+    ::i-block-chrome, input[type="radio"]:hover {
       appearance: none;
       display: none
     }
