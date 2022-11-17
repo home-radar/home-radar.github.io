@@ -70,9 +70,14 @@ div.content-map {
 
     input[type=radio] {
       position: absolute;
+      top: 0;
+      left: 0;
       opacity: 0;
       width: 0;
       height: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
     }
 
     img {
@@ -161,9 +166,14 @@ div.content-map {
 
   input[type=radio] {
     position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
     width: 0;
     height: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 }
 
