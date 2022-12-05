@@ -1,0 +1,24 @@
+[
+    {
+      "question": "Who can I contact if I’m concerned about the security of my dorm? (on campus)",
+      "paragraphOne": "According to VCU Audit and Compliance Services, it seems to be the responsibility of building access control, but says nothing about where students can submit concerns. In the VCU LiveSafe app, there do seem to be ways to contact VCU Police and security.",
+      "unorderedListOne": "",
+      "orderedListOne": "",
+      "paragraphTwo": "If you have an emergency browse this website and contact them immediately!",
+      "unorderedListTwo": "",
+      "orderedListTwo": "",
+      "paragraphThree": "",
+      "link": "https://police.vcu.edu/about/contact-us/"
+    },
+    {
+      "question": "What should I do if I find an intruder in my apartment?",
+      "paragraphOne": "",
+      "unorderedListOne": "",
+      "orderedListOne": "Verify their presence\n~Stay calm\n~Determine if you can escape\n~Stay put if you can't\n~Call the police\n~Keep quiet\n~Take notes afterward",
+      "paragraphTwo": "",
+      "unorderedListTwo": "",
+      "orderedListTwo": "",
+      "paragraphThree": "",
+      "link": "https://www.safewise.com/blog/what-to-do-when-an-intruder-is-in-your-home/"
+    }
+  ]

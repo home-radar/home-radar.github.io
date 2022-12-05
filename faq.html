@@ -2,53 +2,293 @@
 layout: default
 ---
 <div class="faq-page">
-    <div>
-        <h1>Frequently Asked Questions</h1>
-        <h4>on tenants and housing rights in Richmond</h4>
-        <div>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
+    <div class="faq-intro">
+        <div class="faq-text">
+            <h1 id="frequently">Frequently</h1>
+            <h1 id="asked">Asked</h1>
+            <h1 id="questions">Questions</h1>
+            <h3>on tenants and housing rights in Richmond</h3>
         </div>
-        <img src="">
+        <div class="faq-buttons">
+            <a href="#repair" class="repair-button">Repair & Maintenance<div><span>&#8250;</span></div></a>
+            <a href="#pest" class="pest-button">Pest Control<div><span>&#8250;</span></div></a>
+            <a href="#security" class="security-button">Security<div><span>&#8250;</span></div></a>
+            <a href="#tenants" class="tenants-button">Tenant's Rights<div><span>&#8250;</span></div></a>
+        </div>
+        <img src="assets/images/faq_drawing.png">
     </div>
+    
     <div>
-        <div>
+        <div class="accordian-container" id="repair">
             <h2>Repair & Maintenance</h2>
-            <button class="accordion">Section 1</button>
-            <div class="dropdown">
-                <p>dropdown</p>
-            </div>
+            {% for item in site.data.repairs %}
+
+            {% assign unordered_list_one = item.unorderedListOne | split:"~" %}
+            {% assign ordered_list_one = item.orderedListOne | split:"~" %}
+            {% assign unordered_list_two = item.unorderedListTwo | split:"~" %}
+            {% assign ordered_list_two = item.orderedListTwo | split:"~" %}
+
+
+                <button class="accordion"><strong>– {{ item.question }}</strong></button>
+                <div class="dropdown">
+                    {% if item.paragraphOne != "" %}
+                        <p>{{ item.paragraphOne }}</p>
+                    {% endif %}
+
+                    {% if item.unorderedListOne != "" %}
+                        <ul>
+                            {% for list in unordered_list_one %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if item.orderedListOne != "" %}
+                    <ol>
+                        {% for list in ordered_list_one %}
+                        <li>{{ list }}</li>
+                        {% endfor %}
+                    </ol>
+                    {% endif %}
+                    
+                    {% if item.paragraphTwo != "" %}
+                        <p>{{ item.paragraphTwo }}</p>
+                    {% endif %}
+
+                    {% if item.unorderedListTwo != "" %}
+                        <ul>
+                            {% for list in unordered_list_two %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if item.orderedListTwo != "" %}
+                    <ol>
+                        {% for list in ordered_list_two %}
+                        <li>{{ list }}</li>
+                        {% endfor %}
+                    </ol>
+                    {% endif %}
+
+                    {% if item.paragraphThree != "" %}
+                        <p>{{ item.paragraphThree }}</p>
+                    {% endif %}
+
+                    {% if item.link != "" %}
+                        <a href="{{ item.link }}" target="_blank" class="faq-link">Learn more &#8594</a>
+                    {% endif %}
+                </div>
+
+            {% endfor %}
         </div>
-        <div>
+        <div class="accordian-container" id="pest">
             <h2>Pest Control</h2>
-            <div></div>
+            {% for item in site.data.pest %}
+
+            {% assign unordered_list_one = item.unorderedListOne | split:"~" %}
+            {% assign ordered_list_one = item.orderedListOne | split:"~" %}
+            {% assign unordered_list_two = item.unorderedListTwo | split:"~" %}
+            {% assign ordered_list_two = item.orderedListTwo | split:"~" %}
+
+
+                <button class="accordion"><strong>– {{ item.question }}</strong></button>
+                <div class="dropdown">
+                    {% if item.paragraphOne != "" %}
+                        <p>{{ item.paragraphOne }}</p>
+                    {% endif %}
+
+                    {% if item.unorderedListOne != "" %}
+                        <ul>
+                            {% for list in unordered_list_one %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if item.orderedListOne != "" %}
+                    <ol>
+                        {% for list in ordered_list_one %}
+                        <li>{{ list }}</li>
+                        {% endfor %}
+                    </ol>
+                    {% endif %}
+                    
+                    {% if item.paragraphTwo != "" %}
+                        <p>{{ item.paragraphTwo }}</p>
+                    {% endif %}
+
+                    {% if item.unorderedListTwo != "" %}
+                        <ul>
+                            {% for list in unordered_list_two %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if item.orderedListTwo != "" %}
+                    <ol>
+                        {% for list in ordered_list_two %}
+                        <li>{{ list }}</li>
+                        {% endfor %}
+                    </ol>
+                    {% endif %}
+
+                    {% if item.paragraphThree != "" %}
+                        <p>{{ item.paragraphThree }}</p>
+                    {% endif %}
+
+                    {% if item.link != "" %}
+                        <a href="{{ item.link }}" target="_blank" class="faq-link">Learn more &#8594</a>
+                    {% endif %}
+                </div>
+
+            {% endfor %}
         </div>
-        <div>
+
+        <div class="accordian-container" id="security">
             <h2>Security</h2>
-            <div></div>
+            {% for item in site.data.security %}
+
+            {% assign unordered_list_one = item.unorderedListOne | split:"~" %}
+            {% assign ordered_list_one = item.orderedListOne | split:"~" %}
+            {% assign unordered_list_two = item.unorderedListTwo | split:"~" %}
+            {% assign ordered_list_two = item.orderedListTwo | split:"~" %}
+
+
+                <button class="accordion"><strong>– {{ item.question }}</strong></button>
+                <div class="dropdown">
+                    {% if item.paragraphOne != "" %}
+                        <p>{{ item.paragraphOne }}</p>
+                    {% endif %}
+
+                    {% if item.unorderedListOne != "" %}
+                        <ul>
+                            {% for list in unordered_list_one %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if item.orderedListOne != "" %}
+                    <ol>
+                        {% for list in ordered_list_one %}
+                        <li>{{ list }}</li>
+                        {% endfor %}
+                    </ol>
+                    {% endif %}
+                    
+                    {% if item.paragraphTwo != "" %}
+                        <p>{{ item.paragraphTwo }}</p>
+                    {% endif %}
+
+                    {% if item.unorderedListTwo != "" %}
+                        <ul>
+                            {% for list in unordered_list_two %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if item.orderedListTwo != "" %}
+                    <ol>
+                        {% for list in ordered_list_two %}
+                        <li>{{ list }}</li>
+                        {% endfor %}
+                    </ol>
+                    {% endif %}
+
+                    {% if item.paragraphThree != "" %}
+                        <p>{{ item.paragraphThree }}</p>
+                    {% endif %}
+
+                    {% if item.link != "" %}
+                        <a href="{{ item.link }}" target="_blank" class="faq-link">Learn more &#8594</a>
+                    {% endif %}
+                </div>
+
+            {% endfor %}
         </div>
-        <div>
+
+        <div class="accordian-container" id="tenants">
             <h2>Tenant's Rights</h2>
-            <div></div>
+            {% for item in site.data.tenants %}
+
+            {% assign unordered_list_one = item.unorderedListOne | split:"~" %}
+            {% assign ordered_list_one = item.orderedListOne | split:"~" %}
+            {% assign unordered_list_two = item.unorderedListTwo | split:"~" %}
+            {% assign ordered_list_two = item.orderedListTwo | split:"~" %}
+
+
+                <button class="accordion"><strong>– {{ item.question }}</strong></button>
+                <div class="dropdown">
+                    {% if item.paragraphOne != "" %}
+                        <p>{{ item.paragraphOne }}</p>
+                    {% endif %}
+
+                    {% if item.unorderedListOne != "" %}
+                        <ul>
+                            {% for list in unordered_list_one %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if item.orderedListOne != "" %}
+                    <ol>
+                        {% for list in ordered_list_one %}
+                        <li>{{ list }}</li>
+                        {% endfor %}
+                    </ol>
+                    {% endif %}
+                    
+                    {% if item.paragraphTwo != "" %}
+                        <p>{{ item.paragraphTwo }}</p>
+                    {% endif %}
+
+                    {% if item.unorderedListTwo != "" %}
+                        <ul>
+                            {% for list in unordered_list_two %}
+                            <li>{{ list }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if item.orderedListTwo != "" %}
+                    <ol>
+                        {% for list in ordered_list_two %}
+                        <li>{{ list }}</li>
+                        {% endfor %}
+                    </ol>
+                    {% endif %}
+
+                    {% if item.paragraphThree != "" %}
+                        <p>{{ item.paragraphThree }}</p>
+                    {% endif %}
+
+                    {% if item.link != "" %}
+                        <a href="{{ item.link }}" target="_blank" class="faq-link">Learn more &#8594</a>
+                    {% endif %}
+                </div>
+
+            {% endfor %}
         </div>
     </div>
 </div>
 
 <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        } 
-      });
-    }
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 </script>

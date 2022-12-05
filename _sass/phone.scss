@@ -327,4 +327,129 @@
       transform: translateX(0);
     }
   }
+
+
+
+
+
+
+
+
+  //FAQ
+
+
+
+
+
+
+
+
+
+
+  .faq-page {
+    top: 60px;
+
+    .faq-intro {
+      height: calc(100vh - 60px);
+      
+      .faq-text {
+        left: 13vw;
+        top: 10vh;
+
+        h1 {
+          font-size: 50px;
+          line-height: 60px;
+        }
+
+        h4 {
+
+        }
+
+        #asked {
+          position: relative;
+          right: 30px;
+      }
+
+      #questions {
+          position: relative;
+          left: 30px;
+      }
+      }
+
+      .faq-buttons {
+        width: 100%;
+        top: 40%;
+
+        a {
+          font-size: 20px;
+          padding: 10px 15px;
+          white-space: nowrap;
+
+
+          div {
+            height: 25px;
+            width: 25px;
+            min-height: 25px;
+            min-width: 25px;
+            top: 2px;
+
+            span {
+              font-size: 25px;
+              left: 8px;
+              bottom: 8px;
+            }
+          }
+        }
+
+        .repair-button {
+          top: 38%;
+          left: 20%;
+        }
+
+        .pest-button {
+          top: 20%;
+          left: 50%;
+        }
+
+        .security-button {
+          top: 55%;
+          left: 70%;
+        }
+
+        .tenants-button {
+          top: 70%;
+          left: 40%;
+        }
+      }
+
+      img {
+        transform: translate(0);
+        max-width: 175%;
+        height: auto;
+        max-height: 80vh;
+        position: absolute;
+        bottom: 0;
+        left: -10vw;
+      }
+    }
+  }
+
+  .accordian-container {
+    width: 100vw;
+    left: 0;
+  }
+
+  .accordion {
+    min-height: 30px;
+  }
+
+  button.accordion{
+    font-size: 16px;
+  }
+
+  .dropdown {
+    li, p, a{
+      font-size: 16px;   
+    }
+  }
 }

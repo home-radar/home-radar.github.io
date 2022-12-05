@@ -44,7 +44,72 @@
       transform: translateX(-100px);
     }
   }
-}
+
+
+
+
+
+
+
+//FAQ PAGE
+
+
+
+
+
+
+
+
+
+
+  .faq-page .faq-intro {
+        align-items: flex-start;
+        position: relative;
+        
+        .faq-text {
+            width: calc(100% - 13vw);
+            height: 100%;
+            top: 5vh;
+            z-index: 1;
+
+            h1 {
+                font-size: 80px;
+                line-height: 95px;
+                margin: 0;
+            }
+        }
+
+        .faq-buttons {
+            height: 50%;
+            width: 70%;
+            position: absolute;
+            right: 10%;
+            top: 40%;
+            z-index: 999;
+
+            a {
+                background: $blue-gray-50;
+                color: $dark-green-gray-2;
+                box-shadow: 2px 4px 4px 0px $dark-blue;
+                font-weight: bold;
+                font-size: 24px;
+                padding: 10px 25px;
+                border-radius: 40px;
+                position: absolute;
+                display: flex;
+                transition: ease .3s;
+
+            }
+
+        }
+      
+
+        img {
+            height: 70%;
+            transform: translateX(-300px);
+        }
+    }
+  }
 
 @media screen and (max-width: 1000px) {
   .about-us-page {
@@ -74,6 +139,24 @@
 
     img {
       transform: translateX(-200px);
+    }
+  }
+
+
+
+//FAQ
+
+
+  .faq-page .faq-intro {   
+    
+    .faq-buttons {
+      width: 90%;
+    }
+
+    img {
+      height: 70%;
+      transform: translateX(-400px);
+      transition: ease 2s;
     }
   }
 }

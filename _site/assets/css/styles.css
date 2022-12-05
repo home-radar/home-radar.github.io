@@ -118,6 +118,64 @@ nav img { width: 5%; }
 
 .listings-page tr { font-family: Jost; }
 
+.faq-page { position: relative; top: 80px; margin-bottom: 80px; }
+
+.faq-page .faq-intro { background: #2c3c52; height: calc(90vh - 80px); position: relative; display: flex; align-items: center; justify-content: flex-start; overflow: hidden; }
+
+.faq-page .faq-intro .faq-text { position: relative; width: 40%; left: 10vw; z-index: 999; transition: ease 1s; }
+
+.faq-page .faq-intro .faq-text h1, .faq-page .faq-intro .faq-text h3 { color: #E4BEB7; }
+
+.faq-page .faq-intro .faq-text h1 { font-size: 100px; line-height: 120px; margin: 0; }
+
+.faq-page .faq-intro .faq-text h3 { position: relative; bottom: 20px; }
+
+.faq-page .faq-intro .faq-text #asked { position: relative; right: 50px; }
+
+.faq-page .faq-intro .faq-text #questions { position: relative; left: 50px; }
+
+.faq-page .faq-intro .faq-buttons { height: 100%; width: 60%; position: absolute; right: 0; top: 0; z-index: 999; transition: ease 1s; }
+
+.faq-page .faq-intro .faq-buttons a { background: #adbdd4e4; color: #33494D; box-shadow: 2px 4px 4px 0px #2c3c52; font-weight: bold; font-size: 30px; padding: 10px 25px; border-radius: 40px; position: absolute; display: flex; transition: ease .3s; }
+
+.faq-page .faq-intro .faq-buttons a div { background: #E4BEB7; border-radius: 50%; height: 40px; width: 40px; margin-left: 20px; position: relative; transition: ease .3s; }
+
+.faq-page .faq-intro .faq-buttons a div span { font-size: 40px; position: relative; left: 12px; bottom: 12px; transition: ease .3s; }
+
+.faq-page .faq-intro .faq-buttons a:hover div { transform: scale(1.4); }
+
+.faq-page .faq-intro .faq-buttons .repair-button { top: 45%; left: 5%; }
+
+.faq-page .faq-intro .faq-buttons .pest-button { top: 20%; left: 40%; }
+
+.faq-page .faq-intro .faq-buttons .security-button { top: 55%; left: 70%; }
+
+.faq-page .faq-intro .faq-buttons .tenants-button { top: 80%; left: 40%; }
+
+.faq-page .faq-intro img { height: 100%; position: absolute; bottom: 0; left: 650px; transition: ease 1s; }
+
+.accordian-container { width: 70vw; position: relative; left: 10vw; }
+
+#repair { padding-top: 80px; }
+
+#pest, #security { padding-top: 50px; }
+
+#tenants { padding-top: 50px; padding-bottom: 80px; }
+
+.accordion { background: transparent; border: none; border-bottom: 1px solid #64433D; width: 100%; min-height: 50px; padding: 0 18px 18px 18px; margin: 0 auto; text-align: left; outline: none; transition: 0.4s; cursor: pointer; }
+
+.accordion:after { content: '\002B'; color: #777; font-weight: bold; float: right; margin-left: 5px; }
+
+.active:after { content: "\2212"; }
+
+button.active + .dropdown { margin: 20px 0 30px 0; transition: ease .5s; }
+
+.dropdown { padding: 0 18px; margin: 12px 0; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out; }
+
+.dropdown ul, .dropdown ol, .dropdown p { max-width: 80%; margin-bottom: 20px; margin-top: 0; }
+
+.dropdown a { background: #E4BEB7; color: #33494D; padding: 0 20px; border-radius: 30px; min-height: 40px; }
+
 .about-us-page { position: relative; top: 100px; max-width: 100vw; overflow: hidden; }
 
 .about-us-page h1 { margin: 0; font-size: 44px; }
@@ -173,14 +231,6 @@ nav img { width: 5%; }
 .about-us-page .about-us-faq a { bottom: -25px; left: 50px; max-width: 185px; }
 
 .about-us-page .about-us-faq a:hover { background-color: #92D2D9; }
-
-.faq-page { position: relative; top: 80px; }
-
-.accordion { padding: 18px; width: 100%; border: none; text-align: left; outline: none; transition: 0.4s; cursor: pointer; }
-
-.active, .accordion:hover { background-color: #ccc; }
-
-.dropdown { padding: 0 18px; background-color: white; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out; }
 
 .content { height: 100vh; overflow: hidden; }
 
@@ -308,10 +358,10 @@ ul { margin: 0; }
 
 @media screen and (max-width: 1300px) { .about-us-page .about-us-ratings img { position: absolute; left: 300px; bottom: 0; height: 110%; } }
 
-@media screen and (max-width: 1150px) { .right-container { width: 38vw; } .base-content .apartment-card-container { column-count: 1; } .about-us-page .about-us-map, .about-us-page .about-us-ratings { background-color: #3896A0; } .about-us-page .about-us-map .about-us-section_blurb, .about-us-page .about-us-ratings .about-us-section_blurb { width: 80%; min-width: 400px; max-width: 600px; } .about-us-page img { transform: translateX(-100px); } }
+@media screen and (max-width: 1150px) { .right-container { width: 38vw; } .base-content .apartment-card-container { column-count: 1; } .about-us-page .about-us-map, .about-us-page .about-us-ratings { background-color: #3896A0; } .about-us-page .about-us-map .about-us-section_blurb, .about-us-page .about-us-ratings .about-us-section_blurb { width: 80%; min-width: 400px; max-width: 600px; } .about-us-page img { transform: translateX(-100px); } .faq-page .faq-intro { align-items: flex-start; position: relative; } .faq-page .faq-intro .faq-text { width: calc(100% - 13vw); height: 100%; top: 5vh; z-index: 1; } .faq-page .faq-intro .faq-text h1 { font-size: 80px; line-height: 95px; margin: 0; } .faq-page .faq-intro .faq-buttons { height: 50%; width: 70%; position: absolute; right: 10%; top: 40%; z-index: 999; } .faq-page .faq-intro .faq-buttons a { background: #adbdd4e4; color: #33494D; box-shadow: 2px 4px 4px 0px #2c3c52; font-weight: bold; font-size: 24px; padding: 10px 25px; border-radius: 40px; position: absolute; display: flex; transition: ease .3s; } .faq-page .faq-intro img { height: 70%; transform: translateX(-300px); } }
 
-@media screen and (max-width: 1000px) { .about-us-page .about-us-intro h1 { text-align: left; } .about-us-page .about-us-map, .about-us-page .about-us-ratings { background-color: #3896A0; } .about-us-page .about-us-map .about-us-section_blurb, .about-us-page .about-us-ratings .about-us-section_blurb { width: 80%; min-width: 400px; max-width: 500px; } .about-us-page .about-us-map h3, .about-us-page .about-us-ratings h3 { font-size: 20px; right: 560px; } .about-us-page img { transform: translateX(-200px); } }
+@media screen and (max-width: 1000px) { .about-us-page .about-us-intro h1 { text-align: left; } .about-us-page .about-us-map, .about-us-page .about-us-ratings { background-color: #3896A0; } .about-us-page .about-us-map .about-us-section_blurb, .about-us-page .about-us-ratings .about-us-section_blurb { width: 80%; min-width: 400px; max-width: 500px; } .about-us-page .about-us-map h3, .about-us-page .about-us-ratings h3 { font-size: 20px; right: 560px; } .about-us-page img { transform: translateX(-200px); } .faq-page .faq-intro .faq-buttons { width: 90%; } .faq-page .faq-intro img { height: 70%; transform: translateX(-400px); transition: ease 2s; } }
 
-@media screen and (max-width: 700px) { .normal-nav { display: none; } .mobile-nav { display: block; } .mobile-nav .menu { background: none; border: none; height: 30px; display: flex; flex-direction: column; align-items: stretch; justify-content: center; position: absolute; top: 35px; right: 10vw; transition: ease .3s; z-index: 1000000000; } .mobile-nav .line { border-top: 4px solid #33494D; width: 40px; margin: 4px; border-radius: 2px; transition: ease .2s; } .mobile-nav .nav-buttons { background: #0e5860; width: 50vw; height: 100vh; position: absolute; top: 0; right: -50vw; padding: 80px 10px 10px 10px; display: flex; flex-direction: column; transition: ease .5s; z-index: 100000000; } .mobile-nav .nav-buttons a { color: #FFFCF4; width: 100%; font-size: 20px; } .mobile-nav .nav-buttons .current { color: #33494D; } .mobile-nav .menu-slide { transition: ease .5s; right: 0; } .mobile-nav .menu-click { transform: rotate(360deg); } .mobile-nav .menu-click .line-1 { position: relative; top: 12px; transform: rotate(45deg); border-top: 4px solid #FFFCF4; } .mobile-nav .menu-click .line-2 { opacity: 0; } .mobile-nav .menu-click .line-3 { position: relative; bottom: 12px; transform: rotate(-45deg); border-top: 4px solid #FFFCF4; } nav { height: 70px; } .nav-buttons { flex-flow: nowrap; } .nav-buttons a { font-size: 12px; } .nav-logo { font-size: 16px; line-height: 24px; } .menu { position: absolute; top: 20px !important; } div.content-map { max-width: 100vw; min-height: calc(100vh - 70px); position: relative; top: 70px; overflow: hidden; } div.content-map .map-page { width: 100vw; min-height: 1000px; position: absolute; top: -200px; left: 0; overflow: scroll; display: flex; } div.content-map .map-page::-webkit-scrollbar { display: none; } .button-container .apartments-up { background: #FFFCF4; border: 2px solid #64433D; border-radius: 50%; width: 50px; height: 50px; display: block; position: absolute; top: 67.5vh; right: calc(44vw); z-index: 10000; transition: ease .5s; } .button-container .apartments-up p { color: #33494D; font-size: 40px; position: relative; z-index: 10000000; } .button-container .slide-button { top: 12.5vh; transform: rotate(180deg); } .right-container { border-top: 2px solid #64433D; position: relative; top: 70vh; width: 100vw; height: calc(33vh - 90px); transition: ease .5s; } .right-container h1 { font-size: 24px; } .slide-container { height: calc(85vh - 60px); top: 15vh; } .about-us-page { position: relative; top: 70px; max-width: 100vw; overflow: hidden; } .about-us-page img { z-index: 0; } .about-us-page > div { height: calc(100vh - 65px); min-height: 600px; position: relative; align-items: flex-start; justify-content: center; } .about-us-page a { bottom: -25px; right: 25px; transition: ease .3s; } .about-us-page a:hover { background: #FFFCF4; } .about-us-page .about-us-intro { display: flex; align-items: center; } .about-us-page .about-us-intro .about-us-intro_blurb { position: relative; top: 0; left: 0; align-items: center; } .about-us-page .about-us-intro span { color: #8e5e55; } .about-us-page .about-us-map p, .about-us-page .about-us-ratings p { color: white; position: relative; left: 20px; } .about-us-page .about-us-map img, .about-us-page .about-us-ratings img { position: absolute; left: -20px; bottom: 0; width: 110vw; height: auto; transition: ease 2s; transform: translateX(0); } .about-us-page .about-us-map #ratings_blurb, .about-us-page .about-us-ratings #ratings_blurb { max-width: 750px; bottom: 0%; } .about-us-page .about-us-faq { left: 0; } .about-us-page .about-us-map, .about-us-page .about-us-ratings, .about-us-page .about-us-faq { justify-content: flex-end; position: relative; } .about-us-page .about-us-map .about-us-section_blurb, .about-us-page .about-us-ratings .about-us-section_blurb, .about-us-page .about-us-faq .about-us-section_blurb { width: 100vw; min-width: 300px; max-width: 600px; padding: 40px; z-index: 1; position: relative; left: 0; bottom: 2vh; } .about-us-page .about-us-map h3, .about-us-page .about-us-ratings h3, .about-us-page .about-us-faq h3 { background: #92D2D9; padding: 10px 30px; width: 100%; position: relative; margin: 10px 0; text-align: left; font-size: 22px; position: relative; left: -10vw; padding-left: 40px; } .about-us-page .about-us-map h1, .about-us-page .about-us-ratings h1, .about-us-page .about-us-faq h1 { margin: 0; font-size: 30px; } .about-us-page .about-us-map p, .about-us-page .about-us-ratings p, .about-us-page .about-us-faq p { font-size: 18px; position: relative; left: 20px; } .about-us-page .about-us-map img, .about-us-page .about-us-ratings img, .about-us-page .about-us-faq img { position: absolute; left: -20px; bottom: 0; width: 110vw; height: auto; transition: ease 2s; } .about-us-page .about-us-map a, .about-us-page .about-us-ratings a, .about-us-page .about-us-faq a { font-size: 18px; bottom: -25px; left: 50px; max-width: 205px; text-align: center; } .about-us-page .about-us-faq img { width: 120vw; transform: translateX(0); } }
+@media screen and (max-width: 700px) { .normal-nav { display: none; } .mobile-nav { display: block; } .mobile-nav .menu { background: none; border: none; height: 30px; display: flex; flex-direction: column; align-items: stretch; justify-content: center; position: absolute; top: 35px; right: 10vw; transition: ease .3s; z-index: 1000000000; } .mobile-nav .line { border-top: 4px solid #33494D; width: 40px; margin: 4px; border-radius: 2px; transition: ease .2s; } .mobile-nav .nav-buttons { background: #0e5860; width: 50vw; height: 100vh; position: absolute; top: 0; right: -50vw; padding: 80px 10px 10px 10px; display: flex; flex-direction: column; transition: ease .5s; z-index: 100000000; } .mobile-nav .nav-buttons a { color: #FFFCF4; width: 100%; font-size: 20px; } .mobile-nav .nav-buttons .current { color: #33494D; } .mobile-nav .menu-slide { transition: ease .5s; right: 0; } .mobile-nav .menu-click { transform: rotate(360deg); } .mobile-nav .menu-click .line-1 { position: relative; top: 12px; transform: rotate(45deg); border-top: 4px solid #FFFCF4; } .mobile-nav .menu-click .line-2 { opacity: 0; } .mobile-nav .menu-click .line-3 { position: relative; bottom: 12px; transform: rotate(-45deg); border-top: 4px solid #FFFCF4; } nav { height: 70px; } .nav-buttons { flex-flow: nowrap; } .nav-buttons a { font-size: 12px; } .nav-logo { font-size: 16px; line-height: 24px; } .menu { position: absolute; top: 20px !important; } div.content-map { max-width: 100vw; min-height: calc(100vh - 70px); position: relative; top: 70px; overflow: hidden; } div.content-map .map-page { width: 100vw; min-height: 1000px; position: absolute; top: -200px; left: 0; overflow: scroll; display: flex; } div.content-map .map-page::-webkit-scrollbar { display: none; } .button-container .apartments-up { background: #FFFCF4; border: 2px solid #64433D; border-radius: 50%; width: 50px; height: 50px; display: block; position: absolute; top: 67.5vh; right: calc(44vw); z-index: 10000; transition: ease .5s; } .button-container .apartments-up p { color: #33494D; font-size: 40px; position: relative; z-index: 10000000; } .button-container .slide-button { top: 12.5vh; transform: rotate(180deg); } .right-container { border-top: 2px solid #64433D; position: relative; top: 70vh; width: 100vw; height: calc(33vh - 90px); transition: ease .5s; } .right-container h1 { font-size: 24px; } .slide-container { height: calc(85vh - 60px); top: 15vh; } .about-us-page { position: relative; top: 70px; max-width: 100vw; overflow: hidden; } .about-us-page img { z-index: 0; } .about-us-page > div { height: calc(100vh - 65px); min-height: 600px; position: relative; align-items: flex-start; justify-content: center; } .about-us-page a { bottom: -25px; right: 25px; transition: ease .3s; } .about-us-page a:hover { background: #FFFCF4; } .about-us-page .about-us-intro { display: flex; align-items: center; } .about-us-page .about-us-intro .about-us-intro_blurb { position: relative; top: 0; left: 0; align-items: center; } .about-us-page .about-us-intro span { color: #8e5e55; } .about-us-page .about-us-map p, .about-us-page .about-us-ratings p { color: white; position: relative; left: 20px; } .about-us-page .about-us-map img, .about-us-page .about-us-ratings img { position: absolute; left: -20px; bottom: 0; width: 110vw; height: auto; transition: ease 2s; transform: translateX(0); } .about-us-page .about-us-map #ratings_blurb, .about-us-page .about-us-ratings #ratings_blurb { max-width: 750px; bottom: 0%; } .about-us-page .about-us-faq { left: 0; } .about-us-page .about-us-map, .about-us-page .about-us-ratings, .about-us-page .about-us-faq { justify-content: flex-end; position: relative; } .about-us-page .about-us-map .about-us-section_blurb, .about-us-page .about-us-ratings .about-us-section_blurb, .about-us-page .about-us-faq .about-us-section_blurb { width: 100vw; min-width: 300px; max-width: 600px; padding: 40px; z-index: 1; position: relative; left: 0; bottom: 2vh; } .about-us-page .about-us-map h3, .about-us-page .about-us-ratings h3, .about-us-page .about-us-faq h3 { background: #92D2D9; padding: 10px 30px; width: 100%; position: relative; margin: 10px 0; text-align: left; font-size: 22px; position: relative; left: -10vw; padding-left: 40px; } .about-us-page .about-us-map h1, .about-us-page .about-us-ratings h1, .about-us-page .about-us-faq h1 { margin: 0; font-size: 30px; } .about-us-page .about-us-map p, .about-us-page .about-us-ratings p, .about-us-page .about-us-faq p { font-size: 18px; position: relative; left: 20px; } .about-us-page .about-us-map img, .about-us-page .about-us-ratings img, .about-us-page .about-us-faq img { position: absolute; left: -20px; bottom: 0; width: 110vw; height: auto; transition: ease 2s; } .about-us-page .about-us-map a, .about-us-page .about-us-ratings a, .about-us-page .about-us-faq a { font-size: 18px; bottom: -25px; left: 50px; max-width: 205px; text-align: center; } .about-us-page .about-us-faq img { width: 120vw; transform: translateX(0); } .faq-page { top: 60px; } .faq-page .faq-intro { height: calc(100vh - 60px); } .faq-page .faq-intro .faq-text { left: 13vw; top: 10vh; } .faq-page .faq-intro .faq-text h1 { font-size: 50px; line-height: 60px; } .faq-page .faq-intro .faq-text #asked { position: relative; right: 30px; } .faq-page .faq-intro .faq-text #questions { position: relative; left: 30px; } .faq-page .faq-intro .faq-buttons { width: 100%; top: 40%; } .faq-page .faq-intro .faq-buttons a { font-size: 20px; padding: 10px 15px; white-space: nowrap; } .faq-page .faq-intro .faq-buttons a div { height: 25px; width: 25px; min-height: 25px; min-width: 25px; top: 2px; } .faq-page .faq-intro .faq-buttons a div span { font-size: 25px; left: 8px; bottom: 8px; } .faq-page .faq-intro .faq-buttons .repair-button { top: 38%; left: 20%; } .faq-page .faq-intro .faq-buttons .pest-button { top: 20%; left: 50%; } .faq-page .faq-intro .faq-buttons .security-button { top: 55%; left: 70%; } .faq-page .faq-intro .faq-buttons .tenants-button { top: 70%; left: 40%; } .faq-page .faq-intro img { transform: translate(0); max-width: 175%; height: auto; max-height: 80vh; position: absolute; bottom: 0; left: -10vw; } .accordian-container { width: 100vw; left: 0; } .accordion { min-height: 30px; } button.accordion { font-size: 16px; } .dropdown li, .dropdown p, .dropdown a { font-size: 16px; } }
 
 /*# sourceMappingURL=styles.css.map */
