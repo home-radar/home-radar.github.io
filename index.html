@@ -54,12 +54,16 @@ layout: default
                 <h3>{{ item.aptName }}</h3>
 
                 <p {% if item.totalRating == "?" %}class="rating unrated"{% else %}class="rating totalRating"{% endif %}">rating:
-                  {% if item.totalRating == "good" %}
-                    &#9733;&#9733;&#9733;
-                  {% elsif item.totalRating == "mid" %}
-                    &#9733;&#9733;&#9734;
-                  {% elsif item.totalRating == "bad" %}
-                    &#9733;&#9734;&#9734;
+                  {% if item.totalRating == "5" %}
+                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                  {% elsif item.totalRating == "4" %}
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                  {% elsif item.totalRating == "3" %}
+                  &#9733;&#9733;&#9733;&#9734;&#9734;
+                  {% elsif item.totalRating == "2" %}
+                  &#9733;&#9733;&#9734;&#9734;&#9734;
+                  {% elsif item.totalRating == "1" %}
+                  &#9733;&#9734;&#9734;&#9734;&#9734;
                   {% else %}
                     unrated
                   {% endif %}
@@ -148,12 +152,16 @@ layout: default
           <div class="apartment-content-header">
             <h1>{{ item.aptName }}</h1>
             <p class="rating totalRating">rating:
-              {% if item.totalRating == "good" %}
-                &#9733;&#9733;&#9733;
-              {% elsif item.totalRating == "mid" %}
-                &#9733;&#9733;&#9734;
-              {% elsif item.totalRating == "bad" %}
-                &#9733;&#9734;&#9734;
+              {% if item.totalRating == "5" %}
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+                {% elsif item.totalRating == "4" %}
+                &#9733;&#9733;&#9733;&#9733;&#9734;
+              {% elsif item.totalRating == "3" %}
+                &#9733;&#9733;&#9733;&#9734;&#9734;
+              {% elsif item.totalRating == "2" %}
+                &#9733;&#9733;&#9734;&#9734;&#9734;
+              {% elsif item.totalRating == "1" %}
+                &#9733;&#9734;&#9734;&#9734;&#9734;
               {% else %}
                 unrated
               {% endif %}
@@ -171,11 +179,11 @@ layout: default
           <div class="apartment-page-icons">
             <p class="rating">maintence:
               {% if item.maintenance == "good" %}
-                &#9733;&#9733;&#9733;
+              &#9733;&#9733;&#9733;&#9733;&#9733;
               {% elsif item.maintenance == "mid" %}
-                &#9733;&#9733;&#9734;
+              &#9733;&#9733;&#9733;&#9734;&#9734;
               {% elsif item.maintenance == "bad" %}
-                &#9733;&#9734;&#9734;
+              &#9733;&#9734;&#9734;&#9734;&#9734;
               {% else %}
                 unrated
               {% endif %}
@@ -183,11 +191,11 @@ layout: default
 
             <p class="rating">management:
               {% if item.management == "good" %}
-                &#9733;&#9733;&#9733;
+              &#9733;&#9733;&#9733;&#9733;&#9733;
               {% elsif item.management == "mid" %}
-                &#9733;&#9733;&#9734;
+              &#9733;&#9733;&#9733;&#9734;&#9734;
               {% elsif item.management == "bad" %}
-                &#9733;&#9734;&#9734;
+              &#9733;&#9734;&#9734;&#9734;&#9734;
               {% else %}
                 unrated
               {% endif %}
@@ -195,11 +203,11 @@ layout: default
 
             <p class="rating">pest control:
               {% if item.pests == "good" %}
-                &#9733;&#9733;&#9733;
+                &#9733;&#9733;&#9733;&#9733;&#9733;
               {% elsif item.pests == "mid" %}
-                &#9733;&#9733;&#9734;
+                &#9733;&#9733;&#9733;&#9734;&#9734;
               {% elsif item.pests == "bad" %}
-                &#9733;&#9734;&#9734;
+               &#9733;&#9734;&#9734;&#9734;&#9734;
               {% else %}
                 unrated
               {% endif %}
@@ -365,6 +373,10 @@ layout: default
             </div>
 
           <div class="problems-div-div">
+            {% if item.preProblems != "" %}
+              <p class="prepre">{{ item.preProblems}} </p>
+
+            {% endif %}
             {% if item.problems != "" %}
               <ul>
                 {% assign problems = item.problems | split: "," %}

@@ -176,4 +176,155 @@
     top: 15vh ;
   }
 
+
+
+
+
+
+
+//ABOUT US PAGE
+
+
+
+
+
+
+
+
+  .about-us-page {
+    position: relative;
+    top: 70px;
+    max-width: 100vw;
+    overflow: hidden;
+
+
+    img {
+        z-index: 0;
+    }
+
+    & > div {
+        height: calc(100vh - 65px);
+        min-height: 600px;
+        position: relative;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    a {
+        bottom: -25px;
+        right: 25px;
+        transition: ease .3s;
+
+        &:hover {
+            background: $light-cream;
+        }
+    }
+
+    .about-us-intro {
+        display: flex;
+        align-items: center;
+
+        .about-us-intro_blurb {
+            position: relative;
+            top: 0;
+            left: 0;
+            align-items: center;
+        }
+
+        span {
+            color: $mid-pink;
+        }
+
+    }
+
+    .about-us-map, .about-us-ratings {
+        & p {
+            color: $white;
+            position: relative;
+            left: 20px;
+        }
+
+        img {
+            position: absolute;
+            left: -20px;
+            bottom: 0;
+            width: 110vw;
+            height: auto;
+            transition: ease 2s;
+            transform: translateX(0);
+        }
+
+        #ratings_blurb {
+            max-width: 750px;
+            bottom: 0%;
+        }
+    }
+
+    .about-us-faq {
+      left: 0;
+    }
+
+    .about-us-map, .about-us-ratings, .about-us-faq {
+      justify-content: flex-end;
+      position: relative;
+
+      .about-us-section_blurb{
+          width: 100vw;
+          min-width: 300px;
+          max-width: 600px;
+          padding: 40px;
+          z-index: 1;
+          position: relative;
+          left: 0;
+          bottom: 2vh;
+      }
+
+      & h3 {
+          background: $light-teal;
+          padding: 10px 30px;
+          width: 100%;
+          position: relative;
+          margin: 10px 0;
+          text-align: left;
+          font-size: 22px;
+          position: relative;
+          left: -10vw;
+          padding-left: 40px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 30px;
+      }
+
+      & p {
+        font-size: 18px;
+        position: relative;
+        left: 20px;
+      }
+
+      img {
+        position: absolute;
+        left: -20px;
+        bottom: 0;
+        width: 110vw;
+        height: auto;
+        transition: ease 2s;
+      }
+
+      a {
+        font-size: 18px;
+          bottom: -25px;
+          left: 50px;
+          max-width: 205px;
+          text-align: center;
+      }
+      
+    }
+  
+    .about-us-faq img {
+      width: 120vw;
+      transform: translateX(0);
+    }
+  }
 }

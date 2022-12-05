@@ -6,7 +6,9 @@
         "navigation.scss",
         "scrollbar.scss",
         "locations.scss",
-        "listings.scss";
+        "listings.scss",
+        "about-us.scss",
+        "faq.scss";
 
 
 //CONTENT
@@ -143,11 +145,6 @@ div.content-map {
 }
 
 
-
-.button-container {
-
-}
-
 .right-container{
   background: $light-cream;
   box-shadow: 0 0 10px 0 $dark-pink-50;
@@ -231,8 +228,9 @@ div.content-map {
       }
 
       .totalRating {
-        max-width: 149px;
+        max-width: 185px;
         margin-left: 8px;
+        margin-bottom: 15px;
       }
 
       .unrated {
@@ -310,7 +308,7 @@ div.content-map {
 div.table-div {
   margin: 20px 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   h3 {
     margin: 3px 0;
@@ -358,13 +356,13 @@ div.table-div {
   color: $light-cream;
   background: $teal;
   border-radius: 20px;
-  padding: 4px 10px;
+  padding: 4px 15px;
   margin: 4px 4px 4px 0;
   height: 100%;
 }
 
 .problems-div-div {
-  max-width: calc(100% - 125px);
+  max-width: calc(100% - 130px);
   min-width: 200px;
   .aaaa {
     margin: 20px 20px;

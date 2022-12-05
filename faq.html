@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<div class="faq-page">
+    <div>
+        <h1>Frequently Asked Questions</h1>
+        <h4>on tenants and housing rights in Richmond</h4>
+        <div>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+        </div>
+        <img src="">
+    </div>
+    <div>
+        <div>
+            <h2>Repair & Maintenance</h2>
+            <button class="accordion">Section 1</button>
+            <div class="dropdown">
+                <p>dropdown</p>
+            </div>
+        </div>
+        <div>
+            <h2>Pest Control</h2>
+            <div></div>
+        </div>
+        <div>
+            <h2>Security</h2>
+            <div></div>
+        </div>
+        <div>
+            <h2>Tenant's Rights</h2>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+</script>
