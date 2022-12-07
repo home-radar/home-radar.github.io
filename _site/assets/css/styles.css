@@ -138,9 +138,9 @@ nav img { width: 5%; }
 
 .faq-page .faq-intro .faq-buttons a { background: #adbdd4e4; color: #33494D; box-shadow: 2px 4px 4px 0px #2c3c52; font-weight: bold; font-size: 30px; padding: 10px 25px; border-radius: 40px; position: absolute; display: flex; transition: ease .3s; }
 
-.faq-page .faq-intro .faq-buttons a div { background: #E4BEB7; border-radius: 50%; height: 40px; width: 40px; margin-left: 20px; position: relative; transition: ease .3s; }
+.faq-page .faq-intro .faq-buttons a div { background: #33494D; border-radius: 50%; height: 40px; width: 40px; margin-left: 20px; position: relative; transition: ease .3s; }
 
-.faq-page .faq-intro .faq-buttons a div span { font-size: 40px; position: relative; left: 12px; bottom: 12px; transition: ease .3s; }
+.faq-page .faq-intro .faq-buttons a div span { color: #E4BEB7; font-size: 40px; position: relative; left: 12px; bottom: 12px; transition: ease .3s; }
 
 .faq-page .faq-intro .faq-buttons a:hover div { transform: scale(1.4); }
 

@@ -67,7 +67,7 @@
                 transition: ease .3s;
 
                 div {
-                    background: $pink;
+                    background: $dark-green-gray-2;
                     border-radius: 50%;
                     height: 40px;
                     width: 40px;
@@ -76,6 +76,7 @@
                     transition: ease .3s;
 
                     span {
+                        color: $pink;
                         font-size: 40px;
                         position: relative;
                         left: 12px;

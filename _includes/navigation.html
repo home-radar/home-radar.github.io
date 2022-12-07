@@ -10,7 +10,8 @@
         {% if item.url contains "https" %}
           <a href="{{ item.link }}">{{ item.name }}</a>
         {% else %}
-          <a href="{{ baseurl }}{{ item.link }}" class="{% if page.url == item.link or (page.url contains "about" and item.link contains "about")  or (page.url contains "faq" and item.link contains "faq") %}current{% endif %}">{{ item.name }}</a>
+          <a href="{{ baseurl }}{{ item.link }}" class="{% if page.url == item.link or (page.url contains "about" and item.link contains "about") or (page.url == "/faq.html" and item.link == "/faq") %}current{% endif %}">{{ item.name }}</a>
+          {{page.url}} {{item.link}}
         {% endif %}
       {% endfor %}
     </div>
