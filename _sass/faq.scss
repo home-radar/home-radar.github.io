@@ -6,7 +6,7 @@
 
     .faq-intro {
         background: $dark-blue;
-        height: calc(90vh - 80px);
+        height: calc(100vh - 80px);
         position: relative;
         display: flex;
         align-items: center;
@@ -198,5 +198,30 @@ button.active + .dropdown {
         padding: 0 20px;
         border-radius: 30px;
         min-height: 40px;
+    }
+}
+
+.faq-scroll {
+    background: $pink;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    transition: ease .3s;
+    z-index: 9999;
+
+    p {
+        font-size: 40px;
+        color: $dark-blue;
+    }
+
+    &:hover {
+        transform: translate(-50%, -50%) scale(1.25);
     }
 }
