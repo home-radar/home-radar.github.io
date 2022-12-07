@@ -25,10 +25,10 @@
 
     <div class="nav-buttons mobile-nav-buttons" id="mobileMobile">
       {% for item in site.data.navigation %}
-        {% if item.url contains "https" %}
-          <a href="{{ item.link }}">{{ item.name }}</a>
+        {% if item.name == "FAQ" and page.url == "/faq.html"%}
+          <a href="{{ baseurl }}{{ item.link }}" class="current">{{ item.name }}</a>
         {% else %}
-          <a href="{{ baseurl }}{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+          <a href="{{ baseurl }}{{ item.link }}" class="{% if page.url == item.link or page.url contains "about" and item.link contains "about" %}current{% endif %}">{{ item.name }}</a>
         {% endif %}
       {% endfor %}
     </div>
