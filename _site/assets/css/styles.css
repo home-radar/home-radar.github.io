@@ -118,7 +118,7 @@ nav img { width: 5%; }
 
 .listings-page tr { font-family: Jost; }
 
-.faq-page { position: relative; top: 80px; margin-bottom: 80px; }
+.faq-page { position: relative; top: 80px; margin-bottom: 80px; scroll-behavior: smooth; }
 
 .faq-page .faq-intro { background: #2c3c52; height: calc(90vh - 80px); position: relative; display: flex; align-items: center; justify-content: flex-start; overflow: hidden; }
 
